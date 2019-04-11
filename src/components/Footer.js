@@ -18,6 +18,7 @@ const Styled_Footer = styled.footer`
 
   @media (max-width: ${SIZES.BREAK_SM}) {
     padding: 0 ${SIZES.PADDING_MOBILE};
+    margin-bottom: 30px;
   }
 `
 const Footer__Container = styled.div`
@@ -87,16 +88,20 @@ const SiteMap__Item = styled.li`
   }
 `
 const Copyright_Text = styled(P)`
-  font-size: 14px;
+  && {
+    font-size: 14px;
+  }
   font-family: "PT Mono", monospace;
 `
 const Footer__Message_Text = styled(P)`
   font-family: "Noto Serif", Georigia, serif;
   font-weight: normal;
-  font-size: 24px;
   line-height: 1.66;
   margin-bottom: 60px;
   color: ${COLORS.BLACK};
+  && {
+    font-size: 24px;
+  }
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     margin-bottom: 24px;

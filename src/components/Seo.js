@@ -77,7 +77,24 @@ function SEO({ description, lang, meta, keywords, title }) {
             : []
         )
         .concat(meta)}
-    />
+    >
+      <link
+        href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Biryani:400,600,700"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=PT+Mono"
+        rel="stylesheet"
+      />
+    </Helmet>
   )
 }
 

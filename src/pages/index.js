@@ -55,6 +55,9 @@ const List_Item = styled.div`
   &:not(last-child) {
     margin-bottom: 40px;
   }
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    padding-right: ${SIZES.PADDING_MOBILE};
+  }
 `
 
 const List_Wrapper__Content = styled.div`
@@ -62,6 +65,7 @@ const List_Wrapper__Content = styled.div`
   margin-left: auto;
   @media (max-width: ${SIZES.BREAK_MD}) {
     max-width: 600px;
+    width: 90%;
   }
 `
 
@@ -78,9 +82,14 @@ const List_Item__Title = styled(P)`
 `
 
 const List_Item__Body = styled(P)`
-  font-size: 16px;
   line-height: 1.75;
   margin-bottom: 0;
+  && {
+    font-size: 16px;
+    @media (max-width: ${SIZES.BREAK_SM}) {
+      font-size: 14px;
+    }
+  }
 `
 
 const IndexPage = () => (

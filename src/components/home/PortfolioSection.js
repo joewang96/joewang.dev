@@ -28,7 +28,7 @@ const PortfolioSection__Container = styled.div`
 `
 
 const Portfolio_Tag = styled.p`
-  font-family: "PT Mono", monnospace;
+  font-family: "PT Mono", monospace;
   font-size: 16px;
   line-height: 1.125;
 
