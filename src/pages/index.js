@@ -1,18 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import styled from "styled-components"
 
 import HomeHero from "../components/home/HomeHero"
 import PortfolioSection from "../components/home/PortfolioSection"
 
 import Layout from "../components/Layout"
-import Image from "../components/image"
 import SEO from "../components/Seo"
 
-import H1 from "../elements/H1"
 import H2 from "../elements/H2"
 import P from "../elements/P"
-import A from "../elements/A"
 
 import { COLORS, SIZES } from "../tokens"
 
