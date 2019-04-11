@@ -56,7 +56,10 @@ const Icon = styled.i`
 const Header = () => (
   <Navigation>
     <Navigation__Wrapper>
-      <Icon_Link to="/">
+      <Icon_Link
+        to="/"
+        aria-label="My personal logo. Click to return to the homepage."
+      >
         <Icon className="icon icon-logo" />
       </Icon_Link>
     </Navigation__Wrapper>

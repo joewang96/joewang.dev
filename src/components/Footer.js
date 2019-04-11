@@ -121,6 +121,7 @@ const Footer = () => (
               iconClass="icon-github"
               targetBlank
               href="https://github.com/joewang96"
+              ariaLabel="View my Github profile."
             />
           </SocialList__Item>
           <SocialList__Item>
@@ -128,12 +129,14 @@ const Footer = () => (
               iconClass="icon-linkedin"
               targetBlank
               href="https://www.linkedin.com/in/joseph-wang-7b0751129/"
+              ariaLabel="View my LinkedIn profile."
             />
           </SocialList__Item>
           <SocialList__Item>
             <SocialIcon
               iconClass="icon-gmail"
               href="mailto:wang.jo@husky.neu.edu"
+              ariaLabel="Send me an email."
             />
           </SocialList__Item>
           <SocialList__Item>
@@ -141,6 +144,7 @@ const Footer = () => (
               iconClass="icon-dribbble"
               targetBlank
               href="https://dribbble.com/josephwang"
+              ariaLabel="View my Dribbble profile."
             />
           </SocialList__Item>
         </SocialList>

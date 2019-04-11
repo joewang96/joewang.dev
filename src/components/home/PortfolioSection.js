@@ -105,18 +105,18 @@ const PortfolioSection = () => (
       {/* Row */}
       <Portfolio_Row>
         <Portfolio_Col width="58%">
-          <Portfolio_Tag>
+          <Portfolio_Tag id="portfolio-title--generate" aria-hidden="true">
             Generate Website Redesign — visual, UX, and dev overhaul
           </Portfolio_Tag>
-          <a href="#">
+          <a href="#" aria-labelledby="portfolio-title--generate">
             <Portfolio_Image height="410px" />
           </a>
         </Portfolio_Col>
         <Portfolio_Col width="42%">
-          <Portfolio_Tag>
+          <Portfolio_Tag id="portfolio-title--canvas" aria-hidden="true">
             Canvas — creating a first-class design system
           </Portfolio_Tag>
-          <a href="#">
+          <a href="#" aria-labelledby="portfolio-title--canvas">
             <Portfolio_Image height="287px" />
           </a>
         </Portfolio_Col>
@@ -125,18 +125,26 @@ const PortfolioSection = () => (
       {/* Row */}
       <Portfolio_Row alignStart>
         <Portfolio_Col reverse width="41%">
-          <Portfolio_Tag top>
+          <Portfolio_Tag
+            top
+            id="portfolio-title--boo-boston"
+            aria-hidden="true"
+          >
             Boo! Boston — designing an AR app concept
           </Portfolio_Tag>
-          <a href="#">
+          <a href="#" aria-labelledby="portfolio-title--boo-boston">
             <Portfolio_Image height="487px" />
           </a>
         </Portfolio_Col>
         <Portfolio_Col reverse width="50%">
-          <Portfolio_Tag top>
+          <Portfolio_Tag
+            top
+            id="portfolio-title--mentalligence"
+            aria-hidden="true"
+          >
             Mentalligence — brand identity & website dev
           </Portfolio_Tag>
-          <a href="#">
+          <a href="#" aria-labelledby="portfolio-title--mentalligence">
             <Portfolio_Image height="346px" />
           </a>
         </Portfolio_Col>

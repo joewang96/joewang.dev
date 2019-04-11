@@ -137,7 +137,11 @@ const HomeHero = () => (
       <H1 style={{ maxWidth: 616 }}>
         Technology and design make a great pairing.
       </H1>
-      <Hero_ImageContainer mobileOnly={true}>
+      <Hero_ImageContainer
+        mobileOnly={true}
+        aria-label="A headshot of myself where I am smiling and looking at the camera, with a purple gradient background behind me. I am a man, wearing a blue denim shirt over a grey t-shirt."
+        role="image"
+      >
         <Hero_Image fluid={headshot} />
       </Hero_ImageContainer>
       <P style={{ maxWidth: 463 }}>
@@ -156,7 +160,10 @@ const HomeHero = () => (
         — their in-house design system.
       </P>
     </Hero_TextContent>
-    <Hero_ImageContainer>
+    <Hero_ImageContainer
+      aria-label="A headshot of myself where I am smiling and looking at the camera, with a purple gradient background behind me. I am a man, wearing a blue denim shirt over a grey t-shirt."
+      role="image"
+    >
       <Hero_Image fluid={headshot} />
     </Hero_ImageContainer>
   </HeroContainer>
