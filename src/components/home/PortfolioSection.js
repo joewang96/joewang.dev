@@ -18,7 +18,7 @@ const Styled_PortfolioSection = styled.section`
 
   @media (max-width: ${SIZES.BREAK_SM}) {
     padding: 0 ${SIZES.PADDING_MOBILE};
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
 `
 
@@ -50,6 +50,8 @@ const Portfolio_Tag = styled.p`
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
   }
 `
 
