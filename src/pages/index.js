@@ -27,6 +27,7 @@ const List_Wrapper = styled.section`
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     flex-direction: column;
+    margin-bottom: 60px;
   }
 
   @media (max-width: ${SIZES.BREAK_SM}) {

@@ -17,7 +17,7 @@ const H1 = styled.h1`
     font-size: 40px;
   }
   @media (max-width: ${SIZES.BREAK_SM}) {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   // font-size: 3.75vw;

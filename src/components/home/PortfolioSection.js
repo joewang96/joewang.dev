@@ -6,9 +6,14 @@ import { SIZES } from "../../tokens"
 
 const Styled_PortfolioSection = styled.section`
   padding: 0 ${SIZES.PADDING_DESKTOP};
+  margin-bottom: 136px;
 
   @media (max-width: ${SIZES.BREAK_LG}) {
     padding: 0 ${SIZES.PADDING_TABLET};
+  }
+
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    margin-bottom: 60px;
   }
 
   @media (max-width: ${SIZES.BREAK_SM}) {
@@ -20,7 +25,6 @@ const PortfolioSection__Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 136px;
 `
 
 const Portfolio_Tag = styled.p`
@@ -29,6 +33,10 @@ const Portfolio_Tag = styled.p`
   line-height: 1.125;
 
   ${props => (props.top ? "margin-top: 16px" : "margin-bottom: 16px")};
+
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    margin: 0;
+  }
 `
 
 const Portfolio_Row = styled.div`
@@ -39,11 +47,33 @@ const Portfolio_Row = styled.div`
   &:first-of-type {
     margin-bottom: 33px;
   }
+
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    flex-direction: column;
+    &:first-of-type {
+      margin: 0;
+    }
+  }
 `
 
 const Portfolio_Col = styled.div`
   display: flex;
   flex-direction: ${props => (props.reverse ? "column-reverse" : "column")};
+  width: ${({ width }) => width};
+
+  ${Portfolio_Col}:first-of-type {
+    margin-right: 33px;
+  }
+
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    width: 100%;
+    flex-direction: column-reverse;
+    margin-bottom: 60px;
+
+    ${Portfolio_Col}:first-of-type {
+      margin-right: 0;
+    }
+  }
 `
 
 const Portfolio_Image = styled.div`
@@ -51,6 +81,12 @@ const Portfolio_Image = styled.div`
   height: ${props => props.height || "30vh"};
   background: radial-gradient(circle, #fafaff 0%, #eff0ff 100%);
   transition: transform 200ms ease-in-out;
+
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    height: 0;
+    padding-bottom: 60%;
+    margin-bottom: 16px;
+  }
 
   &:hover,
   &:focus {
@@ -68,7 +104,7 @@ const PortfolioSection = () => (
     <PortfolioSection__Container>
       {/* Row */}
       <Portfolio_Row>
-        <Portfolio_Col style={{ width: "58%", marginRight: 33 }}>
+        <Portfolio_Col width="58%">
           <Portfolio_Tag>
             Generate Website Redesign — visual, UX, and dev overhaul
           </Portfolio_Tag>
@@ -76,7 +112,7 @@ const PortfolioSection = () => (
             <Portfolio_Image height="410px" />
           </a>
         </Portfolio_Col>
-        <Portfolio_Col style={{ width: "42%" }}>
+        <Portfolio_Col width="42%">
           <Portfolio_Tag>
             Canvas — creating a first-class design system
           </Portfolio_Tag>
@@ -88,7 +124,7 @@ const PortfolioSection = () => (
 
       {/* Row */}
       <Portfolio_Row alignStart>
-        <Portfolio_Col reverse style={{ width: "41%", marginRight: 33 }}>
+        <Portfolio_Col reverse width="41%">
           <Portfolio_Tag top>
             Boo! Boston — designing an AR app concept
           </Portfolio_Tag>
@@ -96,7 +132,7 @@ const PortfolioSection = () => (
             <Portfolio_Image height="487px" />
           </a>
         </Portfolio_Col>
-        <Portfolio_Col reverse style={{ width: "50%" }}>
+        <Portfolio_Col reverse width="50%">
           <Portfolio_Tag top>
             Mentalligence — brand identity & website dev
           </Portfolio_Tag>
