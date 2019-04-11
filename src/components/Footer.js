@@ -18,7 +18,7 @@ const Styled_Footer = styled.footer`
 
   @media (max-width: ${SIZES.BREAK_SM}) {
     padding: 0 ${SIZES.PADDING_MOBILE};
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 `
 const Footer__Container = styled.div`
@@ -69,6 +69,10 @@ const Footer__Sitemap_Copyright = styled.div`
 const SiteMap = styled.ul`
   list-style: none;
   margin-bottom: 24px;
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    margin-bottom: 32px;
+  }
 `
 const SiteMap__Item = styled.li`
   display: inline-block;
@@ -104,7 +108,7 @@ const Footer__Message_Text = styled(P)`
   }
 
   @media (max-width: ${SIZES.BREAK_MD}) {
-    margin-bottom: 24px;
+    margin-bottom: 40px;
   }
 `
 

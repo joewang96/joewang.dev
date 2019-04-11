@@ -22,6 +22,7 @@ const HeroContainer = styled.section`
 
   @media (max-width: ${SIZES.BREAK_LG}) {
     padding-left: ${SIZES.PADDING_TABLET};
+    margin-bottom: 136px;
   }
 
   @media (max-width: ${SIZES.BREAK_MD}) {
@@ -29,7 +30,10 @@ const HeroContainer = styled.section`
     align-items: flex-start;
     padding: 0;
 
-    margin-bottom: 36px;
+    margin-bottom: 100px;
+  }
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    margin-bottom: 80px;
   }
 `
 
@@ -39,7 +43,7 @@ const Hero_TextContent = styled.div`
   margin-right: 33px;
 
   @media (max-width: ${SIZES.BREAK_MD}) {
-    margin-bottom: 60px;
+    margin-bottom: 0;
     margin-right: 0;
     max-width: 100%;
   }

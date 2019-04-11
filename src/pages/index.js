@@ -20,6 +20,7 @@ const List_Wrapper = styled.section`
 
   @media (max-width: ${SIZES.BREAK_LG}) {
     padding: 0 0 0 ${SIZES.PADDING_TABLET};
+    margin-bottom: 100px;
   }
 
   @media (max-width: ${SIZES.BREAK_MD}) {
@@ -29,6 +30,7 @@ const List_Wrapper = styled.section`
 
   @media (max-width: ${SIZES.BREAK_SM}) {
     padding: 0 0 0 ${SIZES.PADDING_MOBILE};
+    margin-bottom: 40px;
   }
 `
 
@@ -45,6 +47,10 @@ const List_Wrapper__Title = styled(H2)`
     margin-bottom: 60px;
     max-width: 426px;
   }
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    margin-bottom: 36px;
+  }
 `
 
 const List_Item = styled.div`
@@ -58,6 +64,13 @@ const List_Item = styled.div`
   @media (max-width: ${SIZES.BREAK_SM}) {
     padding-right: ${SIZES.PADDING_MOBILE};
   }
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    padding-bottom: 28px;
+    &:not(last-child) {
+      margin-bottom: 28px;
+    }
+  }
 `
 
 const List_Wrapper__Content = styled.div`
@@ -66,6 +79,9 @@ const List_Wrapper__Content = styled.div`
   @media (max-width: ${SIZES.BREAK_MD}) {
     max-width: 600px;
     width: 90%;
+  }
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    width: 92.5%;
   }
 `
 
@@ -79,6 +95,13 @@ const List_Item__Title = styled(P)`
   line-height: 1.75;
   margin-bottom: 12px;
   color: ${COLORS.BLACK};
+
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    font-size: 18px;
+  }
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    font-size: 16px;
+  }
 `
 
 const List_Item__Body = styled(P)`

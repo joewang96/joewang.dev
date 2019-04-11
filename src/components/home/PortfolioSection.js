@@ -13,11 +13,25 @@ const Styled_PortfolioSection = styled.section`
   }
 
   @media (max-width: ${SIZES.BREAK_MD}) {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
   }
 
   @media (max-width: ${SIZES.BREAK_SM}) {
     padding: 0 ${SIZES.PADDING_MOBILE};
+    margin-bottom: 60px;
+  }
+`
+
+const Title = styled(H2)`
+  max-width: 431px;
+  margin-bottom: 63px;
+
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    margin-bottom: 28px;
   }
 `
 
@@ -74,6 +88,9 @@ const Portfolio_Col = styled.div`
       margin-right: 0;
     }
   }
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    margin-bottom: 40px;
+  }
 `
 
 const Portfolio_Image = styled.div`
@@ -96,9 +113,7 @@ const Portfolio_Image = styled.div`
 
 const PortfolioSection = () => (
   <Styled_PortfolioSection>
-    <H2 style={{ maxWidth: 431, marginBottom: 63 }}>
-      My work — some featured case studies.
-    </H2>
+    <Title>My work — some featured case studies.</Title>
 
     {/* Portfolio Container */}
     <PortfolioSection__Container>
@@ -136,7 +151,7 @@ const PortfolioSection = () => (
             <Portfolio_Image height="487px" />
           </a>
         </Portfolio_Col>
-        <Portfolio_Col reverse width="50%">
+        <Portfolio_Col reverse width="50%" style={{ marginBottom: 0 }}>
           <Portfolio_Tag
             top
             id="portfolio-title--mentalligence"
