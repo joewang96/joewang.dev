@@ -1,5 +1,7 @@
 import React from "react"
 import styled, { css } from "styled-components"
+import { StaticQuery, graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
 import H1 from "../../elements/H1"
 import P from "../../elements/P"
@@ -76,10 +78,15 @@ const Hero_ImageContainer = styled.div`
           margin-bottom: 36px;
           ${Hero_Image} {
             padding-bottom: 55%;
-            background-position: center -7vw;
             @media (max-width: ${SIZES.BREAK_SM}) {
-              background-position: center -6vw;
               padding-bottom: 65%;
+            }
+            &:after,
+            &:before {
+              background-position: center -7vw;
+              @media (max-width: ${SIZES.BREAK_SM}) {
+                background-position: center -6vw;
+              }
             }
           }
           @media (min-width: ${parseInt(SIZES.BREAK_MD, 10) + 1}px) {
@@ -93,10 +100,32 @@ const Hero_ImageContainer = styled.div`
         `}
 `
 
-const Hero_Image = styled.div`
+const Hero_Image = styled(props => {
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          placeholderImage: file(relativePath: { eq: "headshot.png" }) {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      `}
+      render={data => (
+        <BackgroundImage
+          {...props}
+          fluid={data.placeholderImage.childImageSharp.fluid}
+        />
+      )}
+    />
+  )
+})`
   width: 100%;
   padding-bottom: 100%;
-  background-image: url(${headshot});
+  // background-image: url(${headshot});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -109,7 +138,7 @@ const HomeHero = () => (
         Technology and design make a great pairing.
       </H1>
       <Hero_ImageContainer mobileOnly={true}>
-        <Hero_Image />
+        <Hero_Image fluid={headshot} />
       </Hero_ImageContainer>
       <P style={{ maxWidth: 463 }}>
         Luckily, I have a background in both. Currently a Software Engineer at{" "}
@@ -128,7 +157,7 @@ const HomeHero = () => (
       </P>
     </Hero_TextContent>
     <Hero_ImageContainer>
-      <Hero_Image />
+      <Hero_Image fluid={headshot} />
     </Hero_ImageContainer>
   </HeroContainer>
 )
