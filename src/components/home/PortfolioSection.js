@@ -128,8 +128,8 @@ const PortfolioSection = () => (
       <Portfolio_Row>
         <Portfolio_Col width="58%">
           <Portfolio_Tag id="portfolio-title--generate" aria-hidden="true">
-            <strong>Generate Website Redesign</strong> — visual, UX, and dev
-            overhaul
+            <strong>Generate Website Redesign</strong> — complete visual, UX,
+            and website overhaul.
           </Portfolio_Tag>
           <a href="#" aria-labelledby="portfolio-title--generate">
             <Portfolio_Image height="410px" />
@@ -137,7 +137,8 @@ const PortfolioSection = () => (
         </Portfolio_Col>
         <Portfolio_Col width="42%">
           <Portfolio_Tag id="portfolio-title--canvas" aria-hidden="true">
-            <strong>Canvas</strong> — creating a first-class design system
+            <strong>HubSpot Canvas</strong> — creating a first-class design
+            system that scales.
           </Portfolio_Tag>
           <a href="#" aria-labelledby="portfolio-title--canvas">
             <Portfolio_Image height="287px" />
@@ -153,7 +154,8 @@ const PortfolioSection = () => (
             id="portfolio-title--boo-boston"
             aria-hidden="true"
           >
-            <strong>Boo! Boston</strong> — designing an AR app concept
+            <strong>Boo! Boston</strong> — designing an AR app using service
+            design concepts.
           </Portfolio_Tag>
           <a href="#" aria-labelledby="portfolio-title--boo-boston">
             <Portfolio_Image height="487px" />
@@ -165,7 +167,8 @@ const PortfolioSection = () => (
             id="portfolio-title--mentalligence"
             aria-hidden="true"
           >
-            <strong>Mentalligence</strong> — brand identity & website dev
+            <strong>Mentalligence</strong> — brand identity and website
+            development for an author / professor.
           </Portfolio_Tag>
           <a href="#" aria-labelledby="portfolio-title--mentalligence">
             <Portfolio_Image height="346px" />

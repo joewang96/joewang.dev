@@ -78,6 +78,9 @@ const SiteMap__Item = styled.li`
   display: inline-block;
   &:not(:last-child) {
     margin-right: 40px;
+    @media (max-width: ${SIZES.BREAK_SM}) {
+      margin-right: 32px;
+    }
   }
 
   a {
