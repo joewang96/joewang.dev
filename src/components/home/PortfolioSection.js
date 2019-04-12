@@ -2,6 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import H2 from "../../elements/H2"
 
+import * as generatePreview from "../../images/generate_preview.png"
+import * as mentalligencePreview from "../../images/mentalligence_preview.png"
+
 import { SIZES } from "../../tokens"
 
 const Styled_PortfolioSection = styled.section`
@@ -102,6 +105,9 @@ const Portfolio_Image = styled.div`
   height: ${props => props.height || "30vh"};
   background: radial-gradient(circle, #fafaff 0%, #eff0ff 100%);
   transition: transform 200ms ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     height: 0;
@@ -132,7 +138,12 @@ const PortfolioSection = () => (
             and website overhaul.
           </Portfolio_Tag>
           <a href="#" aria-labelledby="portfolio-title--generate">
-            <Portfolio_Image height="410px" />
+            <Portfolio_Image
+              height="410px"
+              style={{
+                backgroundImage: `url(${generatePreview})`,
+              }}
+            />
           </a>
         </Portfolio_Col>
         <Portfolio_Col width="42%">
@@ -171,7 +182,12 @@ const PortfolioSection = () => (
             development for an author / professor.
           </Portfolio_Tag>
           <a href="#" aria-labelledby="portfolio-title--mentalligence">
-            <Portfolio_Image height="346px" />
+            <Portfolio_Image
+              height="346px"
+              style={{
+                backgroundImage: `url(${mentalligencePreview})`,
+              }}
+            />
           </a>
         </Portfolio_Col>
       </Portfolio_Row>
