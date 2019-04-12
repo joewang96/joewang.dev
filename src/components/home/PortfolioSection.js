@@ -4,6 +4,7 @@ import H2 from "../../elements/H2"
 
 import * as generatePreview from "../../images/generate_preview.png"
 import * as mentalligencePreview from "../../images/mentalligence_preview.png"
+import * as booboston_preview from "../../images/booboston_preview.png"
 
 import { SIZES } from "../../tokens"
 
@@ -169,7 +170,10 @@ const PortfolioSection = () => (
             design concepts.
           </Portfolio_Tag>
           <a href="#" aria-labelledby="portfolio-title--boo-boston">
-            <Portfolio_Image height="487px" />
+            <Portfolio_Image
+              height="487px"
+              style={{ backgroundImage: `url(${booboston_preview})` }}
+            />
           </a>
         </Portfolio_Col>
         <Portfolio_Col reverse width="50%" style={{ marginBottom: 0 }}>
