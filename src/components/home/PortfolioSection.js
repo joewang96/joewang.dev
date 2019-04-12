@@ -17,7 +17,7 @@ const Styled_PortfolioSection = styled.section`
   }
 
   @media (max-width: ${SIZES.BREAK_SM}) {
-    padding: 0 ${SIZES.PADDING_MOBILE};
+    padding: 0;
     margin-bottom: 80px;
   }
 `
@@ -32,6 +32,7 @@ const Title = styled(H2)`
 
   @media (max-width: ${SIZES.BREAK_SM}) {
     margin-bottom: 28px;
+    padding: 0 ${SIZES.PADDING_MOBILE};
   }
 `
 
@@ -42,16 +43,17 @@ const PortfolioSection__Container = styled.div`
 `
 
 const Portfolio_Tag = styled.p`
-  font-family: "PT Mono", monospace;
+  font-family: "Biryani", "Cabin", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 1.125;
+  line-height: 1.5;
 
   ${props => (props.top ? "margin-top: 16px" : "margin-bottom: 16px")};
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     margin: 0;
-    font-size: 18px;
-    line-height: 1.5;
+  }
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    padding: 0 ${SIZES.PADDING_MOBILE};
   }
 `
 
@@ -91,7 +93,7 @@ const Portfolio_Col = styled.div`
     }
   }
   @media (max-width: ${SIZES.BREAK_SM}) {
-    margin-bottom: 40px;
+    margin-bottom: 52px;
   }
 `
 
@@ -105,6 +107,9 @@ const Portfolio_Image = styled.div`
     height: 0;
     padding-bottom: 60%;
     margin-bottom: 16px;
+  }
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    padding-bottom: 62.5%;
   }
 
   &:hover,
@@ -123,7 +128,8 @@ const PortfolioSection = () => (
       <Portfolio_Row>
         <Portfolio_Col width="58%">
           <Portfolio_Tag id="portfolio-title--generate" aria-hidden="true">
-            Generate Website Redesign — visual, UX, and dev overhaul
+            <strong>Generate Website Redesign</strong> — visual, UX, and dev
+            overhaul
           </Portfolio_Tag>
           <a href="#" aria-labelledby="portfolio-title--generate">
             <Portfolio_Image height="410px" />
@@ -131,7 +137,7 @@ const PortfolioSection = () => (
         </Portfolio_Col>
         <Portfolio_Col width="42%">
           <Portfolio_Tag id="portfolio-title--canvas" aria-hidden="true">
-            Canvas — creating a first-class design system
+            <strong>Canvas</strong> — creating a first-class design system
           </Portfolio_Tag>
           <a href="#" aria-labelledby="portfolio-title--canvas">
             <Portfolio_Image height="287px" />
@@ -147,7 +153,7 @@ const PortfolioSection = () => (
             id="portfolio-title--boo-boston"
             aria-hidden="true"
           >
-            Boo! Boston — designing an AR app concept
+            <strong>Boo! Boston</strong> — designing an AR app concept
           </Portfolio_Tag>
           <a href="#" aria-labelledby="portfolio-title--boo-boston">
             <Portfolio_Image height="487px" />
@@ -159,7 +165,7 @@ const PortfolioSection = () => (
             id="portfolio-title--mentalligence"
             aria-hidden="true"
           >
-            Mentalligence — brand identity & website dev
+            <strong>Mentalligence</strong> — brand identity & website dev
           </Portfolio_Tag>
           <a href="#" aria-labelledby="portfolio-title--mentalligence">
             <Portfolio_Image height="346px" />
