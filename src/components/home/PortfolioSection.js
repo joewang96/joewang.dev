@@ -149,7 +149,7 @@ const PortfolioSection = () => (
         </Portfolio_Col>
         <Portfolio_Col width="42%">
           <Portfolio_Tag id="portfolio-title--canvas" aria-hidden="true">
-            <strong>HubSpot Canvas</strong> — creating a first-class design
+            <strong>HubSpot Canvas</strong> — maintaining a first-class design
             system that scales.
           </Portfolio_Tag>
           <a href="#" aria-labelledby="portfolio-title--canvas">

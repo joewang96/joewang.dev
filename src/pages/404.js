@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
@@ -63,7 +63,7 @@ const NotFoundPage = () => (
         </Body>
         <Body>
           Don’t worry, you can always go back <A href="/">home</A> or even learn
-          more <A href="/about">about me</A>.
+          more <A href="/about">about me</A>!
         </Body>
       </Container>
     </Wrapper>

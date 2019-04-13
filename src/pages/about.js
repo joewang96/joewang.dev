@@ -1,0 +1,129 @@
+import React from "react"
+// import { Link } from "gatsby"
+import styled, { css } from "styled-components"
+
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
+
+import ListComponent from "../components/ListComponent"
+import ListItem from "../components/ListItem"
+
+import H1 from "../elements/H1"
+import P from "../elements/P"
+import A from "../elements/A"
+
+import { SIZES } from "../tokens"
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 ${SIZES.PADDING_DESKTOP};
+  margin-bottom: 60px;
+
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    padding: 0 ${SIZES.PADDING_TABLET};
+  }
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    padding: 0 ${SIZES.PADDING_MOBILE};
+  }
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+`
+
+const Container = styled.div``
+
+const Title = styled(H1)`
+  margin-bottom: 48px;
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    margin-bottom: 32px;
+  }
+`
+
+const Body = styled(P)`
+  max-width: 530px;
+  &:not(:last-child) {
+    margin-bottom: 36px;
+    @media (max-width: ${SIZES.BREAK_SM}) {
+      margin-bottom: 24px;
+    }
+  }
+`
+
+const LightWeight = styled.span`
+  font-weight: 400;
+`
+
+const AboutPage = () => (
+  <Layout>
+    <SEO title="About" />
+    <Wrapper>
+      <Container>
+        <Title>Designer. Developer. Creative.</Title>
+        <Body>
+          Starting out as a developer, I quickly found a passion and love for
+          design and building amazing experiences. I’ve since grown these two
+          skillsets and activley seek opportunities to work at the intersection
+          of these disciplines.
+        </Body>
+        <Body>
+          Originally from Northern Virginia, I moved up to Boston for college —
+          attending Northeastern University. I’ll be graduating May 2020, and
+          joining{" "}
+          <A
+            href="https://hubspot.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            HubSpot
+          </A>{" "}
+          afterward.
+        </Body>
+      </Container>
+    </Wrapper>
+
+    <ListComponent
+      title="Where have I worked?"
+      content={
+        <>
+          <ListItem
+            title={
+              <>
+                Front-End Software Engineer Co-op{" "}
+                <LightWeight>at HubSpot</LightWeight>
+              </>
+            }
+            body="Worked on the team that owned the design system and reusable components used by designers and front-end devs."
+            tag="January 2019 - Present"
+          />
+
+          <ListItem
+            title={
+              <>
+                Technology Director <LightWeight>at Scout Studio</LightWeight>
+              </>
+            }
+            body="Led a team of over 25 designers and developers working on various client projects throughout the semester."
+            tag="June 2018 - December 2018"
+          />
+
+          <ListItem
+            title={
+              <>
+                Front-End Software Engineer Co-op{" "}
+                <LightWeight>at HubSpot</LightWeight>
+              </>
+            }
+            body="Improved the text-editing experience on multipe apps inside HubSpot as part of the Inline Editing team."
+            tag="Jan 2018 - August 2018"
+          />
+        </>
+      }
+    />
+  </Layout>
+)
+
+export default AboutPage
