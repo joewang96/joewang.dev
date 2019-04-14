@@ -9,10 +9,12 @@ import ListComponent from "../components/ListComponent"
 import ListItem from "../components/ListItem"
 
 import H1 from "../elements/H1"
+import H2 from "../elements/H2"
 import P from "../elements/P"
 import A from "../elements/A"
 
-import { SIZES } from "../tokens"
+import { COLORS, SIZES } from "../tokens"
+import * as resume from "../misc/Joseph_Wang_Resume.pdf"
 
 const Wrapper = styled.div`
   display: flex;
@@ -20,14 +22,16 @@ const Wrapper = styled.div`
   align-items: center;
 
   padding: 0 ${SIZES.PADDING_DESKTOP};
-  margin-bottom: 60px;
+  margin-bottom: 120px;
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     padding: 0 ${SIZES.PADDING_TABLET};
+    margin-bottom: 100px;
   }
 
   @media (max-width: ${SIZES.BREAK_SM}) {
     padding: 0 ${SIZES.PADDING_MOBILE};
+    margin-bottom: 60px;
   }
 
   padding-top: 60px;
@@ -55,6 +59,29 @@ const Body = styled(P)`
 
 const LightWeight = styled.span`
   font-weight: 400;
+`
+
+const WorkListings = styled(ListComponent)`
+  max-width: 1089px;
+  margin-left: auto;
+  ${H2} {
+    max-width: 280px;
+  }
+`
+
+const List_Cta = styled(A)`
+  font-family: "Noto Sans", Cabin, Helvetica Neue, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 400;
+  line-height: 1.8;
+  color: ${COLORS.OFF_BLACK};
+  display: inline-block;
+  margin-top: -4px;
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    font-size: 14px;
+  }
 `
 
 const AboutPage = () => (
@@ -85,7 +112,7 @@ const AboutPage = () => (
       </Container>
     </Wrapper>
 
-    <ListComponent
+    <WorkListings
       title="Where have I worked?"
       content={
         <>
@@ -120,6 +147,10 @@ const AboutPage = () => (
             body="Improved the text-editing experience on multipe apps inside HubSpot as part of the Inline Editing team."
             tag="Jan 2018 - August 2018"
           />
+
+          <List_Cta href={resume} target="_blank">
+            View full resume →
+          </List_Cta>
         </>
       }
     />
