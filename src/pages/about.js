@@ -1,20 +1,20 @@
-import React from "react"
+import React from 'react';
 // import { Link } from "gatsby"
-import styled, { css } from "styled-components"
+import styled, { css } from 'styled-components';
 
-import Layout from "../components/Layout"
-import SEO from "../components/Seo"
+import Layout from '../components/Layout';
+import SEO from '../components/Seo';
 
-import ListComponent from "../components/ListComponent"
-import ListItem from "../components/ListItem"
+import ListComponent from '../components/ListComponent';
+import ListItem from '../components/ListItem';
 
-import H1 from "../elements/H1"
-import H2 from "../elements/H2"
-import P from "../elements/P"
-import A from "../elements/A"
+import H1 from '../elements/H1';
+import H2 from '../elements/H2';
+import P from '../elements/P';
+import A from '../elements/A';
 
-import { COLORS, SIZES } from "../tokens"
-import * as resume from "../misc/Joseph_Wang_Resume.pdf"
+import { COLORS, SIZES } from '../tokens';
+import * as resume from '../misc/Joseph_Wang_Resume.pdf';
 
 const Wrapper = styled.div`
   display: flex;
@@ -36,16 +36,16 @@ const Wrapper = styled.div`
 
   padding-top: 60px;
   padding-bottom: 60px;
-`
+`;
 
-const Container = styled.div``
+const Container = styled.div``;
 
 const Title = styled(H1)`
   margin-bottom: 48px;
   @media (max-width: ${SIZES.BREAK_MD}) {
     margin-bottom: 32px;
   }
-`
+`;
 
 const Body = styled(P)`
   max-width: 530px;
@@ -55,11 +55,11 @@ const Body = styled(P)`
       margin-bottom: 24px;
     }
   }
-`
+`;
 
 const LightWeight = styled.span`
   font-weight: 400;
-`
+`;
 
 const WorkListings = styled(ListComponent)`
   max-width: 1089px;
@@ -67,10 +67,10 @@ const WorkListings = styled(ListComponent)`
   ${H2} {
     max-width: 280px;
   }
-`
+`;
 
 const List_Cta = styled(A)`
-  font-family: "Noto Sans", Cabin, Helvetica Neue, Helvetica, sans-serif;
+  font-family: 'Noto Sans', Cabin, Helvetica Neue, Helvetica, sans-serif;
   font-style: italic;
   font-size: 16px;
   text-decoration: none;
@@ -78,11 +78,13 @@ const List_Cta = styled(A)`
   line-height: 1.8;
   color: ${COLORS.OFF_BLACK};
   display: inline-block;
-  margin-top: -4px;
+  margin-top: 36px;
   @media (max-width: ${SIZES.BREAK_SM}) {
     font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 18px;
   }
-`
+`;
 
 const AboutPage = () => (
   <Layout>
@@ -99,14 +101,14 @@ const AboutPage = () => (
         <Body>
           Originally from Northern Virginia, I moved up to Boston for college —
           attending Northeastern University. I’ll be graduating May 2020, and
-          joining{" "}
+          joining{' '}
           <A
             href="https://hubspot.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             HubSpot
-          </A>{" "}
+          </A>{' '}
           afterward.
         </Body>
       </Container>
@@ -119,7 +121,7 @@ const AboutPage = () => (
           <ListItem
             title={
               <>
-                Front-End Software Engineer Co-op{" "}
+                Front-End Software Engineer Co-op{' '}
                 <LightWeight>at HubSpot</LightWeight>
               </>
             }
@@ -140,7 +142,7 @@ const AboutPage = () => (
           <ListItem
             title={
               <>
-                Front-End Software Engineer Co-op{" "}
+                Front-End Software Engineer Co-op{' '}
                 <LightWeight>at HubSpot</LightWeight>
               </>
             }
@@ -155,6 +157,6 @@ const AboutPage = () => (
       }
     />
   </Layout>
-)
+);
 
-export default AboutPage
+export default AboutPage;
