@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Joseph Wang :: UX Engineer`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Hi, I'm Joseph Wang, a UX Engineer with a background in interaction design and front-end engineering. I'm currently a student at Northeastern University, pursuing a B.S. in Computer Science and Interactive Media. I am passionate about accessibility and creating great products to delight users!`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
