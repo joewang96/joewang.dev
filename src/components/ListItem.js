@@ -57,6 +57,9 @@ const List_Item__Tag = styled(P)`
   && {
     font-size: 14px;
     line-height: 2;
+    @media (max-width: ${SIZES.BREAK_SM}) {
+      font-size: 12px;
+    }
   }
   color: #898989;
   margin-top: 16px;

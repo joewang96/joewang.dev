@@ -21,7 +21,7 @@ const IndexPage = () => (
 
     {/* Written or Job(?) Section */}
     <ListComponent
-      title="Writing and some thoughts."
+      title="Additional case studies & writing."
       content={
         <>
           <ListItem
