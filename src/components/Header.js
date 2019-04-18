@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 
 import { COLORS, SIZES } from '../tokens';
 
-const MOBILE_TIMING = '125ms';
+const MOBILE_TIMING = '100ms';
 
 const Navigation = styled.nav`
   padding: 0 ${`${parseInt(SIZES.PADDING_DESKTOP, 10) / 2}px`} 0
@@ -62,7 +62,7 @@ const MobileNavLine = styled.span`
   height: 2px;
   background: ${COLORS.BLACK};
   position: absolute;
-  transition: ${MOBILE_TIMING} ease-in-out transform;
+  transition: ${MOBILE_TIMING} ease-out transform;
   transition-delay: ${MOBILE_TIMING};
 
   &:nth-child(1) {
@@ -75,7 +75,7 @@ const MobileNavLine = styled.span`
       background: ${COLORS.BLACK};
       position: absolute;
       top: 0;
-      transition: ${MOBILE_TIMING} ease-in-out transform;
+      transition: ${MOBILE_TIMING} ease-out transform;
     }
   }
   &:nth-child(2) {
@@ -108,7 +108,7 @@ const MobileNav = styled.div`
   z-index: 1000;
   position: relative;
   cursor: pointer;
-  transition: ${MOBILE_TIMING} ease-in-out transform;
+  transition: ${MOBILE_TIMING} ease-out transform;
 
   ${({ active }) =>
     active == true &&
@@ -120,6 +120,10 @@ const MobileNav = styled.div`
 
 const Header = () => {
   const [active, setActive] = useState(false);
+  const toggleActive = evt => {
+    evt.preventDefault();
+    setActive(!active);
+  };
   return (
     <Navigation>
       <Navigation__Wrapper>
@@ -132,10 +136,16 @@ const Header = () => {
 
         <MobileNav
           active={active}
-          onClick={evt => {
-            evt.preventDefault();
-            setActive(!active);
-          }}
+          tabIndex="0"
+          role="button"
+          aria-pressed={active}
+          aria-label={active ? 'Press to close menu' : 'Press to open menu'}
+          onClick={toggleActive}
+          // prevent blur on mouse click - still works for keyboard
+          onMouseDown={evt => evt.preventDefault()}
+          onKeyDown={evt =>
+            evt.key === 'Enter' || evt.key === ' ' ? toggleActive(evt) : null
+          }
         >
           <MobileNavLine active={active} />
           <MobileNavLine active={active} />

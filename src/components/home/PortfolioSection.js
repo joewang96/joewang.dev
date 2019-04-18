@@ -7,6 +7,7 @@ import H2 from '../../elements/H2';
 import * as generatePreview from '../../images/generate_preview.png';
 import * as mentalligencePreview from '../../images/mentalligence_preview.png';
 import * as booboston_preview from '../../images/booboston_preview.png';
+import * as canvas_preview from '../../images/canvas_preview.svg';
 
 import { SIZES } from '../../tokens';
 
@@ -161,7 +162,10 @@ const PortfolioSection = () => (
             to="/portfolio/hubspot-canvas"
             aria-labelledby="portfolio-title--canvas"
           >
-            <Portfolio_Image height="287px" />
+            <Portfolio_Image
+              height="287px"
+              style={{ backgroundImage: `url(${canvas_preview})` }}
+            />
           </Link>
         </Portfolio_Col>
       </Portfolio_Row>

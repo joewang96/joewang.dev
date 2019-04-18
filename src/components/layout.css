@@ -13,6 +13,9 @@ body {
   padding: 0;
   margin: 0;
 }
+*:focus {
+  outline: 2px dashed #000000;
+}
 
 @font-face {
   font-family: 'icomoon';
