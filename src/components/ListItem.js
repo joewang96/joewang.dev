@@ -61,7 +61,7 @@ const List_Item__Tag = styled(P)`
       font-size: 12px;
     }
   }
-  color: #898989;
+  color: ${COLORS.GREY};
   margin-top: 16px;
   font-family: 'PT Mono', monospace;
 `;
