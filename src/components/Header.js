@@ -195,6 +195,11 @@ const Header = props => {
     onMenuActive(!active);
   };
 
+  const closeMenu = () => {
+    setActive(false);
+    onMenuActive(false);
+  };
+
   return (
     <Navigation>
       <Navigation__Wrapper>
@@ -225,9 +230,9 @@ const Header = props => {
       <Menu
         active={active}
         aria-hidden={!active}
-        onClick={toggleActive}
+        onClick={closeMenu}
         onKeyDown={evt =>
-          evt.key === 'Enter' || evt.key === ' ' ? toggleActive : null
+          evt.key === 'Enter' || evt.key === ' ' ? closeMenu : null
         }
       >
         <MenuWrapper>
