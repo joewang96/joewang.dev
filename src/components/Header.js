@@ -1,8 +1,9 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
-
+import A from '../elements/A';
 import { COLORS, SIZES } from '../tokens';
+import * as resume from '../misc/Joseph_Wang_Resume.pdf';
 
 const MOBILE_TIMING = '100ms';
 
@@ -60,26 +61,26 @@ const Icon = styled.i`
 const MobileNavLine = styled.span`
   width: 100%;
   height: 2px;
-  background: ${COLORS.BLACK};
+  background: ${({ active }) => (active ? COLORS.WHITE : COLORS.BLACK)};
   position: absolute;
   transition: ${MOBILE_TIMING} ease-out transform;
   transition-delay: ${MOBILE_TIMING};
 
   &:nth-child(1) {
-    top: 0;
+    top: 10px;
     background: transparent;
     &::before {
       content: ' ';
       width: 100%;
       height: 100%;
-      background: ${COLORS.BLACK};
+      background: ${({ active }) => (active ? COLORS.WHITE : COLORS.BLACK)};
       position: absolute;
-      top: 0;
+      top: 0px;
       transition: ${MOBILE_TIMING} ease-out transform;
     }
   }
   &:nth-child(2) {
-    bottom: 0;
+    bottom: 10px;
   }
 
   ${({ active }) =>
@@ -104,8 +105,8 @@ const MobileNav = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 32px;
-  height: 12px;
-  z-index: 1000;
+  height: 32px;
+  z-index: 10000;
   position: relative;
   cursor: pointer;
   transition: ${MOBILE_TIMING} ease-out transform;
@@ -118,12 +119,82 @@ const MobileNav = styled.div`
     `};
 `;
 
-const Header = () => {
+const Menu = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: ${COLORS.BLACK};
+  left: 0;
+  top: ${({ active }) => (active ? 0 : '-100vh')};
+  z-index: 100;
+  transition: 250ms top ease-in-out;
+  overflow: hidden;
+
+  padding: 80px ${SIZES.PADDING_DESKTOP};
+
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    padding: 0 60px;
+  }
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    padding: 0 30px;
+  }
+
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+`;
+
+const MenuWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const MenuLink = styled(props => {
+  const { href } = props;
+  const LinkComponent = href ? A : Link;
+  return <LinkComponent {...props} />;
+})`
+  color: ${COLORS.WHITE};
+  text-decoration: none;
+  font-family: 'Noto Serif', Georigia, serif;
+  font-size: 80px;
+  font-weight: 400;
+
+  &:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+
+  transition: color 250ms ease-in-out;
+  &:hover,
+  &:focus {
+    color: ${COLORS.BLUE};
+  }
+
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    font-size: 70px;
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+  }
+`;
+
+const Header = props => {
   const [active, setActive] = useState(false);
+  const { onMenuActive } = props;
+
   const toggleActive = evt => {
     evt.preventDefault();
     setActive(!active);
+    onMenuActive(!active);
   };
+
   return (
     <Navigation>
       <Navigation__Wrapper>
@@ -151,6 +222,30 @@ const Header = () => {
           <MobileNavLine active={active} />
         </MobileNav>
       </Navigation__Wrapper>
+      <Menu
+        active={active}
+        aria-hidden={!active}
+        onClick={toggleActive}
+        onKeyDown={evt =>
+          evt.key === 'Enter' || evt.key === ' ' ? toggleActive : null
+        }
+      >
+        <MenuWrapper>
+          <MenuLink tabIndex={!active ? -1 : null} to="/">
+            Home
+          </MenuLink>
+          <MenuLink tabIndex={!active ? -1 : null} to="/about">
+            About
+          </MenuLink>
+          <MenuLink
+            tabIndex={!active ? -1 : null}
+            href={resume}
+            target="_blank"
+          >
+            Resume
+          </MenuLink>
+        </MenuWrapper>
+      </Menu>
     </Navigation>
   );
 };

@@ -19,19 +19,27 @@ class Layout extends React.Component {
     super(props);
     this.state = {
       mounted: false,
+      menuActive: false,
     };
+
+    this.onMenuActive = this.onMenuActive.bind(this);
   }
 
   componentDidMount() {
     setTimeout(() => this.setState({ mounted: true }));
   }
 
+  onMenuActive(menuActive) {
+    this.setState({ ...this.state, menuActive });
+    document.body.style.overflow = menuActive ? 'hidden' : null;
+  }
+
   render() {
     const { children } = this.props;
-    const { mounted } = this.state;
+    const { mounted, menuActive } = this.state;
     return (
       <Content mounted={mounted}>
-        <Header />
+        <Header onMenuActive={this.onMenuActive} />
         <main>{children}</main>
         <Footer />
       </Content>

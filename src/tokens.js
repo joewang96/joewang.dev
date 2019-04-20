@@ -3,6 +3,7 @@ export const COLORS = {
   OFF_BLACK: '#252525',
   GREY: '#757575',
   OFF_WHITE: '#E0E0E0',
+  WHITE: '#FFFFFF',
   BLUE: '#2147ed',
 };
 
