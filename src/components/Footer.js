@@ -1,12 +1,12 @@
-import { Link } from "gatsby"
-import styled from "styled-components"
-import React from "react"
-import A from "../elements/A"
-import P from "../elements/P"
-import SocialIcon from "../components/SocialIcon"
-import * as resume from "../misc/Joseph_Wang_Resume.pdf"
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import React from 'react';
+import A from '../elements/A';
+import P from '../elements/P';
+import SocialIcon from '../components/SocialIcon';
+import * as resume from '../misc/Joseph_Wang_Resume.pdf';
 
-import { COLORS, SIZES } from "../tokens"
+import { COLORS, SIZES } from '../tokens';
 
 const Styled_Footer = styled.footer`
   margin-bottom: 60px;
@@ -20,7 +20,7 @@ const Styled_Footer = styled.footer`
     padding: 0 ${SIZES.PADDING_MOBILE};
     margin-bottom: 40px;
   }
-`
+`;
 const Footer__Container = styled.div`
   display: flex;
   justify-content: space-between;
@@ -30,7 +30,7 @@ const Footer__Container = styled.div`
     flex-direction: column;
     align-items: flex-start;
   }
-`
+`;
 const Footer__Message_Social = styled.div`
   max-width: 400px;
   display: flex;
@@ -39,13 +39,13 @@ const Footer__Message_Social = styled.div`
   @media (max-width: ${SIZES.BREAK_MD}) {
     margin-bottom: 28px;
   }
-`
+`;
 const SocialList = styled.ul`
   list-style: none;
   position: relative;
 
   &:before {
-    content: " ";
+    content: ' ';
     position: absolute;
     top: 0;
     bottom: 0;
@@ -55,17 +55,17 @@ const SocialList = styled.ul`
     height: 1px;
     background: #e0e0e0;
   }
-`
+`;
 const SocialList__Item = styled.li`
   display: inline-block;
   &:not(:last-child) {
     margin-right: 26px; // 36 - 10 (padding 5 for each) = 26
   }
-`
+`;
 const Footer__Sitemap_Copyright = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 const SiteMap = styled.ul`
   list-style: none;
   margin-bottom: 24px;
@@ -73,7 +73,7 @@ const SiteMap = styled.ul`
   @media (max-width: ${SIZES.BREAK_SM}) {
     margin-bottom: 32px;
   }
-`
+`;
 const SiteMap__Item = styled.li`
   display: inline-block;
   &:not(:last-child) {
@@ -93,15 +93,15 @@ const SiteMap__Item = styled.li`
       color: ${COLORS.BLUE};
     }
   }
-`
+`;
 const Copyright_Text = styled(P)`
   && {
     font-size: 14px;
   }
-  font-family: "PT Mono", monospace;
-`
+  font-family: 'PT Mono', monospace;
+`;
 const Footer__Message_Text = styled(P)`
-  font-family: "Noto Serif", Georigia, serif;
+  font-family: 'Noto Serif', Georigia, serif;
   font-weight: normal;
   line-height: 1.66;
   margin-bottom: 60px;
@@ -113,7 +113,7 @@ const Footer__Message_Text = styled(P)`
   @media (max-width: ${SIZES.BREAK_MD}) {
     margin-bottom: 40px;
   }
-`
+`;
 
 const Footer = () => (
   <Styled_Footer>
@@ -167,7 +167,7 @@ const Footer = () => (
           </SiteMap__Item>
           <SiteMap__Item>
             <A href={resume} target="_blank">
-              Resume
+              Résumé
             </A>
           </SiteMap__Item>
         </SiteMap>
@@ -177,6 +177,6 @@ const Footer = () => (
       </Footer__Sitemap_Copyright>
     </Footer__Container>
   </Styled_Footer>
-)
+);
 
-export default Footer
+export default Footer;

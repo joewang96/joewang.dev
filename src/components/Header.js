@@ -51,11 +51,12 @@ const Navigation__Wrapper = styled.div`
 `;
 const Icon_Link = styled(Link)`
   text-decoration: none;
+  z-index: 1000;
 `;
 
 const Icon = styled.i`
   font-size: 22px;
-  color: ${COLORS.BLACK};
+  color: ${({ menuActive }) => (menuActive ? COLORS.WHITE : COLORS.BLACK)};
 `;
 
 const MobileNavLine = styled.span`
@@ -135,19 +136,19 @@ const Menu = styled.div`
     `};
   overflow: hidden;
 
-  padding: 80px ${SIZES.PADDING_DESKTOP};
-
-  @media (max-width: ${SIZES.BREAK_MD}) {
-    padding: 0 60px;
-  }
-
-  @media (max-width: ${SIZES.BREAK_SM}) {
-    padding: 0 30px;
-  }
-
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  padding: 80px ${SIZES.PADDING_DESKTOP};
+
+  @media (max-width: ${SIZES.BREAK_LG}) {
+    padding: 0 ${SIZES.PADDING_TABLET};
+  }
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    padding: 25vh ${SIZES.PADDING_MOBILE};
+    align-items: flex-start;
+  }
 `;
 
 const MenuWrapper = styled.div`
@@ -212,7 +213,7 @@ const MenuLink = styled(props => {
   }
 
   @media (max-width: ${SIZES.BREAK_SM}) {
-    font-size: 70px;
+    font-size: 64px;
   }
 `;
 
@@ -239,7 +240,7 @@ const Header = props => {
           to="/"
           aria-label="My personal logo. Click to return to the homepage."
         >
-          <Icon className="icon icon-logo" />
+          <Icon menuActive={active} className="icon icon-logo" />
         </Icon_Link>
 
         <MobileNav
@@ -284,7 +285,7 @@ const Header = props => {
               href={resume}
               target="_blank"
             >
-              Resume
+              Résumé
             </MenuLink>
           </MenuItem>
         </MenuWrapper>
