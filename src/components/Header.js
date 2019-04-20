@@ -127,7 +127,12 @@ const Menu = styled.div`
   left: 0;
   top: ${({ active }) => (active ? 0 : '-100vh')};
   z-index: 100;
-  transition: 250ms top ease-in-out;
+  transition: 200ms top ease-in-out;
+  ${({ active }) =>
+    active &&
+    css`
+      transition-duration: 300ms;
+    `};
   overflow: hidden;
 
   padding: 80px ${SIZES.PADDING_DESKTOP};
@@ -150,20 +155,49 @@ const MenuWrapper = styled.div`
   flex-direction: column;
 `;
 
+const MenuItem = styled(props => {
+  const { active: __active, ...rest } = props;
+  return <div {...rest} />;
+})`
+  opacity: ${({ active }) => (active ? 1 : 0)};
+  transform: translateX(${({ active }) => (active ? '0' : '-20px')});
+  transition: 100ms opacity, transform ease-in-out;
+  ${({ active }) =>
+    active &&
+    css`
+      transition-duration: 250ms;
+      &:nth-child(1) {
+        transition-delay: 250ms;
+      }
+      &:nth-child(2) {
+        transition-delay: 400ms;
+      }
+      &:nth-child(3) {
+        transition-delay: 550ms;
+      }
+    `}
+
+  &:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+  }
+`;
+
 const MenuLink = styled(props => {
-  const { href } = props;
+  const { href, ...rest } = props;
   const LinkComponent = href ? A : Link;
-  return <LinkComponent {...props} />;
+  return <LinkComponent href={href} {...rest} />;
 })`
   color: ${COLORS.WHITE};
   text-decoration: none;
   font-family: 'Noto Serif', Georigia, serif;
   font-size: 80px;
   font-weight: 400;
-
-  &:not(:last-of-type) {
-    margin-bottom: 40px;
-  }
 
   transition: color 250ms ease-in-out;
   &:hover,
@@ -179,9 +213,6 @@ const MenuLink = styled(props => {
 
   @media (max-width: ${SIZES.BREAK_SM}) {
     font-size: 70px;
-    &:not(:last-of-type) {
-      margin-bottom: 20px;
-    }
   }
 `;
 
@@ -195,9 +226,10 @@ const Header = props => {
     onMenuActive(!active);
   };
 
-  const closeMenu = () => {
+  const closeMenu = evt => {
     setActive(false);
     onMenuActive(false);
+    evt.target.blur();
   };
 
   return (
@@ -236,19 +268,25 @@ const Header = props => {
         }
       >
         <MenuWrapper>
-          <MenuLink tabIndex={!active ? -1 : null} to="/">
-            Home
-          </MenuLink>
-          <MenuLink tabIndex={!active ? -1 : null} to="/about">
-            About
-          </MenuLink>
-          <MenuLink
-            tabIndex={!active ? -1 : null}
-            href={resume}
-            target="_blank"
-          >
-            Resume
-          </MenuLink>
+          <MenuItem active={active}>
+            <MenuLink tabIndex={!active ? -1 : null} to="/">
+              Home
+            </MenuLink>
+          </MenuItem>
+          <MenuItem active={active}>
+            <MenuLink tabIndex={!active ? -1 : null} to="/about">
+              About
+            </MenuLink>
+          </MenuItem>
+          <MenuItem active={active}>
+            <MenuLink
+              tabIndex={!active ? -1 : null}
+              href={resume}
+              target="_blank"
+            >
+              Resume
+            </MenuLink>
+          </MenuItem>
         </MenuWrapper>
       </Menu>
     </Navigation>
