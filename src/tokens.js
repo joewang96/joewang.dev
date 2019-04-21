@@ -15,4 +15,6 @@ export const SIZES = {
   PADDING_DESKTOP: '100px',
   PADDING_TABLET: '50px',
   PADDING_MOBILE: '20px',
+
+  PROSE_WIDTH: '640px',
 };

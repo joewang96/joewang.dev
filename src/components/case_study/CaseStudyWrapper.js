@@ -6,14 +6,14 @@ import H2 from '../../elements/H2';
 import P from '../../elements/P';
 
 const Wrapper = styled.div`
-  padding: 60px ${SIZES.PADDING_DESKTOP};
+  padding: 60px ${SIZES.PADDING_DESKTOP} 120px;
 
   @media (max-width: ${SIZES.BREAK_LG}) {
-    padding: 30px ${SIZES.PADDING_TABLET};
+    padding: 30px ${SIZES.PADDING_TABLET} 100px;
   }
 
   @media (max-width: ${SIZES.BREAK_SM}) {
-    padding: 15px ${SIZES.PADDING_MOBILE};
+    padding: 15px ${SIZES.PADDING_MOBILE} 80px;
   }
 `;
 
@@ -38,7 +38,7 @@ const Subtitle = styled(P)`
   font-style: italic;
   font-size: 24px;
   margin-bottom: 60px;
-  max-width: 589px;
+  max-width: ${SIZES.PROSE_WIDTH};
   color: ${COLORS.GREY};
 `;
 
