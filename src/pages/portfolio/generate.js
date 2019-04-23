@@ -7,6 +7,8 @@ import CaseStudyWrapper from '../../components/case_study/CaseStudyWrapper';
 import SectionTitle from '../../components/case_study/SectionTitle';
 import Prose from '../../components/case_study/Prose';
 
+import * as generateMockup from '../../images/generate/generate-mock.png';
+
 const GenerateRedesign = () => (
   <Layout>
     <SEO title="Generate Redesign" hideTitle={true} />
@@ -14,6 +16,11 @@ const GenerateRedesign = () => (
       title="Generate Website Redesign — complete visual, UX, and website overhaul."
       subtitle="How might we create an engaging online brand that showcases our story and draws attention from prospective students?"
     >
+      <img
+        src={generateMockup}
+        style={{ width: '100%', maxWidth: 775, marginBottom: 60 }}
+      />
+
       <SectionTitle>Starting from almost zero - what is Generate?</SectionTitle>
       <Prose>
         Generate is a product development studio at Northeastern that aims to
