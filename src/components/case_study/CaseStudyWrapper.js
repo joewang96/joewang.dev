@@ -37,16 +37,23 @@ const Title = styled(H2)`
 const Subtitle = styled(P)`
   font-style: italic;
   font-size: 24px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   max-width: ${SIZES.PROSE_WIDTH};
   color: ${COLORS.GREY};
 `;
 
-const CaseStudyWrapper = ({ children, title, subtitle, ...rest }) => (
+const ImagePreview = styled.img`
+  width: 100%;
+  max-width: 775px;
+  margin-bottom: 80px;
+`;
+
+const CaseStudyWrapper = ({ children, title, subtitle, img, ...rest }) => (
   <Wrapper>
     <Content {...rest}>
       <Title>{title}</Title>
       <Subtitle>{subtitle}</Subtitle>
+      {img && <ImagePreview alt={img.alt} src={img.src} />}
       {children}
     </Content>
   </Wrapper>

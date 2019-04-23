@@ -15,12 +15,8 @@ const GenerateRedesign = () => (
     <CaseStudyWrapper
       title="Generate Website Redesign — complete visual, UX, and website overhaul."
       subtitle="How might we create an engaging online brand that showcases our story and draws attention from prospective students?"
+      img={{ src: generateMockup, alt: '' }}
     >
-      <img
-        src={generateMockup}
-        style={{ width: '100%', maxWidth: 775, marginBottom: 60 }}
-      />
-
       <SectionTitle>Starting from almost zero - what is Generate?</SectionTitle>
       <Prose>
         Generate is a product development studio at Northeastern that aims to
