@@ -113,6 +113,11 @@ const Portfolio_Image = styled.div`
   background-position: center;
   background-repeat: no-repeat;
 
+  @media (min-width: 1480px) {
+    height: 0;
+    padding-bottom: ${({ ratio }) => `${ratio || 70}%`};
+  }
+
   @media (max-width: ${SIZES.BREAK_MD}) {
     height: 0;
     padding-bottom: 60%;
@@ -187,6 +192,7 @@ const PortfolioSection = () => (
           >
             <Portfolio_Image
               height="487px"
+              ratio={120}
               style={{ backgroundImage: `url(${booboston_preview})` }}
             />
           </Link>

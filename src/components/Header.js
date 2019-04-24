@@ -31,23 +31,6 @@ const Navigation__Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
-
-  &:before {
-    content: ' ';
-    position: absolute;
-    left: calc(-32px - ${SIZES.PADDING_DESKTOP});
-    width: ${SIZES.PADDING_DESKTOP};
-    height: 1px;
-    top: -1px;
-    bottom: 0;
-    margin: auto;
-    background: #e0e0e0;
-
-    @media (max-width: ${SIZES.BREAK_LG}) {
-      left: calc(-20px - ${SIZES.PADDING_TABLET});
-      width: ${SIZES.PADDING_TABLET};
-    }
-  }
 `;
 const Icon_Link = styled(Link)`
   text-decoration: none;
@@ -129,6 +112,7 @@ const Menu = styled.div`
   top: ${({ active }) => (active ? 0 : '-100vh')};
   z-index: 100;
   transition: 200ms top ease-in-out;
+  justify-content: center;
   ${({ active }) =>
     active &&
     css`
@@ -154,6 +138,8 @@ const Menu = styled.div`
 const MenuWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 1400px;
+  width: 100%;
 `;
 
 const MenuItem = styled(props => {

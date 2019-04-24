@@ -11,7 +11,7 @@ const Content = styled.div`
   transition: 500ms opacity ease-in-out;
 
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1600px;
 `;
 
 class Layout extends React.Component {

@@ -62,7 +62,6 @@ const LightWeight = styled.span`
 `;
 
 const WorkListings = styled(ListComponent)`
-  max-width: 1089px;
   margin-left: auto;
   ${H2} {
     max-width: 280px;

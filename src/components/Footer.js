@@ -43,18 +43,6 @@ const Footer__Message_Social = styled.div`
 const SocialList = styled.ul`
   list-style: none;
   position: relative;
-
-  &:before {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    right: calc(100% + 32px);
-    width: 100px;
-    height: 1px;
-    background: #e0e0e0;
-  }
 `;
 const SocialList__Item = styled.li`
   display: inline-block;
