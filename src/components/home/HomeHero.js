@@ -55,6 +55,10 @@ const Hero_TextContent = styled.div`
     }
   }
 
+  ${P} {
+    max-width: 29rem;
+  }
+
   ${H1}, ${P} {
     @media (max-width: ${SIZES.BREAK_MD}) {
       padding: 0 ${SIZES.PADDING_TABLET};
@@ -153,7 +157,7 @@ const HomeHero = () => (
       <Hero_ImageContainer mobileOnly={true}>
         <Hero_Image fluid={headshot} />
       </Hero_ImageContainer>
-      <P style={{ maxWidth: 463 }}>
+      <P>
         Luckily, I have a background in both. Currently a Software Engineer at{' '}
         <A href="https://hubspot.com" target="_blank" rel="noreferrer noopener">
           HubSpot
