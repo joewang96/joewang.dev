@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/Seo';
@@ -8,6 +9,15 @@ import SectionTitle from '../../components/case_study/SectionTitle';
 import Prose from '../../components/case_study/Prose';
 
 import * as generateMockup from '../../images/generate/generate-mock.png';
+import * as generateReqs from '../../images/generate/generate-reqs.jpg';
+import * as generateWireDrawn from '../../images/generate/generate-wireframe-drawn.jpg';
+import * as generateWireDigital from '../../images/generate/generate-wireframe-digital.png';
+
+const StyledImage = styled.img`
+  width: 100%;
+  max-width: 48.4rem;
+  margin: 60px 0;
+`;
 
 const GenerateRedesign = () => (
   <Layout>
@@ -50,6 +60,49 @@ const GenerateRedesign = () => (
         group content that was related to each other. This also allowed my to
         clean up any pages that were unnecessary under this structure of
         information.
+      </Prose>
+
+      <StyledImage src={generateReqs} />
+
+      <SectionTitle>Creating wireframes</SectionTitle>
+
+      <Prose>
+        After testing my IA decisions with key stakeholders of Generate
+        (Executive, Ops, and Branding Director) and receiving approval, I was
+        able to begin wireframes for how the content would be presented on the
+        page.
+      </Prose>
+      <Prose>
+        I began this process by sketching out rough drafts, not spending too
+        much time on the details - just enough to convey the necessary
+        information. I showed these to the Design Director, collected feedback
+        and reworked my designs to best incorporate the feedback she provided.
+      </Prose>
+      <Prose>
+        After designs have been reviewed and edited, I moved to creating digital
+        sketches with more of the fine details of spacing and layout
+        incorporated. Increasing fidelity at each step of the process allowed
+        for larger UX details to be straightened out before getting caught up in
+        the more visual aspects.
+      </Prose>
+
+      <StyledImage src={generateWireDrawn} />
+
+      <StyledImage src={generateWireDigital} />
+
+      <SectionTitle>Translating brand to the web</SectionTitle>
+
+      <Prose>
+        While creating the wireframes I also created a few mockups to help
+        determine what Generate's web brand would be. I took a modified approach
+        from style-tiles, with an emphasis on showcasing the same section of the
+        page to not introduce additional factors for participant feedback.
+      </Prose>
+      <Prose>
+        Branding has been a part of the design process that I've had the least
+        experience in--with my expertise coming in through interaction and UX
+        design. This was a great learning opportunity to take an existing,
+        primarily print brand, and translate it into a digital medium.
       </Prose>
     </CaseStudyWrapper>
   </Layout>
