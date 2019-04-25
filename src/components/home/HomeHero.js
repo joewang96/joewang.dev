@@ -1,15 +1,15 @@
-import React from "react"
-import styled, { css } from "styled-components"
-import { StaticQuery, graphql } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
+import React from 'react';
+import styled, { css } from 'styled-components';
+import { StaticQuery, graphql } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
 
-import H1 from "../../elements/H1"
-import P from "../../elements/P"
-import A from "../../elements/A"
+import H1 from '../../elements/H1';
+import P from '../../elements/P';
+import A from '../../elements/A';
 
-import { SIZES } from "../../tokens"
+import { SIZES } from '../../tokens';
 
-import * as headshot from "../../images/headshot.png"
+import * as headshot from '../../images/headshot.png';
 
 const HeroContainer = styled.section`
   padding-left: ${SIZES.PADDING_DESKTOP};
@@ -35,11 +35,11 @@ const HeroContainer = styled.section`
   @media (max-width: ${SIZES.BREAK_SM}) {
     margin-bottom: 80px;
   }
-`
+`;
 
 const Hero_TextContent = styled.div`
   width: 100%;
-  max-width: 616px;
+  max-width: 38.5rem;
   margin-right: 33px;
 
   @media (max-width: ${SIZES.BREAK_MD}) {
@@ -64,17 +64,17 @@ const Hero_TextContent = styled.div`
       padding: 0 ${SIZES.PADDING_MOBILE};
     }
   }
-`
+`;
 
 const Hero_ImageContainer = styled(props => {
-  const { mobileOnly: __mobileOnly, ...rest } = props
+  const { mobileOnly: __mobileOnly, ...rest } = props;
   return (
     <div
       {...rest}
       aria-label="A headshot of myself where I am smiling and looking at the camera, with a purple gradient background behind me. I am a man, wearing a blue denim shirt over a grey t-shirt."
       role="img"
     />
-  )
+  );
 })`
   width: 100%;
   max-width: 41vw;
@@ -111,7 +111,7 @@ const Hero_ImageContainer = styled(props => {
             display: none;
           }
         `}
-`
+`;
 
 const Hero_Image = styled(props => {
   return (
@@ -134,7 +134,7 @@ const Hero_Image = styled(props => {
         />
       )}
     />
-  )
+  );
 })`
   width: 100%;
   padding-bottom: 100%;
@@ -142,7 +142,7 @@ const Hero_Image = styled(props => {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-`
+`;
 
 const HomeHero = () => (
   <HeroContainer>
@@ -154,18 +154,18 @@ const HomeHero = () => (
         <Hero_Image fluid={headshot} />
       </Hero_ImageContainer>
       <P style={{ maxWidth: 463 }}>
-        Luckily, I have a background in both. Currently a Software Engineer at{" "}
+        Luckily, I have a background in both. Currently a Software Engineer at{' '}
         <A href="https://hubspot.com" target="_blank" rel="noreferrer noopener">
           HubSpot
-        </A>{" "}
-        working on{" "}
+        </A>{' '}
+        working on{' '}
         <A
           href="https://canvas.hubspot.com"
           target="_blank"
           rel="noreferrer noopener"
         >
           Canvas
-        </A>{" "}
+        </A>{' '}
         — their in-house design system.
       </P>
     </Hero_TextContent>
@@ -173,6 +173,6 @@ const HomeHero = () => (
       <Hero_Image fluid={headshot} />
     </Hero_ImageContainer>
   </HeroContainer>
-)
+);
 
-export default HomeHero
+export default HomeHero;

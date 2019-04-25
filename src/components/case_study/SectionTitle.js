@@ -7,7 +7,7 @@ import Prose from './Prose';
 const SectionTitle = styled(P)`
   font-family: 'Biryani', Cabin, Helvetica Neue, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 1.375rem;
 
   width: 100%;
   max-width: ${SIZES.PROSE_WIDTH};

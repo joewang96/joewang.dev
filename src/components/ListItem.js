@@ -24,7 +24,7 @@ const List_Item = styled.div`
 `;
 
 const List_Item__Content = styled.div`
-  max-width: 523px;
+  max-width: 32.7rem;
 `;
 
 const List_Item__Title = styled(P)`
@@ -35,10 +35,10 @@ const List_Item__Title = styled(P)`
   color: ${COLORS.BLACK};
 
   @media (max-width: ${SIZES.BREAK_MD}) {
-    font-size: 18px;
+    font-size: 1.125em;
   }
   @media (max-width: ${SIZES.BREAK_SM}) {
-    font-size: 16px;
+    font-size: 1rem;
   }
 `;
 
@@ -46,19 +46,19 @@ const List_Item__Body = styled(P)`
   line-height: 1.75;
   margin-bottom: 0;
   && {
-    font-size: 16px;
+    font-size: 1rem;
     @media (max-width: ${SIZES.BREAK_SM}) {
-      font-size: 14px;
+      font-size: 0.875rem;
     }
   }
 `;
 
 const List_Item__Tag = styled(P)`
   && {
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 2;
     @media (max-width: ${SIZES.BREAK_SM}) {
-      font-size: 12px;
+      font-size: 0.75rem;
     }
   }
   color: ${COLORS.GREY};

@@ -22,7 +22,7 @@ const Content = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 895px;
+  max-width: 56rem;
   margin: auto;
 `;
 
@@ -36,7 +36,7 @@ const Title = styled(H2)`
 
 const Subtitle = styled(P)`
   font-style: italic;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 80px;
   max-width: ${SIZES.PROSE_WIDTH};
   color: ${COLORS.GREY};
@@ -44,7 +44,7 @@ const Subtitle = styled(P)`
 
 const ImagePreview = styled.img`
   width: 100%;
-  max-width: 775px;
+  max-width: 48.4rem;
   margin-bottom: 80px;
 `;
 

@@ -38,7 +38,7 @@ const Icon_Link = styled(Link)`
 `;
 
 const Icon = styled.i`
-  font-size: 22px;
+  font-size: 1.375rem;
   color: ${({ menuActive }) => (menuActive ? COLORS.WHITE : COLORS.BLACK)};
 `;
 
@@ -183,7 +183,7 @@ const MenuLink = styled(props => {
   color: ${COLORS.WHITE};
   text-decoration: none;
   font-family: 'Noto Serif', Georigia, serif;
-  font-size: 80px;
+  font-size: 5rem;
   font-weight: 400;
 
   transition: color 250ms ease-in-out;
@@ -199,7 +199,7 @@ const MenuLink = styled(props => {
   }
 
   @media (max-width: ${SIZES.BREAK_SM}) {
-    font-size: 64px;
+    font-size: 4rem;
   }
 `;
 

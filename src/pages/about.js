@@ -48,7 +48,7 @@ const Title = styled(H1)`
 `;
 
 const Body = styled(P)`
-  max-width: 530px;
+  max-width: 33.125rem;
   &:not(:last-child) {
     margin-bottom: 36px;
     @media (max-width: ${SIZES.BREAK_SM}) {
@@ -64,14 +64,14 @@ const LightWeight = styled.span`
 const WorkListings = styled(ListComponent)`
   margin-left: auto;
   ${H2} {
-    max-width: 280px;
+    max-width: 17.5rem;
   }
 `;
 
 const List_Cta = styled(A)`
   font-family: 'Noto Sans', Cabin, Helvetica Neue, Helvetica, sans-serif;
   font-style: italic;
-  font-size: 16px;
+  font-size: 1rem;
   text-decoration: none;
   font-weight: 400;
   line-height: 1.8;
@@ -79,7 +79,7 @@ const List_Cta = styled(A)`
   display: inline-block;
   margin-top: 36px;
   @media (max-width: ${SIZES.BREAK_SM}) {
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-top: 0px;
     margin-bottom: 18px;
   }

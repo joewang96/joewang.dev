@@ -28,7 +28,7 @@ const List_Wrapper = styled.section`
 `;
 
 const List_Wrapper__Title = styled(H2)`
-  max-width: 338px;
+  max-width: 21.125rem;
   margin-right: 126px;
   box-sizing: content-box;
   flex-shrink: 0;
@@ -38,7 +38,7 @@ const List_Wrapper__Title = styled(H2)`
   }
   @media (max-width: ${SIZES.BREAK_MD}) {
     margin-bottom: 60px;
-    max-width: 426px;
+    max-width: 26.625rem;
   }
 
   @media (max-width: ${SIZES.BREAK_SM}) {
@@ -48,10 +48,10 @@ const List_Wrapper__Title = styled(H2)`
 
 const List_Wrapper__Content = styled.div`
   flex-grow: 1;
-  max-width: 880px;
+  max-width: 55rem;
 
   @media (max-width: ${SIZES.BREAK_MD}) {
-    max-width: 600px;
+    max-width: 37.5rem;
     margin-left: auto;
     width: 90%;
   }

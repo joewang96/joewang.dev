@@ -30,7 +30,7 @@ const Styled_PortfolioSection = styled.section`
 `;
 
 const Title = styled(H2)`
-  max-width: 431px;
+  max-width: 26rem;
   margin-bottom: 63px;
 
   @media (max-width: ${SIZES.BREAK_MD}) {
@@ -51,7 +51,7 @@ const PortfolioSection__Container = styled.div`
 
 const Portfolio_Tag = styled.p`
   font-family: 'Biryani', 'Cabin', 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
 
   ${props => (props.top ? 'margin-top: 16px' : 'margin-bottom: 16px')};

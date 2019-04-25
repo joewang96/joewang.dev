@@ -1,14 +1,14 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 
-import Layout from "../components/Layout"
-import SEO from "../components/Seo"
+import Layout from '../components/Layout';
+import SEO from '../components/Seo';
 
-import H1 from "../elements/H1"
-import P from "../elements/P"
-import A from "../elements/A"
+import H1 from '../elements/H1';
+import P from '../elements/P';
+import A from '../elements/A';
 
-import { SIZES } from "../tokens"
+import { SIZES } from '../tokens';
 
 const Wrapper = styled.div`
   display: flex;
@@ -32,23 +32,23 @@ const Wrapper = styled.div`
 
   padding-top: 60px;
   padding-bottom: 60px;
-`
+`;
 
-const Container = styled.div``
+const Container = styled.div``;
 
 const Title = styled(H1)`
   margin-bottom: 48px;
   @media (max-width: ${SIZES.BREAK_MD}) {
     margin-bottom: 32px;
   }
-`
+`;
 
 const Body = styled(P)`
-  max-width: 530px;
+  max-width: 33.125rem;
   &:not(:last-child) {
     margin-bottom: 36px;
   }
-`
+`;
 
 const NotFoundPage = () => (
   <Layout>
@@ -68,6 +68,6 @@ const NotFoundPage = () => (
       </Container>
     </Wrapper>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

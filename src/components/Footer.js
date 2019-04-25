@@ -32,7 +32,7 @@ const Footer__Container = styled.div`
   }
 `;
 const Footer__Message_Social = styled.div`
-  max-width: 400px;
+  max-width: 25rem;
   display: flex;
   flex-direction: column;
 
@@ -84,7 +84,7 @@ const SiteMap__Item = styled.li`
 `;
 const Copyright_Text = styled(P)`
   && {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   font-family: 'PT Mono', monospace;
 `;
@@ -95,7 +95,7 @@ const Footer__Message_Text = styled(P)`
   margin-bottom: 60px;
   color: ${COLORS.BLACK};
   && {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   @media (max-width: ${SIZES.BREAK_MD}) {
