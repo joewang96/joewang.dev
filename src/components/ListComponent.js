@@ -9,7 +9,7 @@ const List_Wrapper = styled.section`
   padding: 0 0 0 ${SIZES.PADDING_DESKTOP};
   margin-bottom: 136px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 
   @media (max-width: ${SIZES.BREAK_LG}) {
     padding: 0 0 0 ${SIZES.PADDING_TABLET};
@@ -48,7 +48,7 @@ const List_Wrapper__Title = styled(H2)`
 
 const List_Wrapper__Content = styled.div`
   flex-grow: 1;
-  max-width: 55rem;
+  max-width: 49rem;
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     max-width: 37.5rem;
