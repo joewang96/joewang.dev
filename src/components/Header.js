@@ -123,10 +123,12 @@ const Menu = styled.div`
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  padding: 80px ${SIZES.PADDING_DESKTOP};
+  padding: 80px ${`${parseInt(SIZES.PADDING_DESKTOP, 10) / 2}px`} 0px
+    ${SIZES.PADDING_DESKTOP};
 
   @media (max-width: ${SIZES.BREAK_LG}) {
-    padding: 0 ${SIZES.PADDING_TABLET};
+    padding: 60px ${`${parseInt(SIZES.PADDING_TABLET, 10) / 2}px`} 0
+      ${SIZES.PADDING_TABLET};
   }
 
   @media (max-width: ${SIZES.BREAK_SM}) {
@@ -138,6 +140,7 @@ const Menu = styled.div`
 const MenuWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   max-width: 1400px;
   width: 100%;
 `;
@@ -146,60 +149,53 @@ const MenuItem = styled(props => {
   const { active: __active, ...rest } = props;
   return <div {...rest} />;
 })`
-  opacity: ${({ active }) => (active ? 1 : 0)};
-  transform: translateX(${({ active }) => (active ? '0' : '-20px')});
-  transition: 100ms opacity, transform ease-in-out;
-  ${({ active }) =>
-    active &&
-    css`
-      transition-duration: 250ms;
-      &:nth-child(1) {
-        transition-delay: 250ms;
-      }
-      &:nth-child(2) {
-        transition-delay: 400ms;
-      }
-      &:nth-child(3) {
-        transition-delay: 550ms;
-      }
-    `}
-
-  &:not(:last-of-type) {
-    margin-bottom: 40px;
-  }
-
-  @media (max-width: ${SIZES.BREAK_SM}) {
-    &:not(:last-of-type) {
-      margin-bottom: 20px;
-    }
+  & + & {
+    margin-top: 0.875rem;
   }
 `;
 
 const MenuLink = styled(props => {
   const { href, ...rest } = props;
   const LinkComponent = href ? A : Link;
-  return <LinkComponent href={href} {...rest} />;
+  return <LinkComponent {...rest} href={href} />;
 })`
-  color: ${COLORS.WHITE};
+  color: ${({ to }) =>
+    to && window.location.pathname === to ? COLORS.WHITE : COLORS.LIGHT_GREY};
   text-decoration: none;
-  font-family: 'Noto Serif', Georigia, serif;
-  font-size: 5rem;
-  font-weight: 400;
+  font-family: 'Biryani', Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
 
   transition: color 250ms ease-in-out;
   &:hover,
   &:focus {
-    color: ${COLORS.BLUE};
+    color: ${COLORS.WHITE};
+  }
+`;
+
+const MenuCaseStudies = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 1.875rem 0;
+  text-align: right;
+`;
+
+const MenuCaseStudyItem = styled(Link)`
+  color: ${({ to }) =>
+    to && window.location.pathname === to ? COLORS.WHITE : COLORS.LIGHT_GREY};
+  text-decoration: none;
+  font-family: 'Noto Sans', Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-style: italic;
+
+  transition: color 250ms ease-in-out;
+  &:hover,
+  &:focus {
+    color: ${COLORS.WHITE};
   }
 
-  @media (max-width: ${SIZES.BREAK_MD}) {
-    &:not(:last-of-type) {
-      margin-bottom: 30px;
-    }
-  }
-
-  @media (max-width: ${SIZES.BREAK_SM}) {
-    font-size: 4rem;
+  &:not(:last-of-type) {
+    margin-bottom: 1rem;
   }
 `;
 
@@ -260,6 +256,22 @@ const Header = props => {
               Home
             </MenuLink>
           </MenuItem>
+
+          <MenuCaseStudies>
+            <MenuCaseStudyItem to="/portfolio/generate">
+              Generate Website Redesign
+            </MenuCaseStudyItem>
+            <MenuCaseStudyItem to="/portfolio/hubspot-canvas">
+              Canvas Design System
+            </MenuCaseStudyItem>
+            <MenuCaseStudyItem to="/portfolio/mentalligence">
+              Mentalligence Brand Identity
+            </MenuCaseStudyItem>
+            <MenuCaseStudyItem to="/portfolio/boo-boston">
+              Boo! Boston App Concept
+            </MenuCaseStudyItem>
+          </MenuCaseStudies>
+
           <MenuItem active={active}>
             <MenuLink tabIndex={!active ? -1 : null} to="/about">
               About

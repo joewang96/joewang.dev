@@ -10,8 +10,9 @@ import Prose from '../../components/case_study/Prose';
 
 import * as generateMockup from '../../images/generate/generate-mock.png';
 import * as generateReqs from '../../images/generate/generate-reqs.jpg';
-import * as generateWireDrawn from '../../images/generate/generate-wireframe-drawn.jpg';
 import * as generateWireDigital from '../../images/generate/generate-wireframe-digital.png';
+import * as generateUIStyles from '../../images/generate/generate-ui-styles.png';
+import * as generateDirection from '../../images/generate/generate-directions.png';
 
 const StyledImage = styled.img`
   width: 100%;
@@ -44,22 +45,15 @@ const GenerateRedesign = () => (
       <SectionTitle>Beginning research phase</SectionTitle>
 
       <Prose>
-        The first part of the process in redesigning the Generate website was
-        determining what information was pertinent to the organization and how I
-        was going to lay it out. I started by interviewing directors of the
-        organization to get a sense of what they wanted on the new site.
+        The first part of the process was determining what information was
+        pertinent to Generate and what was the best way to organize it. I
+        started by interviewing directors of the organization to get a sense of
+        what they wanted on the new site and translated those findings into some
+        requirements.
       </Prose>
       <Prose>
-        Once that was complete, I conducted an information architecture
-        exercise--listing out all of their current pages and what information
-        was displayed on each page. Afterward, I added the requested additions I
-        found during my interviews as bullets floating on the page.
-      </Prose>
-      <Prose>
-        With the information set, I began reorganizing the structure to better
-        group content that was related to each other. This also allowed my to
-        clean up any pages that were unnecessary under this structure of
-        information.
+        After handling the requirements gathering, I began a few card-sorting
+        exercises to parse through the existing IA of the site and clean it up.
       </Prose>
 
       <StyledImage src={generateReqs} />
@@ -67,26 +61,17 @@ const GenerateRedesign = () => (
       <SectionTitle>Creating wireframes</SectionTitle>
 
       <Prose>
-        After testing my IA decisions with key stakeholders of Generate
-        (Executive, Ops, and Branding Director) and receiving approval, I was
-        able to begin wireframes for how the content would be presented on the
-        page.
+        After receiving feedback and approval of my IA decisions, I was able to
+        begin creating initial wireframes for how the content would be presented
+        on each page.
       </Prose>
       <Prose>
-        I began this process by sketching out rough drafts, not spending too
-        much time on the details - just enough to convey the necessary
-        information. I showed these to the Design Director, collected feedback
-        and reworked my designs to best incorporate the feedback she provided.
-      </Prose>
-      <Prose>
-        After designs have been reviewed and edited, I moved to creating digital
+        After a few rounds of designs and revisions, I moved to creating digital
         sketches with more of the fine details of spacing and layout
         incorporated. Increasing fidelity at each step of the process allowed
         for larger UX details to be straightened out before getting caught up in
         the more visual aspects.
       </Prose>
-
-      <StyledImage src={generateWireDrawn} />
 
       <StyledImage src={generateWireDigital} />
 
@@ -100,9 +85,31 @@ const GenerateRedesign = () => (
       </Prose>
       <Prose>
         Branding has been a part of the design process that I've had the least
-        experience in--with my expertise coming in through interaction and UX
-        design. This was a great learning opportunity to take an existing,
-        primarily print brand, and translate it into a digital medium.
+        experience in—with my expertise being in interaction and UX design. This
+        was a great learning opportunity to take an existing, primarily print
+        brand, and translate it into a digital context.
+      </Prose>
+
+      <StyledImage src={generateDirection} />
+
+      <StyledImage style={{ marginTop: 0 }} src={generateUIStyles} />
+
+      <SectionTitle>Moving into hi-fidelity</SectionTitle>
+
+      <Prose>
+        With a brand and UI directions chosen, I began moving into hi-fi mocks.
+        The original site and brand focused primarily on the blue color featured
+        in the organization's logo which I found difficult to work with, both in
+        terms of accessibility and pairing it with dynamic content such as
+        images.
+      </Prose>
+
+      <Prose>
+        To overcome this dilemma I took the initiative to try a palette swap of
+        the brand's colors—focusing more on the yellow as the primary accent
+        color with a lot of white space to create a more open feeling. Overall I
+        had positive feedback regarding this decision, even with initial
+        hesitation of the directors of cutting back on Generate's primary color.
       </Prose>
     </CaseStudyWrapper>
   </Layout>

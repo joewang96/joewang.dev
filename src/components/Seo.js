@@ -86,7 +86,7 @@ function SEO({ description, lang, meta, keywords, title, hideTitle }) {
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i"
+        href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,500,700,700i"
         rel="stylesheet"
       />
       <link
