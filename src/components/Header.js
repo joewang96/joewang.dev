@@ -143,6 +143,10 @@ const MenuWrapper = styled.div`
   align-items: flex-end;
   max-width: 1400px;
   width: 100%;
+
+  transition: opacity ${({ active }) => (active ? '400ms' : '50ms')} ease-out
+    ${({ active }) => (active ? '300ms' : '0ms')};
+  opacity: ${({ active }) => (active ? 1 : 0)};
 `;
 
 const MenuItem = styled(props => {
@@ -250,7 +254,7 @@ const Header = props => {
           evt.key === 'Enter' || evt.key === ' ' ? closeMenu : null
         }
       >
-        <MenuWrapper>
+        <MenuWrapper active={active}>
           <MenuItem active={active}>
             <MenuLink tabIndex={!active ? -1 : null} to="/" pathname={pathname}>
               Home
