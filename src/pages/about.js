@@ -85,8 +85,8 @@ const List_Cta = styled(A)`
   }
 `;
 
-const AboutPage = () => (
-  <Layout>
+const AboutPage = ({ location }) => (
+  <Layout location={location}>
     <SEO title="About" />
     <Wrapper>
       <Container>

@@ -50,8 +50,8 @@ const Body = styled(P)`
   }
 `;
 
-const NotFoundPage = () => (
-  <Layout>
+const NotFoundPage = ({ location }) => (
+  <Layout location={location}>
     <SEO title="404: Not found" />
 
     <Wrapper>

@@ -6,8 +6,8 @@ import SEO from '../components/Seo';
 import HomeHero from '../components/home/HomeHero';
 import PortfolioSection from '../components/home/PortfolioSection';
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = ({ location }) => (
+  <Layout location={location}>
     <SEO title="Joseph Wang" hideTitle={true} />
     {/* Hero Container */}
     <HomeHero />

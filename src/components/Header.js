@@ -159,8 +159,8 @@ const MenuLink = styled(props => {
   const LinkComponent = href ? A : Link;
   return <LinkComponent {...rest} href={href} />;
 })`
-  color: ${({ to }) =>
-    to && window.location.pathname === to ? COLORS.WHITE : COLORS.LIGHT_GREY};
+  color: ${({ to, pathname }) =>
+    to && pathname === to ? COLORS.WHITE : COLORS.LIGHT_GREY};
   text-decoration: none;
   font-family: 'Biryani', Helvetica, sans-serif;
   font-size: 1.5rem;
@@ -181,8 +181,8 @@ const MenuCaseStudies = styled.div`
 `;
 
 const MenuCaseStudyItem = styled(Link)`
-  color: ${({ to }) =>
-    to && window.location.pathname === to ? COLORS.WHITE : COLORS.LIGHT_GREY};
+  color: ${({ to, pathname }) =>
+    to && pathname === to ? COLORS.WHITE : COLORS.LIGHT_GREY};
   text-decoration: none;
   font-family: 'Noto Sans', Helvetica, sans-serif;
   font-size: 1.25rem;
@@ -201,7 +201,7 @@ const MenuCaseStudyItem = styled(Link)`
 
 const Header = props => {
   const [active, setActive] = useState(false);
-  const { onMenuActive } = props;
+  const { onMenuActive, pathname } = props;
 
   const toggleActive = evt => {
     evt.preventDefault();
@@ -252,28 +252,38 @@ const Header = props => {
       >
         <MenuWrapper>
           <MenuItem active={active}>
-            <MenuLink tabIndex={!active ? -1 : null} to="/">
+            <MenuLink tabIndex={!active ? -1 : null} to="/" pathname={pathname}>
               Home
             </MenuLink>
           </MenuItem>
 
           <MenuCaseStudies>
-            <MenuCaseStudyItem to="/portfolio/generate">
+            <MenuCaseStudyItem to="/portfolio/generate" pathname={pathname}>
               Generate Website Redesign
             </MenuCaseStudyItem>
-            <MenuCaseStudyItem to="/portfolio/hubspot-canvas">
+            <MenuCaseStudyItem
+              to="/portfolio/hubspot-canvas"
+              pathname={pathname}
+            >
               Canvas Design System
             </MenuCaseStudyItem>
-            <MenuCaseStudyItem to="/portfolio/mentalligence">
+            <MenuCaseStudyItem
+              to="/portfolio/mentalligence"
+              pathname={pathname}
+            >
               Mentalligence Brand Identity
             </MenuCaseStudyItem>
-            <MenuCaseStudyItem to="/portfolio/boo-boston">
+            <MenuCaseStudyItem to="/portfolio/boo-boston" pathname={pathname}>
               Boo! Boston App Concept
             </MenuCaseStudyItem>
           </MenuCaseStudies>
 
           <MenuItem active={active}>
-            <MenuLink tabIndex={!active ? -1 : null} to="/about">
+            <MenuLink
+              tabIndex={!active ? -1 : null}
+              to="/about"
+              pathname={pathname}
+            >
               About
             </MenuLink>
           </MenuItem>

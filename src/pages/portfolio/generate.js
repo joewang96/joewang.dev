@@ -20,8 +20,8 @@ const StyledImage = styled.img`
   margin: 60px 0;
 `;
 
-const GenerateRedesign = () => (
-  <Layout>
+const GenerateRedesign = ({ location }) => (
+  <Layout location={location}>
     <SEO title="Generate Redesign" hideTitle={true} />
     <CaseStudyWrapper
       title="Generate Website Redesign — complete visual, UX, and website overhaul."

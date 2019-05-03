@@ -10,8 +10,8 @@ import Prose from '../../components/case_study/Prose';
 
 import * as mentalligenceMockup from '../../images/dr-kris/mentalligence-mock.png';
 
-const MentalligencePage = () => (
-  <Layout>
+const MentalligencePage = ({ location }) => (
+  <Layout location={location}>
     <SEO title="Generate Redesign" hideTitle={true} />
     <CaseStudyWrapper
       title="Mentalligence — brand identity and website development for an author and professor."

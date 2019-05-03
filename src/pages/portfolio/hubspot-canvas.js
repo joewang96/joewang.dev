@@ -5,8 +5,8 @@ import SEO from '../../components/Seo';
 
 import CaseStudyWrapper from '../../components/case_study/CaseStudyWrapper';
 
-const HubSpotCanvas = () => (
-  <Layout>
+const HubSpotCanvas = ({ location }) => (
+  <Layout location={location}>
     <SEO title="Generate Redesign" hideTitle={true} />
     <CaseStudyWrapper
       title="HubSpot Canvas — maintaining a first-class design system that scales."

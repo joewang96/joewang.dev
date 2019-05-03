@@ -5,8 +5,8 @@ import SEO from '../../components/Seo';
 
 import CaseStudyWrapper from '../../components/case_study/CaseStudyWrapper';
 
-const BooBoston = () => (
-  <Layout>
+const BooBoston = ({ location }) => (
+  <Layout location={location}>
     <SEO title="Generate Redesign" hideTitle={true} />
     <CaseStudyWrapper
       title="Boo! Boston — designing an AR app using service design concepts."
