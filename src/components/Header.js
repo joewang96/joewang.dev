@@ -262,22 +262,22 @@ const Header = props => {
           </MenuItem>
 
           <MenuCaseStudies>
-            <MenuCaseStudyItem to="/portfolio/generate" pathname={pathname}>
+            <MenuCaseStudyItem to="/portfolio/generate/" pathname={pathname}>
               Generate Website Redesign
             </MenuCaseStudyItem>
             <MenuCaseStudyItem
-              to="/portfolio/hubspot-canvas"
+              to="/portfolio/hubspot-canvas/"
               pathname={pathname}
             >
               Canvas Design System
             </MenuCaseStudyItem>
             <MenuCaseStudyItem
-              to="/portfolio/mentalligence"
+              to="/portfolio/mentalligence/"
               pathname={pathname}
             >
               Mentalligence Brand Identity
             </MenuCaseStudyItem>
-            <MenuCaseStudyItem to="/portfolio/boo-boston" pathname={pathname}>
+            <MenuCaseStudyItem to="/portfolio/boo-boston/" pathname={pathname}>
               Boo! Boston App Concept
             </MenuCaseStudyItem>
           </MenuCaseStudies>
@@ -285,7 +285,7 @@ const Header = props => {
           <MenuItem active={active}>
             <MenuLink
               tabIndex={!active ? -1 : null}
-              to="/about"
+              to="/about/"
               pathname={pathname}
             >
               About
