@@ -147,7 +147,7 @@ const PortfolioSection = () => (
             and website overhaul.
           </Portfolio_Tag>
           <Link
-            to="/portfolio/generate"
+            to="/portfolio/generate/"
             aria-labelledby="portfolio-title--generate"
           >
             <Portfolio_Image
@@ -164,7 +164,7 @@ const PortfolioSection = () => (
             system that scales.
           </Portfolio_Tag>
           <Link
-            to="/portfolio/hubspot-canvas"
+            to="/portfolio/hubspot-canvas/"
             aria-labelledby="portfolio-title--canvas"
           >
             <Portfolio_Image
@@ -187,7 +187,7 @@ const PortfolioSection = () => (
             design concepts.
           </Portfolio_Tag>
           <Link
-            to="/portfolio/boo-boston"
+            to="/portfolio/boo-boston/"
             aria-labelledby="portfolio-title--boo-boston"
           >
             <Portfolio_Image
@@ -207,7 +207,7 @@ const PortfolioSection = () => (
             development for an author / professor.
           </Portfolio_Tag>
           <Link
-            to="/portfolio/mentalligence"
+            to="/portfolio/mentalligence/"
             aria-labelledby="portfolio-title--mentalligence"
           >
             <Portfolio_Image
