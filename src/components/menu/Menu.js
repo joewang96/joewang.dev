@@ -1,10 +1,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import * as resume from '../../misc/Joseph_Wang_Resume.pdf';
-
-import { Link } from 'gatsby';
+import MenuContext from './MenuContext';
 import { COLORS, SIZES } from '../../tokens';
-import A from '../../elements/A';
+import MenuLink from './MenuLink';
 
 const MenuComponent = styled.div`
   position: fixed;
@@ -61,25 +60,6 @@ const MenuItem = styled(props => {
   }
 `;
 
-const MenuLink = styled(props => {
-  const { href, ...rest } = props;
-  const LinkComponent = href ? A : Link;
-  return <LinkComponent {...rest} href={href} />;
-})`
-  color: ${({ to, pathname }) =>
-    to && pathname === to ? COLORS.WHITE : COLORS.LIGHT_GREY};
-  text-decoration: none;
-  font-family: 'Biryani', Helvetica, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-
-  transition: color 250ms ease-in-out;
-  &:hover,
-  &:focus {
-    color: ${COLORS.WHITE};
-  }
-`;
-
 const MenuCaseStudies = styled.div`
   display: flex;
   flex-direction: column;
@@ -87,88 +67,49 @@ const MenuCaseStudies = styled.div`
   text-align: right;
 `;
 
-const MenuCaseStudyItem = styled(Link)`
-  color: ${({ to, pathname }) =>
-    to && pathname === to ? COLORS.WHITE : COLORS.LIGHT_GREY};
-  text-decoration: none;
-  font-family: 'Noto Sans', Helvetica, sans-serif;
-  font-size: 1.25rem;
-  font-style: italic;
-
-  transition: color 250ms ease-in-out;
-  &:hover,
-  &:focus {
-    color: ${COLORS.WHITE};
-  }
-
-  &:not(:last-of-type) {
-    margin-bottom: 1rem;
-  }
-`;
+const MenuCaseStudyItem = props => <MenuLink {...props} use="case-study" />;
 
 const Menu = ({ closeMenu, pathname, active }) => (
-  <MenuComponent
-    active={active}
-    aria-hidden={!active}
-    onClick={closeMenu}
-    onKeyDown={evt =>
-      evt.key === 'Enter' || evt.key === ' ' ? closeMenu : null
-    }
-  >
-    <MenuWrapper active={active}>
-      <MenuItem active={active}>
-        <MenuLink tabIndex={!active ? -1 : null} to="/" pathname={pathname}>
-          Home
-        </MenuLink>
-      </MenuItem>
+  <MenuContext.Provider value={{ active, pathname }}>
+    <MenuComponent
+      active={active}
+      aria-hidden={!active}
+      onClick={closeMenu}
+      onKeyDown={evt =>
+        evt.key === 'Enter' || evt.key === ' ' ? closeMenu : null
+      }
+    >
+      <MenuWrapper active={active}>
+        <MenuItem active={active}>
+          <MenuLink to="/">Home</MenuLink>
+        </MenuItem>
 
-      <MenuCaseStudies>
-        <MenuCaseStudyItem
-          to="/portfolio/generate/"
-          pathname={pathname}
-          tabIndex={!active ? -1 : null}
-        >
-          Generate Website Redesign
-        </MenuCaseStudyItem>
-        <MenuCaseStudyItem
-          to="/portfolio/hubspot-canvas/"
-          pathname={pathname}
-          tabIndex={!active ? -1 : null}
-        >
-          Canvas Design System
-        </MenuCaseStudyItem>
-        <MenuCaseStudyItem
-          to="/portfolio/mentalligence/"
-          pathname={pathname}
-          tabIndex={!active ? -1 : null}
-        >
-          Mentalligence Brand Identity
-        </MenuCaseStudyItem>
-        <MenuCaseStudyItem
-          to="/portfolio/boo-boston/"
-          pathname={pathname}
-          tabIndex={!active ? -1 : null}
-        >
-          Boo! Boston App Concept
-        </MenuCaseStudyItem>
-      </MenuCaseStudies>
+        <MenuCaseStudies>
+          <MenuCaseStudyItem to="/portfolio/generate/">
+            Generate Website Redesign
+          </MenuCaseStudyItem>
+          <MenuCaseStudyItem to="/portfolio/hubspot-canvas/">
+            Canvas Design System
+          </MenuCaseStudyItem>
+          <MenuCaseStudyItem to="/portfolio/mentalligence/">
+            Mentalligence Brand Identity
+          </MenuCaseStudyItem>
+          <MenuCaseStudyItem to="/portfolio/boo-boston/">
+            Boo! Boston App Concept
+          </MenuCaseStudyItem>
+        </MenuCaseStudies>
 
-      <MenuItem active={active}>
-        <MenuLink
-          tabIndex={!active ? -1 : null}
-          to="/about/"
-          pathname={pathname}
-        >
-          About
-        </MenuLink>
-      </MenuItem>
-      <MenuItem active={active}>
-        <MenuLink tabIndex={!active ? -1 : null} href={resume} target="_blank">
-          Résumé
-        </MenuLink>
-      </MenuItem>
-    </MenuWrapper>
-  </MenuComponent>
+        <MenuItem active={active}>
+          <MenuLink to="/about/">About</MenuLink>
+        </MenuItem>
+        <MenuItem active={active}>
+          <MenuLink href={resume} external={true} target="_blank">
+            Résumé
+          </MenuLink>
+        </MenuItem>
+      </MenuWrapper>
+    </MenuComponent>
+  </MenuContext.Provider>
 );
 
 export default Menu;
