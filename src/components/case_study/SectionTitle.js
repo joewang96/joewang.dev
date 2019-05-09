@@ -12,7 +12,7 @@ const SectionTitle = styled(P)`
   width: 100%;
   max-width: ${SIZES.PROSE_WIDTH};
 
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 
   ${Prose} + & {
     margin-top: 60px;

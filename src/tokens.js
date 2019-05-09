@@ -6,6 +6,7 @@ export const COLORS = {
   OFF_WHITE: '#E0E0E0',
   WHITE: '#FFFFFF',
   BLUE: '#2147ed',
+  YELLOW: '#FFBF38',
 };
 
 export const SIZES = {

@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { COLORS, SIZES } from '../../tokens';
+import { SIZES } from '../../tokens';
 import H2 from '../../elements/H2';
-import P from '../../elements/P';
 
 const Wrapper = styled.div`
   padding: 60px ${SIZES.PADDING_DESKTOP} 120px;
@@ -22,38 +21,35 @@ const Content = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 56rem;
-  margin: auto;
 `;
 
 const Title = styled(H2)`
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   @media (max-width: ${SIZES.BREAK_SM}) {
     text-align: left;
+    margin-bottom: 60px;
   }
 `;
 
-const Subtitle = styled(P)`
-  font-style: italic;
-  font-size: 1.5rem;
-  margin-bottom: 80px;
-  max-width: ${SIZES.PROSE_WIDTH};
-  color: ${COLORS.GREY};
+const Heading = styled.div`
+  max-width: 56rem;
+  margin: auto;
+  margin-bottom: 7.5rem;
 `;
 
 const ImagePreview = styled.img`
   width: 100%;
-  max-width: 48.4rem;
-  margin-bottom: 80px;
+  margin-bottom: 0;
 `;
 
 const CaseStudyWrapper = ({ children, title, subtitle, img, ...rest }) => (
   <Wrapper>
     <Content {...rest}>
-      <Title>{title}</Title>
-      <Subtitle>{subtitle}</Subtitle>
-      {img && <ImagePreview alt={img.alt} src={img.src} />}
+      <Heading>
+        <Title>{title}</Title>
+        {img && <ImagePreview alt={img.alt} src={img.src} />}
+      </Heading>
       {children}
     </Content>
   </Wrapper>
