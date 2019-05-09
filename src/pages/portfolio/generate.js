@@ -86,9 +86,7 @@ const GenerateRedesign = ({ location }) => (
             Their issue was that they had a very poor website that didn't really
             showcase what Generate was all about. I came on as their Web
             Designer and Developer to overhaul their site - which included their
-            established brand. Their site was built on Wordpress theme they
-            bought, and featured a very clunky data structure that made it hard
-            to use.
+            established brand.
           </Prose>
         </GridItem>
         <GridItem style={{ display: 'flex' }}>
@@ -107,18 +105,20 @@ const GenerateRedesign = ({ location }) => (
         <GridItem style={{ gridArea: 'b' }}>
           <SectionTitle>Information architecure revamp</SectionTitle>
           <Prose>
-            Generate is a product development studio at Northeastern that aims
-            to unite tech minded individuals on campus, while also taking on
-            semesterly clients to build out hardware products as part of their
-            Build Studio.
+            The first part of the process was determining what information was
+            pertinent to Generate and what was the best way to organize it. I
+            started by interviewing directors of the organization to get a sense
+            of what they wanted on the new site and translated those findings
+            into some requirements.
           </Prose>
           <Prose>
-            Their issue was that they had a very poor website that didn't really
-            showcase what Generate was all about. I came on as their Web
-            Designer and Developer to overhaul their site - which included their
-            established brand. Their site was built on Wordpress theme they
-            bought, and featured a very clunky data structure that made it hard
-            to use.
+            From those interviews, I was able to begin creating a new IA schema
+            which led into initial wireframes. After a few rounds of designs and
+            revisions, I moved to creating digital sketches with more of the
+            fine details of spacing and layout incorporated. Increasing fidelity
+            at each step of the process allowed for larger UX details to be
+            straightened out before getting caught up in the more visual
+            aspects.
           </Prose>
         </GridItem>
         <GridItem style={{ gridArea: 'a' }}>
