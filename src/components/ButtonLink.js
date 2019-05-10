@@ -8,10 +8,11 @@ const ButtonLink = styled.a`
   text-decoration: none;
   color: ${COLORS.WHITE};
   background: ${COLORS.BLACK};
-  padding: 0.75rem 1.5rem;
+  // Biryani has inconsistent bottom spacing
+  padding: 1rem 2rem 0.65rem;
   font-size: 1rem;
   font-weight: 500;
-  font-family: 'Noto Sans', Cabin, Helvetica Neue, Helvetica, sans-serif;
+  font-family: 'Biryani', Cabin, Helvetica Neue, Helvetica, sans-serif;
   border-radius: 2px;
   transition: background 250ms ease-in-out;
 
