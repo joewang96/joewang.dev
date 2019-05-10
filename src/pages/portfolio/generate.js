@@ -34,6 +34,9 @@ const GridRow = styled.div`
 
   & + & {
     margin-top: 120px;
+    @media (max-width: ${SIZES.BREAK_MD}) {
+      margin-top: ${SIZES.CASE_STUDY_SECTION_SPACING};
+    }
   }
 `;
 
@@ -46,7 +49,7 @@ const GridItem = styled.div`
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     & + & {
-      margin-top: 3.75rem;
+      margin-top: ${SIZES.CASE_STUDY_SECTION_SPACING};
     }
   }
 `;

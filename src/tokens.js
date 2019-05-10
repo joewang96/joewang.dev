@@ -19,4 +19,5 @@ export const SIZES = {
   PADDING_MOBILE: '20px',
 
   PROSE_WIDTH: '640px',
+  CASE_STUDY_SECTION_SPACING: '3.75rem',
 };

@@ -5,14 +5,14 @@ import { SIZES } from '../../tokens';
 import H2 from '../../elements/H2';
 
 const Wrapper = styled.div`
-  padding: 60px ${SIZES.PADDING_DESKTOP} 120px;
+  padding: 60px ${SIZES.PADDING_DESKTOP} 7.5rem;
 
   @media (max-width: ${SIZES.BREAK_LG}) {
-    padding: 30px ${SIZES.PADDING_TABLET} 100px;
+    padding: 30px ${SIZES.PADDING_TABLET} 6.25rem;
   }
 
   @media (max-width: ${SIZES.BREAK_SM}) {
-    padding: 15px ${SIZES.PADDING_MOBILE} 80px;
+    padding: 15px ${SIZES.PADDING_MOBILE} 6.25rem;
   }
 `;
 
@@ -25,10 +25,10 @@ const Content = styled.div`
 
 const Title = styled(H2)`
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 5rem;
   @media (max-width: ${SIZES.BREAK_SM}) {
     text-align: left;
-    margin-bottom: 60px;
+    margin-bottom: ${SIZES.CASE_STUDY_SECTION_SPACING};
   }
 `;
 
@@ -36,6 +36,9 @@ const Heading = styled.div`
   max-width: 56rem;
   margin: auto;
   margin-bottom: 7.5rem;
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    margin-bottom: ${SIZES.CASE_STUDY_SECTION_SPACING};
+  }
 `;
 
 const ImagePreview = styled.img`
