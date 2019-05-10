@@ -9,6 +9,7 @@ import SectionTitle from '../../components/case_study/SectionTitle';
 import Prose from '../../components/case_study/Prose';
 import P from '../../elements/P';
 import { SIZES, COLORS } from '../../tokens';
+import ButtonLink from '../../components/ButtonLink';
 
 import * as generateMockup from '../../images/generate/generate-mock.png';
 import * as generateReqs from '../../images/generate/generate-reqs.jpg';
@@ -25,7 +26,7 @@ const GridRow = styled.div`
   display: grid;
   grid-gap: ${({ gap }) => gap};
   grid-template-columns: ${({ gridTemplateCol }) => gridTemplateCol};
-  grid-template-areas: "${({ gridTemplateAreas }) => gridTemplateAreas}";
+  grid-template-areas: ${({ gridTemplateAreas }) => gridTemplateAreas};
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     display: block;
@@ -37,9 +38,15 @@ const GridRow = styled.div`
 `;
 
 const GridItem = styled.div`
+  grid-area: ${({ gridArea }) => gridArea};
+
+  @media (min-width: ${parseInt(SIZES.BREAK_MD, 10) + 1}px) {
+    margin-top: ${({ marginTop }) => (marginTop ? '7.5rem' : null)};
+  }
+
   @media (max-width: ${SIZES.BREAK_MD}) {
     & + & {
-      margin-top: 60px;
+      margin-top: 3.75rem;
     }
   }
 `;
@@ -73,7 +80,7 @@ const GenerateRedesign = ({ location }) => (
       title="Generate Website Redesign — complete visual, UX, and website overhaul."
       img={{ src: generateMockup, alt: '' }}
     >
-      <GridRow gap="93px" gridTemplateCol="repeat(2, 1fr)">
+      <GridRow gap="5.8125rem" gridTemplateCol="repeat(2, 1fr)">
         <GridItem>
           <SectionTitle>Problem setting - what is Generate?</SectionTitle>
           <Prose>
@@ -98,11 +105,11 @@ const GenerateRedesign = ({ location }) => (
       </GridRow>
 
       <GridRow
-        gap="93px"
+        gap="5.8125rem"
         gridTemplateCol="repeat(2, 1fr)"
-        gridTemplateAreas="a b"
+        gridTemplateAreas="'a b'"
       >
-        <GridItem style={{ gridArea: 'b' }}>
+        <GridItem gridArea="b">
           <SectionTitle>Information architecure revamp</SectionTitle>
           <Prose>
             The first part of the process was determining what information was
@@ -121,17 +128,17 @@ const GenerateRedesign = ({ location }) => (
             aspects.
           </Prose>
         </GridItem>
-        <GridItem style={{ gridArea: 'a' }}>
+        <GridItem gridArea="a">
           <StyledImage src={generateWireDigital} />
         </GridItem>
       </GridRow>
 
       <GridRow
-        gap="93px"
+        gap="0 5.8125rem"
         gridTemplateCol="repeat(2, 1fr)"
-        gridTemplateAreas="a b"
+        gridTemplateAreas="'a b' 'c b' '. b'"
       >
-        <GridItem style={{ gridArea: 'a' }}>
+        <GridItem gridArea="a">
           <SectionTitle>Finalizing hi-fidelity mocks</SectionTitle>
           <Prose>
             Generate is a product development studio at Northeastern that aims
@@ -147,7 +154,11 @@ const GenerateRedesign = ({ location }) => (
             bought, and featured a very clunky data structure that made it hard
             to use.
           </Prose>
-
+        </GridItem>
+        <GridItem gridArea="b">
+          <StyledImage src={generateFinal} />
+        </GridItem>
+        <GridItem gridArea="c" marginTop={true}>
           <SectionTitle>Taking it live - from design to code</SectionTitle>
           <Prose>
             Generate is a product development studio at Northeastern that aims
@@ -163,9 +174,14 @@ const GenerateRedesign = ({ location }) => (
             bought, and featured a very clunky data structure that made it hard
             to use.
           </Prose>
-        </GridItem>
-        <GridItem style={{ gridArea: 'b' }}>
-          <StyledImage src={generateFinal} />
+
+          <ButtonLink
+            href="https://web.northeastern.edu/generate"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View live site
+          </ButtonLink>
         </GridItem>
       </GridRow>
     </CaseStudyWrapper>
