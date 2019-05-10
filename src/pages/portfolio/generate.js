@@ -41,7 +41,7 @@ const GridItem = styled.div`
   grid-area: ${({ gridArea }) => gridArea};
 
   @media (min-width: ${parseInt(SIZES.BREAK_MD, 10) + 1}px) {
-    margin-top: ${({ marginTop }) => (marginTop ? '7.5rem' : null)};
+    margin-top: ${({ marginTop }) => (marginTop ? '5rem' : null)};
   }
 
   @media (max-width: ${SIZES.BREAK_MD}) {
