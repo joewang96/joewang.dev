@@ -7,73 +7,20 @@ import SEO from '../../components/Seo';
 import CaseStudyWrapper from '../../components/case_study/CaseStudyWrapper';
 import SectionTitle from '../../components/case_study/SectionTitle';
 import Prose from '../../components/case_study/Prose';
-import P from '../../elements/P';
+import Quote from '../../components/case_study/Quote';
+import GridRow from '../../components/case_study/GridRow';
+import GridItem from '../../components/case_study/GridItem';
 import { SIZES, COLORS } from '../../tokens';
 import ButtonLink from '../../components/ButtonLink';
 
 import * as generateMockup from '../../images/generate/generate-mock.png';
-import * as generateReqs from '../../images/generate/generate-reqs.jpg';
 import * as generateWireDigital from '../../images/generate/generate-wireframe-digital.png';
-import * as generateUIStyles from '../../images/generate/generate-ui-styles.png';
-import * as generateDirection from '../../images/generate/generate-directions.png';
+// import * as generateUIStyles from '../../images/generate/generate-ui-styles.png';
+// import * as generateDirection from '../../images/generate/generate-directions.png';
 import * as generateFinal from '../../images/generate/generate-final-hifi.png';
 
 const StyledImage = styled.img`
   width: 100%;
-`;
-
-const GridRow = styled.div`
-  display: grid;
-  grid-gap: ${({ gap }) => gap};
-  grid-template-columns: ${({ gridTemplateCol }) => gridTemplateCol};
-  grid-template-areas: ${({ gridTemplateAreas }) => gridTemplateAreas};
-
-  @media (max-width: ${SIZES.BREAK_MD}) {
-    display: block;
-  }
-
-  & + & {
-    margin-top: 120px;
-    @media (max-width: ${SIZES.BREAK_MD}) {
-      margin-top: ${SIZES.CASE_STUDY_SECTION_SPACING};
-    }
-  }
-`;
-
-const GridItem = styled.div`
-  grid-area: ${({ gridArea }) => gridArea};
-
-  @media (min-width: ${parseInt(SIZES.BREAK_MD, 10) + 1}px) {
-    margin-top: ${({ marginTop }) => (marginTop ? '5rem' : null)};
-  }
-
-  @media (max-width: ${SIZES.BREAK_MD}) {
-    & + & {
-      margin-top: ${SIZES.CASE_STUDY_SECTION_SPACING};
-    }
-  }
-`;
-
-const Quote = styled(P)`
-  font-style: italic;
-  font-size: 1.75rem;
-  line-height: 2;
-
-  padding-left: 30px;
-
-  color: ${COLORS.GREY};
-  border-left: 3px solid ${COLORS.YELLOW};
-
-  @media (min-width: ${parseInt(SIZES.BREAK_MD, 10) + 1}px) {
-    max-width: 26.875rem;
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  @media (max-width: ${SIZES.BREAK_MD}) {
-    font-size: 1.5rem;
-    margin-bottom: 0;
-  }
 `;
 
 const GenerateRedesign = ({ location }) => (
@@ -100,7 +47,7 @@ const GenerateRedesign = ({ location }) => (
           </Prose>
         </GridItem>
         <GridItem style={{ display: 'flex' }}>
-          <Quote>
+          <Quote borderColor={COLORS.YELLOW}>
             How might we create an engaging online brand that showcases our
             story and draws attention from prospective students?
           </Quote>

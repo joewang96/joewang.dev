@@ -6,7 +6,10 @@ export const COLORS = {
   OFF_WHITE: '#E0E0E0',
   WHITE: '#FFFFFF',
   BLUE: '#2147ed',
+
+  // --- Case Study Colors ---
   YELLOW: '#FFBF38',
+  GREEN: '#007C79',
 };
 
 export const SIZES = {
