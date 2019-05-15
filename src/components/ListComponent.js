@@ -1,31 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-
+import styled, { css } from 'styled-components';
 import H2 from '../elements/H2';
-
 import { SIZES } from '../tokens';
-
-const List_Wrapper = styled.section`
-  padding: 0 0 0 ${SIZES.PADDING_DESKTOP};
-  margin-bottom: 136px;
-  display: flex;
-  justify-content: space-between;
-
-  @media (max-width: ${SIZES.BREAK_LG}) {
-    padding: 0 0 0 ${SIZES.PADDING_TABLET};
-    margin-bottom: 100px;
-  }
-
-  @media (max-width: ${SIZES.BREAK_MD}) {
-    flex-direction: column;
-    margin-bottom: 60px;
-  }
-
-  @media (max-width: ${SIZES.BREAK_SM}) {
-    padding: 0 0 0 ${SIZES.PADDING_MOBILE};
-    margin-bottom: 40px;
-  }
-`;
 
 const List_Wrapper__Title = styled(H2)`
   max-width: 21.125rem;
@@ -57,6 +33,42 @@ const List_Wrapper__Content = styled.div`
   }
   @media (max-width: ${SIZES.BREAK_SM}) {
     width: 92.5%;
+  }
+`;
+
+const List_Wrapper = styled.section`
+  padding: 0 0 0 ${SIZES.PADDING_DESKTOP};
+  margin-bottom: 136px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: ${parseInt(SIZES.BREAK_LG, 10) + 1}px) {
+    && {
+      ${({ compact }) =>
+        compact
+          ? css`
+              margin-left: 59px;
+            `
+          : 0};
+      ${List_Wrapper__Content} {
+        margin-left: 60px;
+      }
+    }
+  }
+
+  @media (max-width: ${SIZES.BREAK_LG}) {
+    padding: 0 0 0 ${SIZES.PADDING_TABLET};
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    padding: 0 0 0 ${SIZES.PADDING_MOBILE};
+    margin-bottom: 40px;
   }
 `;
 
