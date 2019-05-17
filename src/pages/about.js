@@ -96,9 +96,9 @@ const AboutPage = ({ location }) => (
           of these disciplines.
         </Body>
         <Body>
-          Originally from Northern Virginia, I moved up to Boston for college —
-          attending Northeastern University. I’ll be graduating May 2020, and
-          joining{' '}
+          Originally from Northern Virginia, I moved to Boston for college —
+          attending Northeastern University. I’ll be graduating in May 2020, and
+          heading back to{' '}
           <A
             href="https://hubspot.com"
             target="_blank"
@@ -106,7 +106,7 @@ const AboutPage = ({ location }) => (
           >
             HubSpot
           </A>{' '}
-          afterward.
+          afterward as a Software Engineer.
         </Body>
       </Container>
     </Wrapper>

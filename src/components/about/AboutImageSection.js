@@ -113,7 +113,7 @@ const AboutImageSection = () => {
 
       <TextRow>
         <TextContainer>
-          <H3>Never stop — always learning</H3>
+          <H3>Moving forward — always learning</H3>
           <Smaller>
             I believe that one of my greatest traits is a continual hunger to
             seek knowledge and continue to develop my existing skills.
