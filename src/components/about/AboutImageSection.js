@@ -12,7 +12,6 @@ import { SIZES } from '../../tokens';
 
 import * as washingtonDC from '../../images/about/dc-street.jpg';
 import * as scretreat from '../../images/about/sc-treat.jpg';
-import * as techDesignDuo from '../../images/about/tech-design-duo.jpg';
 
 const Smaller = styled(P)`
   font-size: 1.125rem;
@@ -26,20 +25,68 @@ const Smaller = styled(P)`
   }
 `;
 
+const ScrollableRow = styled(ImagesRow)`
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    flex-direction: row;
+    align-items: flex-start;
+
+    padding: 0 ${SIZES.PADDING_TABLET};
+
+    ${ImagesColumn} {
+      margin-bottom: 24px;
+    }
+    
+    ${ImagesColumn} + ${ImagesColumn} {
+      margin-left: 5vw;
+      padding-right: ${SIZES.PADDING_TABLET};
+    }
+  }
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    padding: 0 ${SIZES.PADDING_MOBILE};
+
+    ${ImagesColumn} + ${ImagesColumn} {
+      padding-right: ${SIZES.PADDING_MOBILE};
+    }
+  }
+`;
+
+const FloatingColumn = styled(ImagesColumn)`
+  position: absolute;
+  top: 35%;
+  right: 0;
+
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    position: static;
+  }
+`;
+
+const TextRow = styled(ImagesRow)`
+  max-width: 54%;
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    max-width: 100%;
+  }
+`;
+
 const TextContainer = styled.div`
-  max-width: 23rem;
+  max-width: 30rem;
   margin: auto;
-  padding-top: 5%;
-  padding-right: 5%;
+  margin-right: 0;
+  padding: 5% 5% 0;
   box-sizing: content-box;
 
   @media (max-width: ${SIZES.BREAK_MD}) {
-    padding: 0 5%;
-    max-width: unset;
+    padding: 0;
+    padding-right: 3.125rem;
+    margin: auto;
+    max-width: 33.125rem;
     margin-top: 60px;
   }
   @media (max-width: ${SIZES.BREAK_SM}) {
     padding: 0;
+    margin-top: 36px;
   }
 `;
 
@@ -47,47 +94,37 @@ const AboutImageSection = () => {
   return (
     <ImagesContainer>
       {/* Row */}
-      <ImagesRow>
-        <ImagesColumn width="58%">
+      <ScrollableRow>
+        <ImagesColumn width="57%">
           <ImageGroup
             caption="Group photo at retreat from my first semester in Scout!"
             src={scretreat}
           />
         </ImagesColumn>
-        <ImagesColumn width="42%">
+        <FloatingColumn width="calc(43% - 33px)">
           <ImageGroup
-            caption="Scout’s Tech and Design Director power duo 🙌"
-            src={techDesignDuo}
-            alignRight={true}
-          />
-        </ImagesColumn>
-      </ImagesRow>
-
-      {/* Row */}
-      <ImagesRow alignStart={true} reverse={true}>
-        <ImagesColumn reverse width="48%" style={{ marginBottom: 0 }}>
-          <ImageGroup
-            caption="My home is Northern Virginia, right by Washington D.C."
+            caption="My home is Northern Virginia, right by D.C."
             src={washingtonDC}
             alignRight={true}
-            flip={true}
+            ratio={1.03}
           />
-        </ImagesColumn>
-        <ImagesColumn width="48%">
-          <TextContainer>
-            <H3>Never stop — always learning</H3>
-            <Smaller>
-              I believe that one of my greatest traits is a continual hunger to
-              seek knowledge and continue to develop my existing skills.
-            </Smaller>
-            <Smaller>
-              Whether it be in my personal or professional life I always seek
-              out ways to challenge myself and learn as much as I can from every
-              experience.
-            </Smaller>
-          </TextContainer>
-        </ImagesColumn>
-      </ImagesRow>
+        </FloatingColumn>
+      </ScrollableRow>
+
+      <TextRow>
+        <TextContainer>
+          <H3>Never stop — always learning</H3>
+          <Smaller>
+            I believe that one of my greatest traits is a continual hunger to
+            seek knowledge and continue to develop my existing skills.
+          </Smaller>
+          <Smaller>
+            Whether it be in my personal or professional life I always seek out
+            ways to challenge myself and learn as much as I can from every
+            experience.
+          </Smaller>
+        </TextContainer>
+      </TextRow>
     </ImagesContainer>
   );
 };

@@ -14,8 +14,11 @@ const ImagesContainer = styled.div`
     margin-bottom: 100px;
   }
 
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    padding: 0;
+  }
+
   @media (max-width: ${SIZES.BREAK_SM}) {
-    padding: 0 ${SIZES.PADDING_MOBILE};
     margin-bottom: 60px;
   }
 `;

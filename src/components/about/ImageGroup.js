@@ -26,6 +26,10 @@ const Image = styled.div`
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     margin-bottom: 16px;
+
+    flex-shrink: 0;
+    width: 80vw;
+    padding-bottom: 62.5%;
   }
 `;
 
