@@ -61,9 +61,6 @@ const LightWeight = styled.span`
 
 const WorkListings = styled(ListComponent)`
   margin-left: auto;
-  ${H2} {
-    max-width: 17.5rem;
-  }
 `;
 
 const List_Cta = styled(A)`

@@ -19,6 +19,7 @@ const List_Wrapper__Title = styled(H2)`
 
   @media (max-width: ${SIZES.BREAK_SM}) {
     margin-bottom: 36px;
+    max-width: 100%;
   }
 `;
 
@@ -32,7 +33,7 @@ const List_Wrapper__Content = styled.div`
     width: 90%;
   }
   @media (max-width: ${SIZES.BREAK_SM}) {
-    width: 92.5%;
+    width: 100%;
   }
 `;
 

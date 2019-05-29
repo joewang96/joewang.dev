@@ -17,7 +17,7 @@ const H1 = styled.h2`
     font-size: 2rem;
   }
   @media (max-width: ${SIZES.BREAK_SM}) {
-    font-size: 1.75rem;
+    font-size: 1.875rem;
   }
 `;
 
