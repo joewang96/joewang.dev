@@ -5,20 +5,39 @@ import A from '../elements/A';
 import P from '../elements/P';
 import SocialIcon from '../components/SocialIcon';
 import * as resume from '../misc/Joseph_Wang_Resume.pdf';
+import * as footerBg from '../images/footer_pattern.svg';
 
 import { COLORS, SIZES } from '../tokens';
 
 const Styled_Footer = styled.footer`
-  margin-bottom: 60px;
-  padding: 0 ${SIZES.PADDING_DESKTOP};
+  position: relative;
+  padding: 0 ${SIZES.PADDING_DESKTOP} 60px;
 
   @media (max-width: ${SIZES.BREAK_LG}) {
-    padding: 0 ${SIZES.PADDING_TABLET};
+    padding: 0 ${SIZES.PADDING_TABLET} 60px;
   }
 
   @media (max-width: ${SIZES.BREAK_SM}) {
-    padding: 0 ${SIZES.PADDING_MOBILE};
-    margin-bottom: 40px;
+    padding: 0 ${SIZES.PADDING_MOBILE} 40px;
+  }
+
+  &::before {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background: url('${footerBg}');
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 0;
+    bottom: 0;
+
+    @media (max-width: ${SIZES.BREAK_MD}) {
+      width: 50%;
+      background-position: bottom right;
+    }
   }
 `;
 const Footer__Container = styled.div`

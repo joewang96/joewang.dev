@@ -10,6 +10,7 @@ import A from '../../elements/A';
 import { SIZES } from '../../tokens';
 
 import * as headshot from '../../images/headshot.png';
+import * as headshotBg from '../../images/headshot_pattern.svg';
 
 const HeroContainer = styled.section`
   padding-left: ${SIZES.PADDING_DESKTOP};
@@ -87,6 +88,27 @@ const Hero_ImageContainer = styled(props => {
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     max-width: 100%;
+  }
+
+  &::before {
+    content: " ";
+    width: 116%;
+    height: 130%;
+    position: absolute;
+    z-index: -1;
+    background: url('${headshotBg}');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 0;
+    top: 0;
+    
+    @media (max-width: ${SIZES.BREAK_MD}) {
+      background-position: bottom;
+      background-size: cover;
+      width: 100%;
+      height: 120%;
+    }
   }
 
   ${({ mobileOnly }) =>
