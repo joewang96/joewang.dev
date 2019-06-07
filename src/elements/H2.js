@@ -7,7 +7,7 @@ const H1 = styled.h2`
   font-family: 'Noto Serif', Georigia, serif;
   font-size: 2.75rem;
   font-weight: normal;
-  line-height: 1.833;
+  line-height: 1.75;
   color: ${COLORS.BLACK};
 
   @media (max-width: ${SIZES.BREAK_LG}) {

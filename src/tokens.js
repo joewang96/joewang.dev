@@ -17,8 +17,8 @@ export const SIZES = {
   BREAK_MD: '800px',
   BREAK_SM: '600px',
 
-  PADDING_DESKTOP: '100px',
-  PADDING_TABLET: '50px',
+  PADDING_DESKTOP: '80px',
+  PADDING_TABLET: '40px',
   PADDING_MOBILE: '20px',
 
   PROSE_WIDTH: '640px',
