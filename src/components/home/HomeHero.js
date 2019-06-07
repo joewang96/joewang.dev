@@ -173,7 +173,7 @@ const Hero_Image = styled(props => {
 const HomeHero = () => (
   <HeroContainer>
     <Hero_TextContent>
-      <H1 style={{ maxWidth: 616 }}>
+      <H1 style={{ maxWidth: '38.5rem' }}>
         Technology and design make a great pairing.
       </H1>
       <Hero_ImageContainer mobileOnly={true}>

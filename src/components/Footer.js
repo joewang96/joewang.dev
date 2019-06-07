@@ -111,14 +111,17 @@ const Footer__Message_Text = styled(P)`
   font-family: 'Noto Serif', Georigia, serif;
   font-weight: normal;
   line-height: 1.66;
-  margin-bottom: 60px;
+  margin-bottom: 3.5rem;
   color: ${COLORS.BLACK};
   && {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 
   @media (max-width: ${SIZES.BREAK_MD}) {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+    && {
+      font-size: 1.5rem;
+    }
   }
 `;
 

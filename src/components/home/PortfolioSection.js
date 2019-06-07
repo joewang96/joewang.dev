@@ -30,7 +30,7 @@ const Styled_PortfolioSection = styled.section`
 `;
 
 const Title = styled(H2)`
-  max-width: 26rem;
+  max-width: 29rem;
   margin-bottom: 63px;
 
   @media (max-width: ${SIZES.BREAK_MD}) {

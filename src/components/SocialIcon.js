@@ -9,7 +9,7 @@ const Styled_SocialIcon_Icon = styled.i`
   transition-duration: 250ms;
   transition-timing-function: ease-in-out;
   transition-property: color;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   padding: 5px;
 `;
 
