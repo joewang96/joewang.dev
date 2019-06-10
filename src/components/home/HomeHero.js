@@ -1,13 +1,12 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
-import BackgroundImage from 'gatsby-background-image';
 
 import H1 from '../../elements/H1';
 import P from '../../elements/P';
 import A from '../../elements/A';
 
 import { SIZES } from '../../tokens';
+import * as headshot from '../../images/headshot.jpg';
 import * as headshotBg from '../../images/headshot_pattern.svg';
 
 const HeroContainer = styled.section`
@@ -138,33 +137,18 @@ const Hero_ImageContainer = styled(props => {
 `;
 
 const Hero_Image = styled(props => {
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          placeholderImage: file(relativePath: { eq: "headshot.jpg" }) {
-            childImageSharp {
-              fluid(quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      `}
-      render={data => (
-        <BackgroundImage
-          {...props}
-          fluid={data.placeholderImage.childImageSharp.fluid}
-        />
-      )}
-    />
-  );
+  return <div {...props} />;
 })`
   width: 100%;
   padding-bottom: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url('${headshot}');
+
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    background-position: center 20%;
+  }
 `;
 
 const HomeHero = () => (
