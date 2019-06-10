@@ -4,9 +4,9 @@ import { Link } from 'gatsby';
 
 import H2 from '../../elements/H2';
 
-import * as generatePreview from '../../images/generate_preview.png';
-import * as mentalligencePreview from '../../images/mentalligence_preview.png';
-import * as booboston_preview from '../../images/booboston_preview.png';
+import * as generatePreview from '../../images/generate_preview.jpg';
+import * as mentalligencePreview from '../../images/mentalligence_preview.jpg';
+import * as booboston_preview from '../../images/booboston_preview.jpg';
 import * as canvas_preview from '../../images/canvas_preview.svg';
 
 import { SIZES } from '../../tokens';

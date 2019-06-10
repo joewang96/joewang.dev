@@ -8,8 +8,6 @@ import P from '../../elements/P';
 import A from '../../elements/A';
 
 import { SIZES } from '../../tokens';
-
-import * as headshot from '../../images/headshot.png';
 import * as headshotBg from '../../images/headshot_pattern.svg';
 
 const HeroContainer = styled.section`
@@ -144,7 +142,7 @@ const Hero_Image = styled(props => {
     <StaticQuery
       query={graphql`
         query {
-          placeholderImage: file(relativePath: { eq: "headshot.png" }) {
+          placeholderImage: file(relativePath: { eq: "headshot.jpg" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
@@ -164,7 +162,6 @@ const Hero_Image = styled(props => {
 })`
   width: 100%;
   padding-bottom: 100%;
-  // background-image: url(${headshot});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -177,7 +174,7 @@ const HomeHero = () => (
         Technology and design make a great pairing.
       </H1>
       <Hero_ImageContainer mobileOnly={true}>
-        <Hero_Image fluid={headshot} />
+        <Hero_Image />
       </Hero_ImageContainer>
       <P>
         Luckily, I have a background in both. Currently a Software Engineer at{' '}
@@ -196,7 +193,7 @@ const HomeHero = () => (
       </P>
     </Hero_TextContent>
     <Hero_ImageContainer>
-      <Hero_Image fluid={headshot} />
+      <Hero_Image />
     </Hero_ImageContainer>
   </HeroContainer>
 );
