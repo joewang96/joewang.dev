@@ -5,7 +5,7 @@ import H1 from '../../elements/H1';
 import P from '../../elements/P';
 import A from '../../elements/A';
 
-import { SIZES } from '../../tokens';
+import { SIZES, MISC } from '../../tokens';
 import * as headshot from '../../images/headshot.jpg';
 import * as headshotBg from '../../images/headshot_pattern.svg';
 
@@ -35,7 +35,7 @@ const HeroContainer = styled.section`
   }
 `;
 
-const Hero_TextContent = styled.div`
+const TextContent = styled.div`
   width: 100%;
   max-width: 38.5rem;
   margin-right: 33px;
@@ -68,7 +68,7 @@ const Hero_TextContent = styled.div`
   }
 `;
 
-const Hero_ImageContainer = styled(props => {
+const ImageContainer = styled(props => {
   const { mobileOnly: __mobileOnly, ...rest } = props;
   return (
     <div
@@ -112,7 +112,7 @@ const Hero_ImageContainer = styled(props => {
     mobileOnly
       ? css`
           margin-bottom: 36px;
-          ${Hero_Image} {
+          ${HeroImage} {
             padding-bottom: 55%;
             @media (max-width: ${SIZES.BREAK_SM}) {
               padding-bottom: 65%;
@@ -136,7 +136,7 @@ const Hero_ImageContainer = styled(props => {
         `}
 `;
 
-const Hero_Image = styled(props => {
+const HeroImage = styled(props => {
   return <div {...props} />;
 })`
   width: 100%;
@@ -145,21 +145,25 @@ const Hero_Image = styled(props => {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('${headshot}');
+  border-top-left-radius: ${SIZES.BORDER_RADIUS};
+  border-bottom-left-radius: ${SIZES.BORDER_RADIUS};
+  box-shadow: ${MISC.BOX_SHADOW};
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     background-position: center 20%;
+    border-radius: 0;
   }
 `;
 
 const HomeHero = () => (
   <HeroContainer>
-    <Hero_TextContent>
+    <TextContent>
       <H1 style={{ maxWidth: '38.5rem' }}>
         Technology and design make a great pairing.
       </H1>
-      <Hero_ImageContainer mobileOnly={true}>
-        <Hero_Image />
-      </Hero_ImageContainer>
+      <ImageContainer mobileOnly={true}>
+        <HeroImage />
+      </ImageContainer>
       <P>
         Luckily, I have a background in both. Currently a Software Engineer at{' '}
         <A href="https://hubspot.com" target="_blank" rel="noreferrer noopener">
@@ -175,10 +179,10 @@ const HomeHero = () => (
         </A>{' '}
         — their in-house design system.
       </P>
-    </Hero_TextContent>
-    <Hero_ImageContainer>
-      <Hero_Image />
-    </Hero_ImageContainer>
+    </TextContent>
+    <ImageContainer>
+      <HeroImage />
+    </ImageContainer>
   </HeroContainer>
 );
 

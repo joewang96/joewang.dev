@@ -24,14 +24,14 @@ const Navigation = styled.nav`
   }
 `;
 
-const Navigation__Wrapper = styled.div`
+const Wrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 `;
-const Icon_Link = styled(Link)`
+const IconLink = styled(Link)`
   text-decoration: none;
   z-index: 1000;
 `;
@@ -67,7 +67,7 @@ const MobileNavLine = styled.span`
   }
 
   ${({ active }) =>
-    active == true &&
+    active === true &&
     css`
       transition-delay: 0ms;
       &:nth-child(1) {
@@ -95,7 +95,7 @@ const MobileNav = styled.div`
   transition: ${MOBILE_TIMING} ease-out transform;
 
   ${({ active }) =>
-    active == true &&
+    active === true &&
     css`
       transition-delay: ${MOBILE_TIMING};
       transform: rotate(45deg);
@@ -120,13 +120,13 @@ const Header = props => {
 
   return (
     <Navigation>
-      <Navigation__Wrapper>
-        <Icon_Link
+      <Wrapper>
+        <IconLink
           to="/"
           aria-label="My personal logo. Click to return to the homepage."
         >
           <Icon menuActive={active} className="icon icon-logo" />
-        </Icon_Link>
+        </IconLink>
 
         <MobileNav
           active={active}
@@ -144,7 +144,7 @@ const Header = props => {
           <MobileNavLine active={active} />
           <MobileNavLine active={active} />
         </MobileNav>
-      </Navigation__Wrapper>
+      </Wrapper>
       <Menu closeMenu={closeMenu} pathname={pathname} active={active} />
     </Navigation>
   );

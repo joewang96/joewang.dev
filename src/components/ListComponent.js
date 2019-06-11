@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import H2 from '../elements/H2';
 import { SIZES } from '../tokens';
 
-const List_Wrapper__Title = styled(H2)`
+const Title = styled(H2)`
   max-width: 21.125rem;
   margin-right: 126px;
   box-sizing: content-box;
@@ -23,7 +23,7 @@ const List_Wrapper__Title = styled(H2)`
   }
 `;
 
-const List_Wrapper__Content = styled.div`
+const Content = styled.div`
   flex-grow: 1;
   max-width: 49rem;
 
@@ -37,7 +37,7 @@ const List_Wrapper__Content = styled.div`
   }
 `;
 
-const List_Wrapper = styled.section`
+const Wrapper = styled.section`
   padding: 0 0 0 ${SIZES.PADDING_DESKTOP};
   margin-bottom: 136px;
   display: flex;
@@ -51,7 +51,7 @@ const List_Wrapper = styled.section`
               margin-left: 59px;
             `
           : 0};
-      ${List_Wrapper__Content} {
+      ${Content} {
         margin-left: 60px;
       }
     }
@@ -75,10 +75,10 @@ const List_Wrapper = styled.section`
 
 const ListComponent = ({ title, content, ...rest }) => {
   return (
-    <List_Wrapper {...rest}>
-      <List_Wrapper__Title>{title}</List_Wrapper__Title>
-      <List_Wrapper__Content>{content}</List_Wrapper__Content>
-    </List_Wrapper>
+    <Wrapper {...rest}>
+      <Title>{title}</Title>
+      <Content>{content}</Content>
+    </Wrapper>
   );
 };
 

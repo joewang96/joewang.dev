@@ -5,7 +5,7 @@ import P from '../elements/P';
 
 import { COLORS, SIZES } from '../tokens';
 
-const List_Item = styled.div`
+const Wrapper = styled.div`
   padding-bottom: 40px;
   border-bottom: 1px solid ${COLORS.OFF_WHITE};
   position: relative;
@@ -23,11 +23,11 @@ const List_Item = styled.div`
   }
 `;
 
-const List_Item__Content = styled.div`
+const Content = styled.div`
   max-width: 32.7rem;
 `;
 
-const List_Item__Title = styled(P)`
+const Title = styled(P)`
   font-family: 'Biryani', Cabin, Helvetica Neue, Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1.75;
@@ -42,7 +42,7 @@ const List_Item__Title = styled(P)`
   }
 `;
 
-const List_Item__Body = styled(P)`
+const Body = styled(P)`
   line-height: 1.75;
   margin-bottom: 0;
   && {
@@ -53,7 +53,7 @@ const List_Item__Body = styled(P)`
   }
 `;
 
-const List_Item__Tag = styled(P)`
+const Tag = styled(P)`
   && {
     font-size: 0.875rem;
     line-height: 2;
@@ -67,13 +67,13 @@ const List_Item__Tag = styled(P)`
 `;
 
 const ListItem = ({ title, body, tag, ...rest }) => (
-  <List_Item {...rest}>
-    <List_Item__Content>
-      {title && <List_Item__Title>{title}</List_Item__Title>}
-      {body && <List_Item__Body>{body}</List_Item__Body>}
-      {tag && <List_Item__Tag>{tag}</List_Item__Tag>}
-    </List_Item__Content>
-  </List_Item>
+  <Wrapper {...rest}>
+    <Content>
+      {title && <Title>{title}</Title>}
+      {body && <Body>{body}</Body>}
+      {tag && <Tag>{tag}</Tag>}
+    </Content>
+  </Wrapper>
 );
 
 export default ListItem;

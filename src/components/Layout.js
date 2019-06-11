@@ -36,7 +36,7 @@ class Layout extends React.Component {
 
   render() {
     const { children, location } = this.props;
-    const { mounted, menuActive } = this.state;
+    const { mounted } = this.state;
     return (
       <Content mounted={mounted}>
         <Header onMenuActive={this.onMenuActive} pathname={location.pathname} />

@@ -8,7 +8,6 @@ import ListItem from '../components/ListItem';
 import AboutImageSection from '../components/about/AboutImageSection';
 
 import H1 from '../elements/H1';
-import H2 from '../elements/H2';
 import P from '../elements/P';
 import A from '../elements/A';
 
@@ -63,7 +62,7 @@ const WorkListings = styled(ListComponent)`
   margin-left: auto;
 `;
 
-const List_Cta = styled(A)`
+const CTA = styled(A)`
   font-family: 'Noto Sans', Cabin, Helvetica Neue, Helvetica, sans-serif;
   font-style: italic;
   font-size: 1rem;
@@ -148,9 +147,9 @@ const AboutPage = ({ location }) => (
             tag="Jan 2018 - August 2018"
           />
 
-          <List_Cta href={resume} target="_blank">
+          <CTA href={resume} target="_blank">
             View full resume →
-          </List_Cta>
+          </CTA>
         </>
       }
     />

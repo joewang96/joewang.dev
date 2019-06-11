@@ -23,4 +23,15 @@ export const SIZES = {
 
   PROSE_WIDTH: '640px',
   CASE_STUDY_SECTION_SPACING: '3.75rem',
+
+  BORDER_RADIUS: '3px',
+};
+
+export const FONTS = {
+  NOTO_SANS: "'Noto Sans', Cabin, Helvetica Neue, Helvetica, sans-serif",
+  BIRYANI: "'Biryani', 'Cabin', 'Helvetica Neue', Helvetica, sans-serif",
+};
+
+export const MISC = {
+  BOX_SHADOW: '0px 4px 20px 0px rgba(0, 0, 0, 0.1)',
 };

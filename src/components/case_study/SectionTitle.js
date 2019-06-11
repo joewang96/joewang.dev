@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { COLORS, SIZES } from '../../tokens';
+import { SIZES } from '../../tokens';
 import P from '../../elements/P';
 import Prose from './Prose';
 

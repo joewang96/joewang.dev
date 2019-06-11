@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { COLORS } from '../tokens';
 
-const Styled_SocialIcon_Icon = styled.i`
+const Icon = styled.i`
   display: inline-block;
   color: #595959;
   transition-duration: 250ms;
@@ -13,26 +13,20 @@ const Styled_SocialIcon_Icon = styled.i`
   padding: 5px;
 `;
 
-const Styled_SocialIcon = styled.a`
+const Wrapper = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  &:hover ${Styled_SocialIcon_Icon}, &:focus ${Styled_SocialIcon_Icon} {
+  &:hover ${Icon}, &:focus ${Icon} {
     color: ${COLORS.BLUE};
   }
 `;
 
 class SocialIcon extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   renderIcon() {
     const { iconClass, ariaLabel } = this.props;
-    return (
-      <Styled_SocialIcon_Icon className={iconClass} aria-label={ariaLabel} />
-    );
+    return <Icon className={iconClass} aria-label={ariaLabel} />;
   }
 
   render() {
@@ -40,14 +34,14 @@ class SocialIcon extends Component {
     return !href ? (
       this.renderIcon()
     ) : (
-      <Styled_SocialIcon
+      <Wrapper
         className={`social-icon ${className}`}
         href={href}
         target={targetBlank ? '_blank' : ''}
         rel="noopener noreferrer"
       >
         {this.renderIcon()}
-      </Styled_SocialIcon>
+      </Wrapper>
     );
   }
 }

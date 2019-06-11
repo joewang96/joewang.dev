@@ -10,7 +10,7 @@ import Prose from '../../components/case_study/Prose';
 import Quote from '../../components/case_study/Quote';
 import GridRow from '../../components/case_study/GridRow';
 import GridItem from '../../components/case_study/GridItem';
-import { SIZES, COLORS } from '../../tokens';
+import { COLORS } from '../../tokens';
 import ButtonLink from '../../components/ButtonLink';
 
 import * as generateMockup from '../../images/generate/generate-mock.png';

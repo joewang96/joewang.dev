@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Em from '../../elements/Em';
-import { SIZES } from '../../tokens';
+import { SIZES, MISC } from '../../tokens';
 
 const Caption = styled(Em)`
   ${({ flip }) => (flip ? 'margin-top' : 'margin-bottom')}: 16px;
@@ -21,8 +21,9 @@ const Image = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 3px;
+  border-radius: ${SIZES.BORDER_RADIUS};
   background-image: url('${({ imageSrc }) => imageSrc}');
+  box-shadow: ${MISC.BOX_SHADOW};
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     margin-bottom: 16px;

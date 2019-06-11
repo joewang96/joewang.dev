@@ -59,7 +59,11 @@ const NotFoundPage = ({ location }) => (
         <Title>Hmm, that doesn’t look right…</Title>
         <Body>
           The page you are looking for either doesn’t exist, has been moved, or
-          deleted 😬.
+          deleted{' '}
+          <span role="img" aria-label="Nervous smiling emoji">
+            😬
+          </span>
+          .
         </Body>
         <Body>
           Don’t worry, you can always go back <A href="/">home</A> or even learn
