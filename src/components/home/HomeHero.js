@@ -145,13 +145,9 @@ const HeroImage = styled(props => {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('${headshot}');
-  border-top-left-radius: ${SIZES.BORDER_RADIUS};
-  border-bottom-left-radius: ${SIZES.BORDER_RADIUS};
-  box-shadow: ${MISC.BOX_SHADOW};
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     background-position: center 20%;
-    border-radius: 0;
   }
 `;
 
