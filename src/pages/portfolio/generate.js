@@ -12,6 +12,7 @@ import GridRow from '../../components/case_study/GridRow';
 import GridItem from '../../components/case_study/GridItem';
 import { COLORS } from '../../tokens';
 import ButtonLink from '../../components/ButtonLink';
+import A from '../../elements/A';
 
 import * as generateMockup from '../../images/generate/generate-mock.png';
 import * as generateWireDigital from '../../images/generate/generate-wireframe-digital.png';
@@ -91,18 +92,18 @@ const GenerateRedesign = ({ location }) => (
         <GridItem gridArea="a">
           <SectionTitle>Finalizing hi-fidelity mocks</SectionTitle>
           <Prose>
-            Generate is a product development studio at Northeastern that aims
-            to unite tech minded individuals on campus, while also taking on
-            semesterly clients to build out hardware products as part of their
-            Build Studio.
+            The original site and brand focused primarily on the blue color
+            featured in the organization’s logo. When creating the site I found
+            that color difficult to work with, both in terms of accessibility
+            and pairing it with dynamic content such as images.
           </Prose>
           <Prose>
-            Their issue was that they had a very poor website that didn't really
-            showcase what Generate was all about. I came on as their Web
-            Designer and Developer to overhaul their site - which included their
-            established brand. Their site was built on Wordpress theme they
-            bought, and featured a very clunky data structure that made it hard
-            to use.
+            To overcome this dilemma, I opted for a palette swap of the brand’s
+            colors — focusing more on the yellow as the primary accent color
+            with a lot of white space to create a more open feeling. Overall I
+            had positive feedback regarding this decision, even with initial
+            hesitation of the directors of cutting back on Generate’s primary
+            color.
           </Prose>
         </GridItem>
         <GridItem gridArea="b">
@@ -111,18 +112,35 @@ const GenerateRedesign = ({ location }) => (
         <GridItem gridArea="c" marginTop={true}>
           <SectionTitle>Taking it live - from design to code</SectionTitle>
           <Prose>
-            Generate is a product development studio at Northeastern that aims
-            to unite tech minded individuals on campus, while also taking on
-            semesterly clients to build out hardware products as part of their
-            Build Studio.
+            Northeastern organizations must use Wordpress to host on their
+            domain, which was a limitation I was aware of when starting this
+            project. I decided to use{' '}
+            <A
+              href="https://www.upstatement.com/timber/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Timber
+            </A>{' '}
+            coupled with{' '}
+            <A
+              href="https://www.advancedcustomfields.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              ACF
+            </A>{' '}
+            to build out a custom theme, due to the fact that it is arguably
+            easier for future devs to make updates since it uses templating
+            markup that is more familiar than traditional PHP files.
           </Prose>
           <Prose>
-            Their issue was that they had a very poor website that didn't really
-            showcase what Generate was all about. I came on as their Web
-            Designer and Developer to overhaul their site - which included their
-            established brand. Their site was built on Wordpress theme they
-            bought, and featured a very clunky data structure that made it hard
-            to use.
+            A key part of the development overhaul was to allow for future
+            Generate members to be able to update the site’s information,
+            without the need of a developer. After handoff I was so pleased to
+            see the Generate team making use of the new design and creating new
+            posts that needed a developer in the past. This wasn’t just a visual
+            refresh — it was an entire process upgrade for the Generate team.
           </Prose>
 
           <ButtonLink
