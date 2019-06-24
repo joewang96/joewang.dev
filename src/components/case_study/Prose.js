@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import P from '../../elements/P';
+import { FONTS } from '../../tokens';
 
 const Prose = styled(P)`
   font-size: 1.125rem;
-  font-family: 'Noto Serif', Georigia, serif;
+  font-family: ${FONTS.NOTO_SERIF};
   line-height: 1.9;
 
   & + & {

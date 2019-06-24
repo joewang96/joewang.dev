@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import Prose from './case_study/Prose';
-import { COLORS } from '../tokens';
+import { COLORS, FONTS } from '../tokens';
 
 const ButtonLink = styled.a`
   display: inline-block;
@@ -12,15 +12,15 @@ const ButtonLink = styled.a`
   padding: 1rem 2rem 0.65rem;
   font-size: 1rem;
   font-weight: 500;
-  font-family: 'Biryani', Cabin, Helvetica Neue, Helvetica, sans-serif;
+  font-family: ${FONTS.BIRYANI};
   border-radius: 2px;
-  transition: background 250ms ease-in-out;
+  transition: background 350ms ease-in-out;
 
   &:hover {
-    background: ${COLORS.OFF_BLACK};
+    background: ${COLORS.BLUE};
   }
   &:active {
-    background: ${COLORS.BLACK};
+    background: ${COLORS.BLUE_DARK};
   }
 
   ${Prose} + & {

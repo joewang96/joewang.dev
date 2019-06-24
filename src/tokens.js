@@ -6,6 +6,7 @@ export const COLORS = {
   OFF_WHITE: '#E0E0E0',
   WHITE: '#FFFFFF',
   BLUE: '#2147ed',
+  BLUE_DARK: '#082ED4',
 
   // --- Case Study Colors ---
   YELLOW: '#FFBF38',
@@ -30,6 +31,7 @@ export const SIZES = {
 export const FONTS = {
   NOTO_SANS: "'Noto Sans', Cabin, Helvetica Neue, Helvetica, sans-serif",
   BIRYANI: "'Biryani', 'Cabin', 'Helvetica Neue', Helvetica, sans-serif",
+  NOTO_SERIF: "'Noto Serif', 'Georgia', 'Palatino', serif",
 };
 
 export const MISC = {

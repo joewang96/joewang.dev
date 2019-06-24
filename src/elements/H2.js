@@ -1,10 +1,10 @@
 import 'react';
 import styled from 'styled-components';
 
-import { COLORS, SIZES } from '../tokens';
+import { COLORS, SIZES, FONTS } from '../tokens';
 
 const H1 = styled.h2`
-  font-family: 'Noto Serif', Georigia, serif;
+  font-family: ${FONTS.NOTO_SERIF};
   font-size: 2.75rem;
   font-weight: normal;
   line-height: 1.75;

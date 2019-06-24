@@ -5,7 +5,7 @@ import H1 from '../../elements/H1';
 import P from '../../elements/P';
 import A from '../../elements/A';
 
-import { SIZES, MISC } from '../../tokens';
+import { SIZES } from '../../tokens';
 import * as headshot from '../../images/headshot.jpg';
 import * as headshotBg from '../../images/headshot_pattern.svg';
 
