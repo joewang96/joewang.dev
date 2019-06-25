@@ -51,9 +51,6 @@ const Wrapper = styled.section`
               margin-left: 59px;
             `
           : 0};
-      ${Content} {
-        margin-left: 60px;
-      }
     }
   }
 
