@@ -15,14 +15,16 @@ const Wrapper = styled.div`
   @media (max-width: ${SIZES.BREAK_MD}) {
     width: 100%;
     flex-basis: 100%;
-    margin-bottom: 60px;
 
     &:first-of-type {
+      margin-bottom: 60px;
       margin-right: 0;
     }
   }
   @media (max-width: ${SIZES.BREAK_SM}) {
-    margin-bottom: 52px;
+    &:first-of-type {
+      margin-bottom: 52px;
+    }
   }
 `;
 
