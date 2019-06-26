@@ -49,7 +49,7 @@ const SplitImageRow = styled.div`
 
 const BooBoston = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Boo! Boston" hideTitle={false} />
+    <SEO title="Boo! Boston App Concept" />
     <CaseStudyWrapper
       title="Boo! Boston — designing an AR app using service design concepts."
       img={{

@@ -3,6 +3,7 @@ import { SIZES } from '../../tokens';
 
 const GridRow = styled.div`
   display: grid;
+  position: relative;
   grid-gap: ${({ gap }) => gap};
   grid-template-columns: ${({ gridTemplateCol }) => gridTemplateCol};
   grid-template-areas: ${({ gridTemplateAreas }) => gridTemplateAreas};

@@ -26,7 +26,7 @@ const StyledImage = styled.img`
 
 const GenerateRedesign = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Generate Redesign" hideTitle={false} />
+    <SEO title="Generate Website Redesign" />
     <CaseStudyWrapper
       title="Generate Website Redesign — complete visual, UX, and website overhaul."
       img={{ src: generateMockup, alt: '' }}
