@@ -10,19 +10,26 @@ import Prose from '../../components/case_study/Prose';
 import Quote from '../../components/case_study/Quote';
 import GridRow from '../../components/case_study/GridRow';
 import GridItem from '../../components/case_study/GridItem';
+import CenteredText from '../../components/case_study/CenteredText';
 import { COLORS } from '../../tokens';
 import ButtonLink from '../../components/ButtonLink';
 import A from '../../elements/A';
 
 import * as generateMockup from '../../images/generate/generate-mock.png';
 import * as generateWireDigital from '../../images/generate/generate-wireframe-digital.png';
-// import * as generateUIStyles from '../../images/generate/generate-ui-styles.png';
-// import * as generateDirection from '../../images/generate/generate-directions.png';
+import * as generateDirection from '../../images/generate/generate-directions.png';
+import * as brandColors from '../../images/generate/brand_colors.png';
+import * as brandType from '../../images/generate/brand_type.png';
 import * as generateFinal from '../../images/generate/generate-final-hifi.png';
 import StickyWrapper from '../../components/case_study/StickyWrapper';
 
 const StyledImage = styled.img`
   width: 100%;
+`;
+
+const FullImage = styled(StyledImage)`
+  max-width: 56rem;
+  margin-top: 3.75rem;
 `;
 
 const GenerateRedesign = ({ location }) => (
@@ -83,6 +90,41 @@ const GenerateRedesign = ({ location }) => (
         </GridItem>
       </GridRow>
 
+      <GridRow gap="0">
+        <CenteredText>
+          <SectionTitle>Determining a brand direction</SectionTitle>
+          <Prose>
+            While creating the wireframes I also created a few mockups to help
+            determine what Generate's web brand would be. I took a modified
+            approach from style-tiles, with an emphasis on showcasing the same
+            section of the page to not introduce additional factors for
+            participant feedback. Below are three options I created, with the
+            center being the one that was chosen.
+          </Prose>
+        </CenteredText>
+        <FullImage src={generateDirection} alt="" />
+      </GridRow>
+
+      <GridRow gap="0">
+        <CenteredText>
+          <SectionTitle>Refreshing a brand for the web</SectionTitle>
+          <Prose>
+            The original site and brand focused primarily on the blue color
+            featured in the organization’s logo. I found that color difficult to
+            work with, both in terms of accessibility and pairing it with
+            dynamic content such as images.
+          </Prose>
+          <Prose>
+            To overcome this dilemma, I opted for a palette swap of the brand’s
+            colors — focusing more on the yellow as the primary accent color
+            with a lot of white space to create a more open feeling. Below are
+            the finalized brand colors and typography options.
+          </Prose>
+        </CenteredText>
+        <FullImage src={brandColors} alt="" />
+        <FullImage src={brandType} alt="" />
+      </GridRow>
+
       <GridRow
         gridTemplateCol="repeat(2, 1fr)"
         gridTemplateAreas="'a b' 'c b' '. b'"
@@ -90,18 +132,14 @@ const GenerateRedesign = ({ location }) => (
         <GridItem gridArea="a">
           <SectionTitle>Finalizing hi-fidelity mocks</SectionTitle>
           <Prose>
-            The original site and brand focused primarily on the blue color
-            featured in the organization’s logo. When creating the site I found
-            that color difficult to work with, both in terms of accessibility
-            and pairing it with dynamic content such as images.
+            Overall I had positive feedback regarding the updated branding of
+            Generate, even with initial hesitation of the directors of cutting
+            back on Generate’s primary color.
           </Prose>
           <Prose>
-            To overcome this dilemma, I opted for a palette swap of the brand’s
-            colors — focusing more on the yellow as the primary accent color
-            with a lot of white space to create a more open feeling. Overall I
-            had positive feedback regarding this decision, even with initial
-            hesitation of the directors of cutting back on Generate’s primary
-            color.
+            With the branding of the website solidified, I began putting time
+            into finishing the design of the rest of the pages, including the
+            templates for the dynamic position listings.
           </Prose>
         </GridItem>
         <GridItem gridArea="b">
