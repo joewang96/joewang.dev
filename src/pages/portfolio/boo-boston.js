@@ -7,7 +7,7 @@ import CaseStudyWrapper from '../../components/case_study/CaseStudyWrapper';
 import SectionTitle from '../../components/case_study/SectionTitle';
 import Prose from '../../components/case_study/Prose';
 import GridRow from '../../components/case_study/GridRow';
-import GridItem from '../../components/case_study/GridItem';
+import CenteredText from '../../components/case_study/CenteredText';
 import ButtonLink from '../../components/ButtonLink';
 
 import * as booBostonHero from '../../images/boo-boston/hero_preview.svg';
@@ -16,12 +16,6 @@ import * as serviceModel from '../../images/boo-boston/service_model.jpg';
 import * as brandingElements from '../../images/boo-boston/branding.jpg';
 import * as versatileBranding from '../../images/boo-boston/versatile_branding.jpg';
 import * as finalScreens from '../../images/boo-boston/final_screens.jpg';
-
-const TextBlock = styled(GridItem)`
-  max-width: 44.18rem;
-  margin-left: auto;
-  margin-right: auto;
-`;
 
 const StyledImage = styled.img`
   width: 100%;
@@ -58,7 +52,7 @@ const BooBoston = ({ location }) => (
       }}
     >
       <GridRow>
-        <TextBlock>
+        <CenteredText>
           <SectionTitle>An AR mobile app with a service model</SectionTitle>
           <Prose>
             Boo! Boston was a semester-long project for my Interaction Design 2:
@@ -70,7 +64,7 @@ const BooBoston = ({ location }) => (
             Each team was given a different neighborhood to tailor their service
             toward. My team was given the Fenway neighborhood.{' '}
           </Prose>
-        </TextBlock>
+        </CenteredText>
       </GridRow>
 
       <GridRow>
@@ -84,7 +78,7 @@ const BooBoston = ({ location }) => (
             alt="A brainstorming exercise that allowed our team to come up with the idea to use our service to improve foot traffic and help local businesses."
           />
         </SplitImageRow>
-        <TextBlock>
+        <CenteredText>
           <SectionTitle>
             Discovery phase: journey maps & service models
           </SectionTitle>
@@ -95,7 +89,7 @@ const BooBoston = ({ location }) => (
             enjoyable experience to users and potentially more business to
             smaller, family owned businesses.
           </Prose>
-        </TextBlock>
+        </CenteredText>
       </GridRow>
 
       <GridRow>
@@ -104,7 +98,7 @@ const BooBoston = ({ location }) => (
           alt="A collection of branding elements for the Boo! Boston app, including wordmark, colors, typography, and iconography."
         />
 
-        <TextBlock>
+        <CenteredText>
           <SectionTitle>The branding elements of Boo! Boston.</SectionTitle>
           <Prose>
             The core demographic of the Boo! Boston app is families, so we
@@ -118,7 +112,7 @@ const BooBoston = ({ location }) => (
             governenment backed app, we wanted to create a more playful and fun
             energy.
           </Prose>
-        </TextBlock>
+        </CenteredText>
       </GridRow>
 
       <GridRow>
@@ -127,14 +121,14 @@ const BooBoston = ({ location }) => (
           alt="Multiple variations of the Boo! Boston wordmark and app icon to showcase how the brand could be applied to a variety of cities."
         />
 
-        <TextBlock>
+        <CenteredText>
           <SectionTitle>Versatile branding</SectionTitle>
           <Prose>
             The brand of Boo! Boston was created with expandability in mind. If
             brought into new areas, each city could use it’s own variation of
             the brand for unique splash screens, app icons, and taglines.
           </Prose>
-        </TextBlock>
+        </CenteredText>
       </GridRow>
 
       <GridRow>
@@ -143,7 +137,7 @@ const BooBoston = ({ location }) => (
           alt="Ten screens from our finalized UI mockups that show the onboarding experience and core ghost finding and catching feature."
         />
 
-        <TextBlock>
+        <CenteredText>
           <SectionTitle>The finalized UI and prototype</SectionTitle>
           <Prose>
             Taking our branding elements and original UI wireframes, our team
@@ -159,7 +153,7 @@ const BooBoston = ({ location }) => (
           >
             View InVision prototype
           </ButtonLink>
-        </TextBlock>
+        </CenteredText>
       </GridRow>
     </CaseStudyWrapper>
   </Layout>

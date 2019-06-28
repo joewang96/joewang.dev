@@ -19,6 +19,7 @@ import * as generateWireDigital from '../../images/generate/generate-wireframe-d
 // import * as generateUIStyles from '../../images/generate/generate-ui-styles.png';
 // import * as generateDirection from '../../images/generate/generate-directions.png';
 import * as generateFinal from '../../images/generate/generate-final-hifi.png';
+import StickyWrapper from '../../components/case_study/StickyWrapper';
 
 const StyledImage = styled.img`
   width: 100%;
@@ -31,7 +32,7 @@ const GenerateRedesign = ({ location }) => (
       title="Generate Website Redesign — complete visual, UX, and website overhaul."
       img={{ src: generateMockup, alt: '' }}
     >
-      <GridRow gap="5.8125rem" gridTemplateCol="repeat(2, 1fr)">
+      <GridRow gridTemplateCol="repeat(2, 1fr)">
         <GridItem>
           <SectionTitle>Problem setting - what is Generate?</SectionTitle>
           <Prose>
@@ -55,29 +56,27 @@ const GenerateRedesign = ({ location }) => (
         </GridItem>
       </GridRow>
 
-      <GridRow
-        gap="5.8125rem"
-        gridTemplateCol="repeat(2, 1fr)"
-        gridTemplateAreas="'a b'"
-      >
+      <GridRow gridTemplateCol="repeat(2, 1fr)" gridTemplateAreas="'a b'">
         <GridItem gridArea="b">
-          <SectionTitle>Information architecure revamp</SectionTitle>
-          <Prose>
-            The first part of the process was determining what information was
-            pertinent to Generate and what was the best way to organize it. I
-            started by interviewing directors of the organization to get a sense
-            of what they wanted on the new site and translated those findings
-            into some requirements.
-          </Prose>
-          <Prose>
-            From those interviews, I was able to begin creating a new IA schema
-            which led into initial wireframes. After a few rounds of designs and
-            revisions, I moved to creating digital sketches with more of the
-            fine details of spacing and layout incorporated. Increasing fidelity
-            at each step of the process allowed for larger UX details to be
-            straightened out before getting caught up in the more visual
-            aspects.
-          </Prose>
+          <StickyWrapper>
+            <SectionTitle>Information architecure revamp</SectionTitle>
+            <Prose>
+              The first part of the process was determining what information was
+              pertinent to Generate and what was the best way to organize it. I
+              started by interviewing directors of the organization to get a
+              sense of what they wanted on the new site and translated those
+              findings into some requirements.
+            </Prose>
+            <Prose>
+              From those interviews, I was able to begin creating a new IA
+              schema which led into initial wireframes. After a few rounds of
+              designs and revisions, I moved to creating digital sketches with
+              more of the fine details of spacing and layout incorporated.
+              Increasing fidelity at each step of the process allowed for larger
+              UX details to be straightened out before getting caught up in the
+              more visual aspects.
+            </Prose>
+          </StickyWrapper>
         </GridItem>
         <GridItem gridArea="a">
           <StyledImage src={generateWireDigital} />
@@ -85,7 +84,6 @@ const GenerateRedesign = ({ location }) => (
       </GridRow>
 
       <GridRow
-        gap="0 5.8125rem"
         gridTemplateCol="repeat(2, 1fr)"
         gridTemplateAreas="'a b' 'c b' '. b'"
       >
