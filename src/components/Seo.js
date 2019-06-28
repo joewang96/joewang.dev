@@ -18,6 +18,7 @@ function SEO({ description, lang, meta, keywords, title, hideTitle }) {
           siteMetadata {
             title
             description
+            keywords
           }
         }
       }
@@ -41,6 +42,10 @@ function SEO({ description, lang, meta, keywords, title, hideTitle }) {
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: `keywords`,
+          content: site.siteMetadata.keywords,
         },
         {
           property: `og:title`,

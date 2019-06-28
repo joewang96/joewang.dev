@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Joseph Wang :: UX Engineer`,
     description: `Hi, I'm Joseph Wang, a UX Engineer with a background in interaction design and front-end engineering. I'm currently a student at Northeastern University, pursuing a B.S. in Computer Science and Interactive Media. I am passionate about accessibility and creating great products to delight users!`,
+    keywords: `Joe Wang, Joseph Wang, Joseph, Wang, Joe, developer, designer, front end, front-end, interaction design, web design, ux, ux engineer, software engineer, Northeastern, portfolio`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,6 +30,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {},
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-114961201-1',
+        head: true,
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
