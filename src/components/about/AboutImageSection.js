@@ -113,15 +113,28 @@ const AboutImageSection = () => {
 
       <TextRow>
         <TextContainer>
-          <H3>Moving forward — always learning</H3>
+          <H3>Strengths and other interests</H3>
           <Smaller>
-            I believe that one of my greatest traits is a continual hunger to
-            seek knowledge and continue to develop my existing skills.
+            One of my greatest strengths is a continual drive to seek out
+            knowledge to develop my existing skills. Whether it be in my
+            personal or professional life, I always try to learn as much as I
+            can from every experience.
           </Smaller>
           <Smaller>
-            Whether it be in my personal or professional life I always seek out
-            ways to challenge myself and learn as much as I can from every
-            experience.
+            In my spare time I enjoy photography{' '}
+            <span aria-hidden="true" role="presentation">
+              📸
+            </span>
+            , video games{' '}
+            <span aria-hidden="true" role="presentation">
+              🎮
+            </span>{' '}
+            <i>(Smash Bros. Ultimate, anyone?)</i>, and finding new horror
+            movies to watch{' '}
+            <span aria-hidden="true" role="presentation">
+              👻
+            </span>
+            .
           </Smaller>
         </TextContainer>
       </TextRow>

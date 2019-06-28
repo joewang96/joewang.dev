@@ -37,7 +37,11 @@ const GenerateRedesign = ({ location }) => (
     <SEO title="Generate Website Redesign" />
     <CaseStudyWrapper
       title="Generate Website Redesign — complete visual, UX, and website overhaul."
-      img={{ src: generateMockup, alt: '' }}
+      img={{
+        src: generateMockup,
+        alt:
+          'Screens of the Generate redesign on mockups of a phone and laptop.',
+      }}
     >
       <GridRow gridTemplateCol="repeat(2, 1fr)">
         <GridItem>
@@ -86,7 +90,10 @@ const GenerateRedesign = ({ location }) => (
           </StickyWrapper>
         </GridItem>
         <GridItem gridArea="a">
-          <StyledImage src={generateWireDigital} />
+          <StyledImage
+            src={generateWireDigital}
+            alt="Wireframe mockups of the various screens on the Generate website."
+          />
         </GridItem>
       </GridRow>
 
@@ -102,7 +109,10 @@ const GenerateRedesign = ({ location }) => (
             center being the one that was chosen.
           </Prose>
         </CenteredText>
-        <FullImage src={generateDirection} alt="" />
+        <FullImage
+          src={generateDirection}
+          alt="Three choices for the new brand direction for Generate, shown through mockups of the hero section of the homepage."
+        />
       </GridRow>
 
       <GridRow gap="0">
@@ -121,8 +131,14 @@ const GenerateRedesign = ({ location }) => (
             the finalized brand colors and typography options.
           </Prose>
         </CenteredText>
-        <FullImage src={brandColors} alt="" />
-        <FullImage src={brandType} alt="" />
+        <FullImage
+          src={brandColors}
+          alt="The finalized colors I picked for the new brand, with the usage ratio beneath them."
+        />
+        <FullImage
+          src={brandType}
+          alt="Various text styles I used for updating Generate's brand. Uses IBM Plex Sans and Lato as the two font faces"
+        />
       </GridRow>
 
       <GridRow
@@ -143,7 +159,10 @@ const GenerateRedesign = ({ location }) => (
           </Prose>
         </GridItem>
         <GridItem gridArea="b">
-          <StyledImage src={generateFinal} />
+          <StyledImage
+            src={generateFinal}
+            alt="Finalized mockups of the Generate website, complete with color, complete UI, and more realistic copy."
+          />
         </GridItem>
         <GridItem gridArea="c" marginTop={true}>
           <SectionTitle>Taking it live - from design to code</SectionTitle>

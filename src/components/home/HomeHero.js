@@ -161,11 +161,11 @@ const HomeHero = () => (
         <HeroImage />
       </ImageContainer>
       <P>
-        Luckily, I have a background in both. Currently a Software Engineer at{' '}
+        Luckily, I have a background in both. Previously a Software Engineer at{' '}
         <A href="https://hubspot.com" target="_blank" rel="noreferrer noopener">
           HubSpot
-        </A>{' '}
-        working on{' '}
+        </A>
+        , where I worked on{' '}
         <A
           href="https://canvas.hubspot.com"
           target="_blank"

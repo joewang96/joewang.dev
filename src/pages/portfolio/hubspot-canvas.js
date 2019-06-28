@@ -32,7 +32,11 @@ const HubSpotCanvas = ({ location }) => (
     <SEO title="HubSpot Canvas UI Team" />
     <CaseStudyWrapper
       title="HubSpot Canvas — maintaining a first-class design system that scales."
-      img={{ src: canvasMockup, alt: '' }}
+      img={{
+        src: canvasMockup,
+        alt:
+          "Mobile, wide-screen desktop, and laptop views of different pages of the Canvas Design System's public website.",
+      }}
     >
       <GridRow>
         <CenteredText>
@@ -70,7 +74,10 @@ const HubSpotCanvas = ({ location }) => (
           </Prose>
         </GridItem>
         <GridItem gridArea="b">
-          <StyledImage src={canvasNew} />
+          <StyledImage
+            src={canvasNew}
+            alt="A mockup of a nested dropdown next to an onboarding popover component, both of which I developed."
+          />
         </GridItem>
       </GridRow>
 
@@ -92,7 +99,10 @@ const HubSpotCanvas = ({ location }) => (
           </Prose>
         </GridItem>
         <GridItem gridArea="a">
-          <StyledImage src={canvasEvergreen} />
+          <StyledImage
+            src={canvasEvergreen}
+            alt="An assortment of UI components that I had a hand in updating or refactoring. These include progress bars, text inputs, buttons, popovers, and cards."
+          />
         </GridItem>
       </GridRow>
 

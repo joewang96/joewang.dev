@@ -121,7 +121,10 @@ const MentalligencePage = ({ location }) => (
           </Prose>
         </GridItem>
         <GridItem gridArea="a">
-          <StyledImage src={howMightWe} />
+          <StyledImage
+            src={howMightWe}
+            alt="A brainstorming exercise where my team placed sticky notes on a board to help us prioritize deliverables for the client."
+          />
         </GridItem>
       </GridRow>
 
@@ -174,7 +177,10 @@ const MentalligencePage = ({ location }) => (
           </StickyWrapper>
         </GridItem>
         <GridItem gridArea="b">
-          <StyledImage src={finalResEvents} />
+          <StyledImage
+            src={finalResEvents}
+            alt="Hi-fi UI for the events and resources pages for Dr. Kris's site. Both list dynamic content the client would add herself."
+          />
         </GridItem>
       </GridRow>
 
@@ -201,7 +207,10 @@ const MentalligencePage = ({ location }) => (
           </StickyWrapper>
         </GridItem>
         <GridItem gridArea="a">
-          <StyledImage src={quizPages} />
+          <StyledImage
+            src={quizPages}
+            alt="Five screens of the quiz I developed for the site. Different steps include ranking options and agreeing or disagreeing with statements."
+          />
         </GridItem>
       </GridRow>
 
@@ -227,7 +236,11 @@ const MentalligencePage = ({ location }) => (
           </StickyWrapper>
         </GridItem>
         <GridItem gridArea="b" style={{ textAlign: 'center' }}>
-          <StyledImage src={mobileAnimation} style={{ maxWidth: 400 }} />
+          <StyledImage
+            src={mobileAnimation}
+            style={{ maxWidth: 400 }}
+            alt="An animation on a mobile screen that shows the menu opening. The hamburger menu transforms into an 'X' close button as the links fade in."
+          />
         </GridItem>
       </GridRow>
 
@@ -237,7 +250,10 @@ const MentalligencePage = ({ location }) => (
         gridTemplateAreas="'a b'"
       >
         <GridItem gridArea="a">
-          <StyledImage src={finalPages} />
+          <StyledImage
+            src={finalPages}
+            alt="The final UI for all of the pages on the client's site. Incorporates the brand shown in an above section."
+          />
         </GridItem>
 
         <GridItem gridArea="b">

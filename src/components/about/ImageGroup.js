@@ -37,7 +37,7 @@ const Image = styled.div`
 const ImageGroup = ({ alignRight, flip, caption, src, ratio = 0.66 }) => {
   return (
     <>
-      <Caption alignRight={alignRight} flip={flip}>
+      <Caption alignRight={alignRight} flip={flip} aria-hidden="true">
         {caption}
       </Caption>
       <Image imageSrc={src} aria-label={caption} ratio={ratio} role="img" />
