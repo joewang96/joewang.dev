@@ -143,7 +143,7 @@ const AboutPage = ({ location }) => (
                 <LightWeight>at HubSpot</LightWeight>
               </>
             }
-            body="Improved the text-editing experience on multipe apps inside HubSpot as part of the Inline Editing team."
+            body="Improved the text-editing experience on multiple apps inside HubSpot as part of the Inline Editing team."
             tag="Jan 2018 - August 2018"
           />
 

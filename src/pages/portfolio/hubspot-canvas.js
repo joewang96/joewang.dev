@@ -91,7 +91,7 @@ const HubSpotCanvas = ({ location }) => (
           </Prose>
           <Prose>
             Refactoring old components was where most of my time was spent while
-            a part of the team. This doesn’t just mean bugfixes, however —
+            a part of the team. This doesn’t just mean bug fixes, however —
             components are redesigned as seen fit based on the current needs of
             designers, developers, and PMs. A design system is a living,
             breathing thing that cannot stay static to when a feature was first
@@ -112,7 +112,7 @@ const HubSpotCanvas = ({ location }) => (
           <Prose>
             My final project on FaaS UI was kicking off the initiative to give
             the UI Library a needed refresh. Designers have found it difficult
-            to use and there hasn't been much UX thought put into it after it's
+            to use and there hasn't been much UX thought put into it after its
             initial creation in 2016.
           </Prose>
           <Prose>
@@ -127,7 +127,7 @@ const HubSpotCanvas = ({ location }) => (
         />
         <CenteredText>
           <Prose>
-            One of the key changes I made was to sepereate the content into
+            One of the key changes I made was to separate the content into
             different tabs to make it easier for designers and developers to
             know where to go to find the information they are looking for.
           </Prose>

@@ -109,7 +109,7 @@ const BooBoston = ({ location }) => (
           <Prose>
             To do this, we opted for bold colors and clean, sans-serif typefaces
             to create a modern feeling brand. Even though this would be a
-            governenment backed app, we wanted to create a more playful and fun
+            government backed app, we wanted to create a more playful and fun
             energy.
           </Prose>
         </CenteredText>
@@ -125,8 +125,8 @@ const BooBoston = ({ location }) => (
           <SectionTitle>Versatile branding</SectionTitle>
           <Prose>
             The brand of Boo! Boston was created with expandability in mind. If
-            brought into new areas, each city could use it’s own variation of
-            the brand for unique splash screens, app icons, and taglines.
+            brought into new areas, each city could use its own variation of the
+            brand for unique splash screens, app icons, and taglines.
           </Prose>
         </CenteredText>
       </GridRow>
@@ -134,7 +134,7 @@ const BooBoston = ({ location }) => (
       <GridRow>
         <StyledImage
           src={finalScreens}
-          alt="Ten screens from our finalized UI mockups that show the onboarding experience and core ghost finding and catching feature."
+          alt="Ten screens from our finalized UI mockups that show the on-boarding experience and core ghost finding and catching feature."
         />
 
         <CenteredText>
@@ -142,7 +142,7 @@ const BooBoston = ({ location }) => (
           <Prose>
             Taking our branding elements and original UI wireframes, our team
             built out the final screens for our prototype. The image above
-            showcases screens from onboarding and the “find and catch” ghost
+            showcases screens from on-boarding and the “find and catch” ghost
             gameplay.
           </Prose>
 

@@ -70,7 +70,7 @@ const GenerateRedesign = ({ location }) => (
       <GridRow gridTemplateCol="repeat(2, 1fr)" gridTemplateAreas="'a b'">
         <GridItem gridArea="b">
           <StickyWrapper>
-            <SectionTitle>Information architecure revamp</SectionTitle>
+            <SectionTitle>Information architecture revamp</SectionTitle>
             <Prose>
               The first part of the process was determining what information was
               pertinent to Generate and what was the best way to organize it. I
