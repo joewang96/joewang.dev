@@ -12,7 +12,7 @@ const ImagesColumn = styled.div`
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     width: 100%;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin-bottom: 60px;
 
     &:first-of-type {

@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 import { Link } from 'gatsby';
-import { COLORS } from '../../tokens';
+import { COLORS, FONTS } from '../../tokens';
 import A from '../../elements/A';
 import MenuContext from './MenuContext';
 
@@ -23,16 +23,16 @@ const LinkComponent = styled(props => {
   ${({ use }) =>
     use === 'case-study'
       ? css`
-          font-family: 'Noto Sans', Helvetica, sans-serif;
-          font-size: 1.25rem;
+          font-family: ${FONTS.SERIF};
+          font-size: 1.125rem;
           font-style: italic;
 
           &:not(:last-of-type) {
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
           }
         `
       : css`
-          font-family: 'Biryani', Helvetica, sans-serif;
+          font-family: ${FONTS.SANS};
           font-size: 1.5rem;
           font-weight: 600;
         `};

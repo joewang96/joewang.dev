@@ -100,9 +100,6 @@ const Menu = ({ closeMenu, pathname, active }) => (
         </MenuCaseStudies>
 
         <MenuItem active={active}>
-          <MenuLink to="/about/">About</MenuLink>
-        </MenuItem>
-        <MenuItem active={active}>
           <MenuLink href={resume} external={true} target="_blank">
             Résumé
           </MenuLink>

@@ -5,27 +5,17 @@ import ImagesContainer from './ImagesContainer';
 import ImagesRow from './ImagesRow';
 import ImagesColumn from './ImagesColumn';
 import ImageGroup from './ImageGroup';
+import TitleSubtitle from '../../components/TitleSubtitle';
 
-import H3 from '../../elements/H3';
 import P from '../../elements/P';
 import { SIZES } from '../../tokens';
 
 import * as washingtonDC from '../../images/about/dc-street.jpg';
 import * as scretreat from '../../images/about/sc-treat.jpg';
-
-const Smaller = styled(P)`
-  font-size: 1.125rem;
-
-  ${H3} + & {
-    margin-top: 12px;
-  }
-
-  & + & {
-    margin-top: 30px;
-  }
-`;
+import * as dot_pattern from '../../images/dot.svg';
 
 const ScrollableRow = styled(ImagesRow)`
+  position: relative;
   @media (max-width: ${SIZES.BREAK_MD}) {
     overflow-x: scroll;
     overflow-y: hidden;
@@ -51,11 +41,28 @@ const ScrollableRow = styled(ImagesRow)`
       padding-right: ${SIZES.PADDING_MOBILE};
     }
   }
+
+  &:before {
+    content: ' ';
+    z-index: -1;
+    width: 40%;
+    height: 90%;
+    position: absolute;
+    bottom: 20%;
+    right: 20%;
+
+    background-image: url(${dot_pattern});
+    background-size: 32px;
+
+    @media (max-width: ${SIZES.BREAK_MD}) {
+      content: none;
+    }
+  }
 `;
 
 const FloatingColumn = styled(ImagesColumn)`
   position: absolute;
-  top: 35%;
+  top: -65%;
   right: 0;
 
   @media (max-width: ${SIZES.BREAK_MD}) {
@@ -64,35 +71,67 @@ const FloatingColumn = styled(ImagesColumn)`
 `;
 
 const TextRow = styled(ImagesRow)`
-  max-width: 54%;
+  max-width: 52%;
+  margin-bottom: 5%;
   @media (max-width: ${SIZES.BREAK_MD}) {
     max-width: 100%;
   }
 `;
 
 const TextContainer = styled.div`
-  max-width: 30rem;
   margin: auto;
-  margin-right: 0;
-  padding: 5% 5% 0;
+  margin-left: 0;
   box-sizing: content-box;
+  width: 100%;
+  max-width: 33rem;
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     padding: 0;
-    padding-right: 3.125rem;
+
     margin: auto;
-    max-width: 33.125rem;
-    margin-top: 60px;
+    max-width: 100%;
+    margin-bottom: 60px;
   }
   @media (max-width: ${SIZES.BREAK_SM}) {
     padding: 0;
-    margin-top: 36px;
+    margin-bottom: 36px;
   }
 `;
 
 const AboutImageSection = () => {
   return (
     <ImagesContainer>
+      {/* Row */}
+      <TextRow>
+        <TextContainer>
+          <TitleSubtitle
+            title="Some of my interests and the fun stuff."
+            subtitle="What makes me a person"
+          />
+          <P>
+            One of my greatest strengths is a continual drive to seek out
+            knowledge to develop my existing skills. Whether it be in my
+            personal or professional life, I always try to learn as much as I
+            can from every experience.
+          </P>
+          <P>
+            In my spare time I enjoy photography{' '}
+            <span aria-hidden="true" role="presentation">
+              📸
+            </span>
+            , video games{' '}
+            <span aria-hidden="true" role="presentation">
+              🎮
+            </span>{' '}
+            <i>(Smash Bros. Ultimate, anyone?)</i>, and finding new horror
+            movies to watch{' '}
+            <span aria-hidden="true" role="presentation">
+              👻
+            </span>
+            .
+          </P>
+        </TextContainer>
+      </TextRow>
       {/* Row */}
       <ScrollableRow>
         <ImagesColumn width="57%">
@@ -110,34 +149,6 @@ const AboutImageSection = () => {
           />
         </FloatingColumn>
       </ScrollableRow>
-
-      <TextRow>
-        <TextContainer>
-          <H3>Strengths and other interests</H3>
-          <Smaller>
-            One of my greatest strengths is a continual drive to seek out
-            knowledge to develop my existing skills. Whether it be in my
-            personal or professional life, I always try to learn as much as I
-            can from every experience.
-          </Smaller>
-          <Smaller>
-            In my spare time I enjoy photography{' '}
-            <span aria-hidden="true" role="presentation">
-              📸
-            </span>
-            , video games{' '}
-            <span aria-hidden="true" role="presentation">
-              🎮
-            </span>{' '}
-            <i>(Smash Bros. Ultimate, anyone?)</i>, and finding new horror
-            movies to watch{' '}
-            <span aria-hidden="true" role="presentation">
-              👻
-            </span>
-            .
-          </Smaller>
-        </TextContainer>
-      </TextRow>
     </ImagesContainer>
   );
 };

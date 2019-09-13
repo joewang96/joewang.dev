@@ -5,17 +5,20 @@ import P from '../../elements/P';
 import Prose from './Prose';
 
 const SectionTitle = styled(P)`
-  font-family: 'Biryani', Cabin, Helvetica Neue, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1.375rem;
+  font-weight: 600;
+  font-size: 1.5rem;
 
   width: 100%;
   max-width: ${SIZES.PROSE_WIDTH};
-
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 
   ${Prose} + & {
     margin-top: 60px;
+  }
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    font-size: 1.3rem;
+    margin-bottom: 1.125rem;
   }
 `;
 

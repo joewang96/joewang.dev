@@ -5,14 +5,18 @@ import { SIZES } from '../../tokens';
 import H2 from '../../elements/H2';
 
 const Wrapper = styled.div`
-  padding: 60px ${SIZES.PADDING_DESKTOP} 7.5rem;
+  padding: 100px ${SIZES.PADDING_DESKTOP} 7.5rem;
 
   @media (max-width: ${SIZES.BREAK_LG}) {
-    padding: 30px ${SIZES.PADDING_TABLET} 6.25rem;
+    padding: 80px ${SIZES.PADDING_TABLET} 6.25rem;
+  }
+
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    padding: 60px ${SIZES.PADDING_TABLET} 6.25rem;
   }
 
   @media (max-width: ${SIZES.BREAK_SM}) {
-    padding: 15px ${SIZES.PADDING_MOBILE} 6.25rem;
+    padding: 60px ${SIZES.PADDING_MOBILE} 6.25rem;
   }
 `;
 

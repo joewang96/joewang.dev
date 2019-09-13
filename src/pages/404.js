@@ -66,8 +66,8 @@ const NotFoundPage = ({ location }) => (
           .
         </Body>
         <Body>
-          Don’t worry, you can always go back <A href="/">home</A> or even learn
-          more <A href="/about">about me</A>!
+          Don’t worry, you can always go back <A href="/">home</A> to checkout
+          out my portfolio or learn more about me!
         </Body>
       </Container>
     </Wrapper>

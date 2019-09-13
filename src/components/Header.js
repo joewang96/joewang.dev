@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { COLORS, SIZES } from '../tokens';
 import Menu from './menu/Menu';
+import * as dot_pattern from '../images/dot.svg';
 
 const MOBILE_TIMING = '100ms';
+const NAV_PADDING = parseInt(SIZES.PADDING_DESKTOP, 10) / 2;
 
 const Navigation = styled.nav`
-  padding: 0 ${`${parseInt(SIZES.PADDING_DESKTOP, 10) / 2}px`} 0
-    ${SIZES.PADDING_DESKTOP};
-  height: 100px;
+  padding: 0 ${`${NAV_PADDING}px`} 0 ${NAV_PADDING}px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +22,25 @@ const Navigation = styled.nav`
 
   @media (max-width: ${SIZES.BREAK_SM}) {
     padding: 0 ${SIZES.PADDING_MOBILE};
+  }
+
+  &:before {
+    content: ' ';
+    z-index: -1;
+    width: 40%;
+    max-width: 22rem;
+    height: 207px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: url(${dot_pattern});
+    background-size: 32px;
+
+    @media (max-width: ${SIZES.BREAK_SM}) {
+      width: 60%;
+      height: 120px;
+    }
   }
 `;
 
