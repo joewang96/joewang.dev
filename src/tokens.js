@@ -34,11 +34,6 @@ export const FONTS = {
   SANS: "'Source Sans Pro', Helvetica Neue, Helvetica, sans-serif",
   SERIF: "'Lora', 'Georgia', 'Palatino', serif",
   MONO: "'PT Mono', monospace",
-
-  // to delete
-  NOTO_SANS: "'Noto Sans', Cabin, Helvetica Neue, Helvetica, sans-serif",
-  BIRYANI: "'Biryani', 'Cabin', 'Helvetica Neue', Helvetica, sans-serif",
-  NOTO_SERIF: "'Noto Serif', 'Georgia', 'Palatino', serif",
 };
 
 export const MISC = {

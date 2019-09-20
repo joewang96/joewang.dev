@@ -124,12 +124,6 @@ const AboutMe = () => (
         Northeastern University. I’ll be graduating in May 2020, and joining
         HubSpot as a Software Engineer afterward.
       </P>
-
-      <P>
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </P>
     </TextContent>
   </MainContainer>
 );

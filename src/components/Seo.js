@@ -83,15 +83,11 @@ function SEO({ description, lang, meta, keywords, title, hideTitle }) {
         .concat(meta)}
     >
       <link
-        href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i"
+        href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i"
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css?family=Biryani:400,600,700"
-        rel="stylesheet"
-      />
-      <link
-        href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,500,700,700i"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i"
         rel="stylesheet"
       />
       <link
