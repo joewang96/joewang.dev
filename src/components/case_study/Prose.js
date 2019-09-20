@@ -4,7 +4,7 @@ import { FONTS } from '../../tokens';
 
 const Prose = styled(P)`
   font-size: 1.125rem;
-  font-family: ${FONTS.NOTO_SERIF};
+  font-family: ${FONTS.SERIF};
   line-height: 1.9;
 
   & + & {

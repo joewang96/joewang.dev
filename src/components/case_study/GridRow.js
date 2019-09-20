@@ -13,7 +13,7 @@ const GridRow = styled.div`
   }
 
   & + & {
-    margin-top: 120px;
+    margin-top: 100px;
     @media (max-width: ${SIZES.BREAK_MD}) {
       margin-top: ${SIZES.CASE_STUDY_SECTION_SPACING};
     }

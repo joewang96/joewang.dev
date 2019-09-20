@@ -1,20 +1,29 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-import H2 from '../elements/H2';
+import styled from 'styled-components';
+import P from '../elements/P';
 import { SIZES } from '../tokens';
+import TitleSubtitle from './TitleSubtitle';
+import A from '../elements/A';
+import * as resume from '../misc/Joseph_Wang_Resume.pdf';
 
-const Title = styled(H2)`
-  max-width: 21.125rem;
-  margin-right: 126px;
+const Title = styled.div`
+  width: 100%;
+  max-width: 31rem;
+  margin-right: 92px;
   box-sizing: content-box;
-  flex-shrink: 0;
+
+  @media (min-width: ${parseInt(SIZES.BREAK_MD, 10) + 1}px) {
+    position: sticky;
+    top: 1rem;
+    height: 100%;
+  }
 
   @media (max-width: ${SIZES.BREAK_LG}) {
     margin-right: 72px;
   }
   @media (max-width: ${SIZES.BREAK_MD}) {
     margin-bottom: 60px;
-    max-width: 26.625rem;
+    max-width: 600px;
   }
 
   @media (max-width: ${SIZES.BREAK_SM}) {
@@ -25,37 +34,27 @@ const Title = styled(H2)`
 
 const Content = styled.div`
   flex-grow: 1;
-  max-width: 49rem;
+  max-width: 48%;
+
+  @media (min-width: ${parseInt(SIZES.BREAK_MD, 10) + 1}px) {
+    margin-top: 3.125rem;
+  }
 
   @media (max-width: ${SIZES.BREAK_MD}) {
-    max-width: 37.5rem;
-    margin-left: auto;
-    width: 90%;
-  }
-  @media (max-width: ${SIZES.BREAK_SM}) {
+    max-width: 540px;
     width: 100%;
   }
 `;
 
 const Wrapper = styled.section`
-  padding: 0 0 0 ${SIZES.PADDING_DESKTOP};
+  padding: 0 ${SIZES.PADDING_DESKTOP};
   margin-bottom: 136px;
   display: flex;
   justify-content: space-between;
-
-  @media (min-width: ${parseInt(SIZES.BREAK_LG, 10) + 1}px) {
-    && {
-      ${({ compact }) =>
-        compact
-          ? css`
-              margin-left: 59px;
-            `
-          : 0};
-    }
-  }
+  position: relative;
 
   @media (max-width: ${SIZES.BREAK_LG}) {
-    padding: 0 0 0 ${SIZES.PADDING_TABLET};
+    padding: 0 ${SIZES.PADDING_TABLET};
     margin-bottom: 100px;
   }
 
@@ -65,7 +64,7 @@ const Wrapper = styled.section`
   }
 
   @media (max-width: ${SIZES.BREAK_SM}) {
-    padding: 0 0 0 ${SIZES.PADDING_MOBILE};
+    padding: 0 ${SIZES.PADDING_MOBILE};
     margin-bottom: 40px;
   }
 `;
@@ -73,7 +72,21 @@ const Wrapper = styled.section`
 const ListComponent = ({ title, content, ...rest }) => {
   return (
     <Wrapper {...rest}>
-      <Title>{title}</Title>
+      <Title>
+        <TitleSubtitle
+          title="Where have I worked."
+          subtitle="Experiences that helped me grow"
+        />
+        <P>
+          I’ve been fortunate enough to have been able to work for a variety of
+          great companies in both design and engineering roles. For more
+          information, view my{' '}
+          <A href={resume} target="_blank">
+            full résumé
+          </A>
+          .
+        </P>
+      </Title>
       <Content>{content}</Content>
     </Wrapper>
   );

@@ -5,9 +5,8 @@ import A from '../elements/A';
 import P from '../elements/P';
 import SocialIcon from '../components/SocialIcon';
 import * as resume from '../misc/Joseph_Wang_Resume.pdf';
-import * as footerBg from '../images/footer_pattern.svg';
 
-import { COLORS, SIZES } from '../tokens';
+import { COLORS, FONTS, SIZES } from '../tokens';
 
 const StyledFooter = styled.footer`
   position: relative;
@@ -19,25 +18,6 @@ const StyledFooter = styled.footer`
 
   @media (max-width: ${SIZES.BREAK_SM}) {
     padding: 0 ${SIZES.PADDING_MOBILE} 40px;
-  }
-
-  &::before {
-    content: " ";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    background: url('${footerBg}');
-    background-position: top right;
-    background-size: contain;
-    background-repeat: no-repeat;
-    right: 0;
-    bottom: 0;
-
-    @media (max-width: ${SIZES.BREAK_MD}) {
-      width: 50%;
-      background-position: bottom right;
-    }
   }
 `;
 const Container = styled.div`
@@ -75,25 +55,31 @@ const SitemapCopyright = styled.div`
 `;
 const SiteMap = styled.ul`
   list-style: none;
-  margin-bottom: 24px;
+  margin-bottom: 1.75rem;
+  margin-left: auto;
 
+  @media (max-width: ${SIZES.BREAK_MD}) {
+    margin-left: 0;
+  }
   @media (max-width: ${SIZES.BREAK_SM}) {
-    margin-bottom: 32px;
+    margin-bottom: 1.5rem;
   }
 `;
 const SiteMapItem = styled.li`
   display: inline-block;
   &:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 1.75rem;
     @media (max-width: ${SIZES.BREAK_SM}) {
       margin-right: 32px;
     }
   }
+  font-family: ${FONTS.SANS};
+  font-size: 1rem;
+  font-weight: 600;
 
   a {
     text-decoration: none;
     color: ${COLORS.OFF_BLACK};
-    font-weight: bold;
     transition: color 250ms ease-in-out;
     &:hover,
     &:focus {
@@ -105,23 +91,17 @@ const CopyrightText = styled(P)`
   && {
     font-size: 0.875rem;
   }
-  font-family: 'PT Mono', monospace;
+  font-family: ${FONTS.MONO};
 `;
 const MessageText = styled(P)`
-  font-family: 'Noto Serif', Georigia, serif;
+  font-family: ${FONTS.SERIF};
   font-weight: normal;
-  line-height: 1.66;
-  margin-bottom: 3.5rem;
-  color: ${COLORS.BLACK};
-  && {
-    font-size: 1.75rem;
-  }
+  font-style: italic;
+  margin-bottom: 2.5rem;
+  max-width: 20rem;
 
   @media (max-width: ${SIZES.BREAK_MD}) {
-    margin-bottom: 2.5rem;
-    && {
-      font-size: 1.5rem;
-    }
+    margin-bottom: 1.75rem;
   }
 `;
 
@@ -171,9 +151,6 @@ const Footer = () => (
         <SiteMap>
           <SiteMapItem>
             <Link to="/">Home</Link>
-          </SiteMapItem>
-          <SiteMapItem>
-            <Link to="/about">About</Link>
           </SiteMapItem>
           <SiteMapItem>
             <A href={resume} target="_blank">

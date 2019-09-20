@@ -18,26 +18,12 @@ const Section = styled.section`
   }
 
   @media (max-width: ${SIZES.BREAK_MD}) {
-    margin-bottom: 100px;
-  }
-
-  @media (max-width: ${SIZES.BREAK_SM}) {
-    padding: 0;
-    margin-bottom: 80px;
-  }
-`;
-
-const Title = styled(H2)`
-  max-width: 29rem;
-  margin-bottom: 63px;
-
-  @media (max-width: ${SIZES.BREAK_MD}) {
-    margin-bottom: 48px;
-  }
-
-  @media (max-width: ${SIZES.BREAK_SM}) {
-    margin-bottom: 28px;
+    margin-bottom: ${SIZES.TABLET_SECTION_SPACING};
     padding: 0 ${SIZES.PADDING_MOBILE};
+  }
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    margin-bottom: 80px;
   }
 `;
 
@@ -50,62 +36,68 @@ const Container = styled.div`
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: ${({ alignEnd }) => (alignEnd ? 'flex-end' : 'flex-start')};
+  justify-content: flex-start;
   &:not(:last-child) {
-    margin-bottom: 3rem;
+    margin-bottom: 2.125rem;
   }
 
   // Matches PortfolioItem
   @media (max-width: ${SIZES.BREAK_MD}) {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: flex-start;
     &:not(:last-child) {
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
   }
   @media (max-width: ${SIZES.BREAK_SM}) {
+    flex-direction: column;
     &:not(:last-child) {
-      margin-bottom: 52px;
+      margin-bottom: 40px;
     }
   }
 `;
 
 const PortfolioSection = () => (
   <Section>
-    <Title>My work — some featured case studies.</Title>
     {/* Portfolio Container */}
     <Container>
-      <Row>
+      <Row alignEnd={true}>
         <PortfolioItem
-          title="Generate Website Redesign"
-          body="complete visual, UX, and website overhaul."
+          title="Digital branding and web design for an engineering organization."
           id="portfolio-title--generate"
           to="/portfolio/generate/"
           image={generatePreview}
+          basis="58%"
+          above={true}
         />
         <PortfolioItem
-          title="HubSpot Canvas"
-          body="maintaining a first-class design
+          title="Maintaining a first-class design
             system that scales."
           id="portfolio-title--canvas"
           to="/portfolio/hubspot-canvas/"
           image={canvas_preview}
+          basis="42%"
+          above={true}
+          left={false}
         />
       </Row>
-      <Row>
+      <Row style={{ justifyContent: 'center' }}>
         <PortfolioItem
-          title="Boo! Boston"
-          body="designing an AR app using service
-          design concepts."
+          title="Service model concept for an augmented-reality app."
           id="portfolio-title--boo-boston"
           to="/portfolio/boo-boston/"
           image={booboston_preview}
+          basis="37.77%"
+          ratio="114%"
         />
         <PortfolioItem
-          title="Mentalligence"
-          body=" brand identity and website development for an author and professor."
+          title=" Brand identity and website development for an author."
           id="portfolio-title--mentalligence"
           to="/portfolio/mentalligence/"
           image={mentalligencePreview}
+          basis="48%"
+          left={false}
         />
       </Row>
     </Container>

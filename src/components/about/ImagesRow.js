@@ -7,10 +7,6 @@ const ImagesRow = styled.div`
   flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
   align-items: ${({ alignStart }) => (alignStart ? 'flex-start' : 'flex-end')};
 
-  &:first-of-type {
-    margin-bottom: 33px;
-  }
-
   @media (max-width: ${SIZES.BREAK_MD}) {
     flex-direction: column;
     padding: 0 ${SIZES.PADDING_TABLET};

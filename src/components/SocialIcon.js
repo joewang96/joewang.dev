@@ -5,12 +5,17 @@ import { COLORS } from '../tokens';
 
 const Icon = styled.i`
   display: inline-block;
-  color: #595959;
+  color: ${COLORS.BLACK};
   transition-duration: 250ms;
   transition-timing-function: ease-in-out;
   transition-property: color;
   font-size: 1.75rem;
   padding: 5px;
+
+  // override to get the same feel of weight
+  &.icon-dribbble {
+    font-weight: bold;
+  }
 `;
 
 const Wrapper = styled.a`
@@ -30,7 +35,7 @@ class SocialIcon extends Component {
   }
 
   render() {
-    const { className, href, targetBlank = true } = this.props;
+    const { className = '', href, targetBlank = true } = this.props;
     return !href ? (
       this.renderIcon()
     ) : (

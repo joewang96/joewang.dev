@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { COLORS, SIZES, FONTS } from '../tokens';
 
 const H3 = styled.h3`
-  font-family: ${FONTS.BIRYANI};
+  font-family: ${FONTS.SANS};
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.833;

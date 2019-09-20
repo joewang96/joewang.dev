@@ -4,12 +4,16 @@ import Em from '../../elements/Em';
 import { SIZES, MISC } from '../../tokens';
 
 const Caption = styled(Em)`
-  ${({ flip }) => (flip ? 'margin-top' : 'margin-bottom')}: 16px;
+  margin-top: 1rem;
   text-align: ${({ alignRight }) => (alignRight ? 'right' : 'left')};
 
   @media (max-width: ${SIZES.BREAK_MD}) {
     margin: 0;
     text-align: left;
+  }
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    font-size: 0.875rem;
+    padding: 0 0.5rem;
   }
 `;
 
@@ -23,10 +27,9 @@ const Image = styled.div`
   background-repeat: no-repeat;
   border-radius: ${SIZES.BORDER_RADIUS};
   background-image: url('${({ imageSrc }) => imageSrc}');
-  box-shadow: ${MISC.BOX_SHADOW};
 
   @media (max-width: ${SIZES.BREAK_MD}) {
-    margin-bottom: 16px;
+    margin-bottom: 0.75rem;
 
     flex-shrink: 0;
     width: 80vw;
@@ -34,13 +37,13 @@ const Image = styled.div`
   }
 `;
 
-const ImageGroup = ({ alignRight, flip, caption, src, ratio = 0.66 }) => {
+const ImageGroup = ({ alignRight, caption, src, ratio = 0.66 }) => {
   return (
     <>
-      <Caption alignRight={alignRight} flip={flip} aria-hidden="true">
+      <Image imageSrc={src} aria-label={caption} ratio={ratio} role="img" />
+      <Caption alignRight={alignRight} aria-hidden="true">
         {caption}
       </Caption>
-      <Image imageSrc={src} aria-label={caption} ratio={ratio} role="img" />
     </>
   );
 };

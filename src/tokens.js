@@ -5,7 +5,7 @@ export const COLORS = {
   LIGHT_GREY: '#898989',
   OFF_WHITE: '#E0E0E0',
   WHITE: '#FFFFFF',
-  BLUE: '#2147ed',
+  BLUE: '#2B0CF6',
   BLUE_DARK: '#082ED4',
 
   // --- Case Study Colors ---
@@ -24,14 +24,16 @@ export const SIZES = {
 
   PROSE_WIDTH: '640px',
   CASE_STUDY_SECTION_SPACING: '3.75rem',
+  TABLET_SECTION_SPACING: '80px',
+  MOBILE_SECTION_SPACING: '60px',
 
   BORDER_RADIUS: '3px',
 };
 
 export const FONTS = {
-  NOTO_SANS: "'Noto Sans', Cabin, Helvetica Neue, Helvetica, sans-serif",
-  BIRYANI: "'Biryani', 'Cabin', 'Helvetica Neue', Helvetica, sans-serif",
-  NOTO_SERIF: "'Noto Serif', 'Georgia', 'Palatino', serif",
+  SANS: "'Source Sans Pro', Helvetica Neue, Helvetica, sans-serif",
+  SERIF: "'Lora', 'Georgia', 'Palatino', serif",
+  MONO: "'PT Mono', monospace",
 };
 
 export const MISC = {

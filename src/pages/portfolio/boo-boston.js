@@ -13,9 +13,9 @@ import ButtonLink from '../../components/ButtonLink';
 import * as booBostonHero from '../../images/boo-boston/hero_preview.svg';
 import * as heroJourney from '../../images/boo-boston/hero_journey.jpg';
 import * as serviceModel from '../../images/boo-boston/service_model.jpg';
-import * as brandingElements from '../../images/boo-boston/branding.jpg';
-import * as versatileBranding from '../../images/boo-boston/versatile_branding.jpg';
-import * as finalScreens from '../../images/boo-boston/final_screens.jpg';
+import * as brandingElements from '../../images/boo-boston/branding.png';
+import * as versatileBranding from '../../images/boo-boston/versatile_branding.png';
+import * as finalScreens from '../../images/boo-boston/final_screens.png';
 
 const StyledImage = styled.img`
   width: 100%;
