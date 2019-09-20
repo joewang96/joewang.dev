@@ -27,11 +27,11 @@ const Title = styled(P)`
   color: ${COLORS.BLACK};
 
   @media (max-width: ${SIZES.BREAK_MD}) {
-    font-size: 1.125em;
+    font-size: 1.25em;
     margin-bottom: 0.875rem;
   }
   @media (max-width: ${SIZES.BREAK_SM}) {
-    font-size: 1rem;
+    font-size: 1.125rem;
     margin-bottom: 0.75rem;
   }
 `;
