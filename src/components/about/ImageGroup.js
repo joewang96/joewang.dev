@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Em from '../../elements/Em';
-import { SIZES, MISC } from '../../tokens';
+import { SIZES } from '../../tokens';
 
 const Caption = styled(Em)`
   margin-top: 1rem;
