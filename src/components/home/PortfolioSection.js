@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import H2 from '../../elements/H2';
 import { SIZES } from '../../tokens';
 import PortfolioItem from './PortfolioItem';
 

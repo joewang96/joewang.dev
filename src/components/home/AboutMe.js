@@ -1,9 +1,8 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import TitleSubtitle from '../../components/TitleSubtitle';
 import P from '../../elements/P';
-import A from '../../elements/A';
 
 import { SIZES } from '../../tokens';
 import * as headshot from '../../images/headshot.jpg';
@@ -94,7 +93,13 @@ const ImageContainer = styled(props => {
 `;
 
 const HeroImage = styled(props => {
-  return <img {...props} src={headshot} />;
+  return (
+    <img
+      {...props}
+      src={headshot}
+      alt="A headshot of myself smiling at the camera."
+    />
+  );
 })`
   width: 100%;
   border-radius: ${SIZES.BORDER_RADIUS};

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
-import { SIZES, FONTS, COLORS } from '../../tokens';
+import { SIZES, FONTS } from '../../tokens';
 
 const Tag = styled.div`
   font-family: ${FONTS.SERIF};

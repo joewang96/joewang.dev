@@ -13,8 +13,6 @@ import ListComponent from '../components/ListComponent';
 import ListItem from '../components/ListItem';
 import AboutImageSection from '../components/about/AboutImageSection';
 
-import { COLORS, SIZES } from '../tokens';
-
 const LightWeight = styled.span`
   font-weight: 400;
 `;
