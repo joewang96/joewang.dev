@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 
-import { COLORS, FONTS } from '../tokens';
+import { COLORS, FONTS, FONT_SIZE } from '../tokens';
 
 const ItalicSubtitle = styled.p`
   font-family: ${FONTS.SERIF};
-  font-size: 1.125rem;
+  font-size: ${FONT_SIZE.SUBTITLE};
   font-weight: 400;
   font-style: italic;
-  line-height: 2;
-  color: ${COLORS.OFF_BLACK};
+  color: ${COLORS.TEXT_SUBTLE};
 `;
 
 export default ItalicSubtitle;

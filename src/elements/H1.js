@@ -1,22 +1,22 @@
 import styled from 'styled-components';
 
-import { COLORS, SIZES, FONTS } from '../tokens';
+import { COLORS, SIZES, FONTS, FONT_SIZE } from '../tokens';
 
 const H1 = styled.h1`
   font-family: ${FONTS.SERIF};
-  font-size: 3rem;
-  font-weight: normal;
-  line-height: 1.4166;
-  color: ${COLORS.BLUE};
+  font-size: ${FONT_SIZE.TITLE};
+  font-weight: 400;
+  color: ${COLORS.TEXT};
 
+  /* TODO: update this */
   @media (max-width: ${SIZES.BREAK_LG}) {
-    font-size: 2.75rem;
+    font-size: ${FONT_SIZE.TITLE};
   }
   @media (max-width: ${SIZES.BREAK_MD}) {
-    font-size: 2.35rem;
+    font-size: ${FONT_SIZE.TITLE};
   }
   @media (max-width: ${SIZES.BREAK_SM}) {
-    font-size: 2.25rem;
+    font-size: ${FONT_SIZE.TITLE};
   }
 `;
 
