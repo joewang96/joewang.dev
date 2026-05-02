@@ -53,6 +53,10 @@ const JobList = styled.div`
   flex-direction: column;
   width: 100%;
   gap: 24px;
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    gap: 18px;
+  }
 `;
 
 class JobItem extends React.Component {

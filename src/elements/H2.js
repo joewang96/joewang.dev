@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { COLORS, FONTS, FONT_SIZE } from '../tokens';
+import { COLORS, FONTS, FONT_SIZE, SIZES } from '../tokens';
 
 const H2 = styled.h2`
   font-family: ${FONTS.SERIF};
@@ -8,6 +8,10 @@ const H2 = styled.h2`
   font-weight: normal;
   color: ${COLORS.TEXT};
   margin-bottom: 32px;
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    margin-bottom: 28px;
+  }
 `;
 
 export default H2;
