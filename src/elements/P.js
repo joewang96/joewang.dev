@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { COLORS, FONTS, FONT_SIZE } from '../tokens';
+import { COLORS, FONTS, FONT_SIZE, SIZES } from '../tokens';
 
 const P = styled.p`
   font-family: ${FONTS.SANS};
@@ -12,6 +12,10 @@ const P = styled.p`
 
   & + & {
     margin-top: 16px;
+  }
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    font-size: 16px;
   }
 `;
 

@@ -16,11 +16,11 @@ const Content = styled.div`
   margin: 0 auto;
 
   @media (max-width: ${SIZES.BREAK_SM}) {
-    padding: 0 40px;
+    padding: 0 32px;
   }
 
   @media (max-width: ${SIZES.BREAK_XS}) {
-    padding: 0 32px;
+    padding: 0 24px;
   }
 `;
 
