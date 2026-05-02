@@ -49,7 +49,7 @@ const Hero = () => (
     </TitleContainer>
     <Body>
       <P>
-        Hello there! I’m a designer with a background as a software engineer
+        Hello there! I’m a designer with a background as a software engineer,
         working on agentic automation and workflow integrations at HubSpot.
       </P>
       <P>

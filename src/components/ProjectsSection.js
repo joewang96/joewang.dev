@@ -25,7 +25,7 @@ const PlaceholderBlock = styled.div`
 
   ${P} {
     font-family: ${FONTS.MONO};
-    font-size: ${FONT_SIZE.SM};
+    font-size: ${FONT_SIZE.XS};
     color: ${COLORS.TEXT_SUBTLE};
     text-align: center;
     line-height: 140%;
@@ -40,7 +40,7 @@ const PlaceholderBlock = styled.div`
 
 const ProjectsSection = () => (
   <Wrapper>
-    <H2>Projects</H2>
+    <H2>Case studies</H2>
     <PlaceholderBlock>
       <CraneIcon size={24} />
       <span>
