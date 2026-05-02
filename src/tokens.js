@@ -13,12 +13,15 @@ export const COLORS = {
   // Borders
   BORDER_SUBTLE: '#3E3E3E',
   BORDER_HOVER: '#D2D2D2',
+
+  CONTAINER_BORDER_SUBTLE: '#1E1E1E',
 };
 
 export const SIZES = {
   BREAK_LG: '1080px',
   BREAK_MD: '800px',
   BREAK_SM: '600px',
+  BREAK_XS: '480px',
 
   PADDING_DESKTOP: '80px',
   PADDING_TABLET: '40px',

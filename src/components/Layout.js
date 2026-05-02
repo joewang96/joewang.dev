@@ -14,6 +14,14 @@ const Content = styled.div`
   padding: 0 60px;
   max-width: ${SIZES.MAX_WIDTH};
   margin: 0 auto;
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: ${SIZES.BREAK_XS}) {
+    padding: 0 32px;
+  }
 `;
 
 class Layout extends React.Component {

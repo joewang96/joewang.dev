@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import H2 from '../elements/H2';
 import P from '../elements/P';
-import { COLORS, FONTS, FONT_SIZE } from '../tokens';
+import { COLORS, FONTS, FONT_SIZE, SIZES } from '../tokens';
 
 const Wrapper = styled.div``;
 
@@ -10,23 +10,14 @@ const JobWrapper = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
-  padding: 12px 16px;
 
+  padding: 14px 20px;
+  border: 1px solid ${COLORS.CONTAINER_BORDER_SUBTLE};
   border-radius: 8px;
-  position: relative;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px; /* Matches the container */
-    pointer-events: none; /* Allows clicks to pass through to the content inside */
-
-    /* SVG background definition */
-    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%233E3E3E' stroke-width='1' stroke-dasharray='4%2c 4' stroke-dashoffset='0' stroke-linecap='square' vector-effect='non-scaling-stroke'/%3e%3c/svg%3e");
+  @media (max-width: ${SIZES.BREAK_XS}) {
+    flex-direction: column-reverse;
+    gap: 8px;
   }
 `;
 

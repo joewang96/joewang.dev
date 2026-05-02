@@ -7,6 +7,8 @@ import P from '../elements/P';
 import ItalicSubtitle from '../elements/ItalicSubtitle';
 import EmailButton from './EmailButton';
 
+import { SIZES } from '../tokens';
+
 const Body = styled.div`
   text-align: left;
   margin: auto;
@@ -33,6 +35,10 @@ const Wrapper = styled.div`
   ${H1} {
     margin-bottom: 4px;
   }
+
+  @media (max-width: ${SIZES.BREAK_SM}) {
+    margin-top: 80px;
+  }
 `;
 
 const Hero = () => (
@@ -44,10 +50,10 @@ const Hero = () => (
     <Body>
       <P>
         Hello there! I’m a designer with a background as a software engineer
-        working on agentic automation and app integrations at HubSpot.
+        working on agentic automation and workflow integrations at HubSpot.
       </P>
       <P>
-        Outside of work I like to play video games and hang out with my dog
+        Outside of work I like to play video games and hang out with my dog,
         Kody.
       </P>
     </Body>

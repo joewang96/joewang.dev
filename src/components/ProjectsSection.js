@@ -20,7 +20,7 @@ const PlaceholderBlock = styled.div`
   gap: 12px;
   padding: 28px 16px;
 
-  position: relative;
+  border: 1px solid ${COLORS.CONTAINER_BORDER_SUBTLE};
   border-radius: 8px;
 
   ${P} {
@@ -35,20 +35,6 @@ const PlaceholderBlock = styled.div`
   & ${P} {
     margin-bottom: 4px;
     margin-top: 0;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px; /* Matches the container */
-    pointer-events: none; /* Allows clicks to pass through to the content inside */
-
-    /* SVG background definition */
-    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%233E3E3E' stroke-width='1' stroke-dasharray='4%2c 4' stroke-dashoffset='0' stroke-linecap='square' vector-effect='non-scaling-stroke'/%3e%3c/svg%3e");
   }
 `;
 
