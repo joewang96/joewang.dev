@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "author": "Joseph Wang",
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.3.5",
     "gatsby-background-image": "^0.2.9",

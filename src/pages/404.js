@@ -6,7 +6,6 @@ import SEO from '../components/Seo';
 
 import H1 from '../elements/H1';
 import P from '../elements/P';
-import A from '../elements/A';
 
 import { SIZES } from '../tokens';
 
@@ -64,10 +63,6 @@ const NotFoundPage = ({ location }) => (
             😬
           </span>
           .
-        </Body>
-        <Body>
-          Don’t worry, you can always go back <A href="/">home</A> to checkout
-          out my portfolio or learn more about me!
         </Body>
       </Container>
     </Wrapper>

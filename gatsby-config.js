@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Joseph Wang :: UX Engineer`,
-    description: `Hi, I'm Joseph Wang, a UX Engineer with a background in interaction design and front-end engineering. I'm currently a student at Northeastern University, pursuing a B.S. in Computer Science and Interactive Media. I am passionate about accessibility and creating great products to delight users!`,
-    keywords: `Joe Wang, Joseph Wang, Joseph, Wang, Joe, developer, designer, front end, front-end, interaction design, web design, ux, ux engineer, software engineer, Northeastern, portfolio`,
+    title: `Joe Wang | Senior Product Designer`,
+    description: `Hi, I'm Joe Wang, a designer with a background as a software engineer, working on agentic automation and workflow integrations at HubSpot. `,
+    keywords: `Joe Wang, Joseph Wang, Joseph, Wang, Joe, developer, designer, front end, front-end, interaction design, web design, ux, ux engineer, software engineer, Northeastern, portfolio, product design, product designer`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

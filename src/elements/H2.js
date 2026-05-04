@@ -1,20 +1,17 @@
 import styled from 'styled-components';
 
-import { COLORS, SIZES, FONTS } from '../tokens';
+import { COLORS, FONTS, FONT_SIZE, SIZES } from '../tokens';
 
-const H1 = styled.h2`
+const H2 = styled.h2`
   font-family: ${FONTS.SERIF};
-  font-size: 2.75rem;
+  font-size: ${FONT_SIZE.SECTION_HEAD};
   font-weight: normal;
-  line-height: 1.4166;
-  color: ${COLORS.BLUE};
+  color: ${COLORS.TEXT};
+  margin-bottom: 32px;
 
-  @media (max-width: ${SIZES.BREAK_LG}) {
-    font-size: 2.5rem;
-  }
   @media (max-width: ${SIZES.BREAK_SM}) {
-    font-size: 2rem;
+    margin-bottom: 28px;
   }
 `;
 
-export default H1;
+export default H2;
