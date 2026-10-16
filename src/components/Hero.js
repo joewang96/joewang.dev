@@ -45,7 +45,9 @@ const Hero = () => (
   <Wrapper>
     <TitleContainer>
       <H1>Joe Wang</H1>
-      <ItalicSubtitle>Senior Product Designer @ HubSpot</ItalicSubtitle>
+      <ItalicSubtitle>
+        Senior Product Designer, formerly @ HubSpot
+      </ItalicSubtitle>
     </TitleContainer>
     <Body>
       <P>

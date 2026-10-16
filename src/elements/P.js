@@ -17,6 +17,24 @@ const P = styled.p`
   @media (max-width: ${SIZES.BREAK_SM}) {
     font-size: 16px;
   }
+
+  && strong {
+    color: ${COLORS.TEXT};
+  }
+
+  && ol,
+  && ul {
+    padding-left: 16px;
+  }
+
+  && li {
+    list-style-position: outside;
+    padding-left: 12px;
+  }
+
+  && li + li {
+    margin-top: 12px;
+  }
 `;
 
 export default P;

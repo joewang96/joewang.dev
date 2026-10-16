@@ -11,9 +11,11 @@ const JobWrapper = styled.div`
   flex-direction: row;
   gap: 20px;
 
-  padding: 14px 20px;
-  border: 1px solid ${COLORS.CONTAINER_BORDER_SUBTLE};
-  border-radius: 8px;
+  padding: 16px 0px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid ${COLORS.CONTAINER_BORDER_SUBTLE};
+  }
 
   @media (max-width: ${SIZES.BREAK_XS}) {
     flex-direction: column-reverse;
@@ -25,7 +27,7 @@ const JobTitle = styled(P)`
   margin: 0;
   margin-bottom: 2px;
 
-  font-weight: 500;
+  font-weight: 600;
   color: ${COLORS.TEXT};
 `;
 
@@ -52,11 +54,7 @@ const JobList = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 24px;
-
-  @media (max-width: ${SIZES.BREAK_SM}) {
-    gap: 18px;
-  }
+  gap: 0px;
 `;
 
 class JobItem extends React.Component {
