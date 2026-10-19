@@ -12,6 +12,10 @@ import { SIZES } from '../tokens';
 const Body = styled.div`
   text-align: left;
   margin: auto;
+
+  ${P} + ${P} {
+    margin-top: 16px;
+  }
 `;
 
 const TitleContainer = styled.div``;
@@ -51,12 +55,14 @@ const Hero = () => (
     </TitleContainer>
     <Body>
       <P>
-        Hello there! I’m a designer with a background as a software engineer,
-        working on agentic automation and workflow integrations at HubSpot.
+        Welcome! I’m a product designer with a technical background as a
+        front-end software engineer. Some product areas I've worked on include
+        design systems, workflow triggers, developer tooling, and agentic
+        automation.
       </P>
       <P>
-        Outside of work I like to play video games and hang out with my dog,
-        Kody.
+        Outside of work I like to play video games, read (currently reading the
+        Mistborn trilogy), and hang out with my dog, Kody.
       </P>
     </Body>
     <ActionContainer>

@@ -10,6 +10,21 @@ import P from '../elements/P';
 import CaseStudySection from '../components/case-study/CaseStudySection';
 import CaseStudyImage from '../components/case-study/CaseStudyImage';
 import TldrBanner from '../components/case-study/TldrBanner';
+import CaseStudyTopNav from '../components/case-study/CaseStudyTopNav';
+import { PATHS } from '../tokens';
+
+import * as triggerAppCatalog from '../images/triggers/trigger-app-catalog.png';
+import * as triggerPreAuth from '../images/triggers/trigger-oauth-config.png';
+import * as triggerOauth from '../images/triggers/trigger-oauth-modal.png';
+
+import * as sheetSelect from '../images/triggers/googlesheet-spreadsheet-select.png';
+import * as sheetModal from '../images/triggers/googlesheet-spreadsheet-modal.png';
+import * as triggerConfigured from '../images/triggers/googlesheets-configured.png';
+
+import * as sheetManage1 from '../images/triggers/googlesheets-managedata-1.png';
+import * as sheetManage2 from '../images/triggers/googlesheets-managedata-2.png';
+import * as sheetManage3 from '../images/triggers/googlesheets-managedata-3.png';
+import * as sheetManage4 from '../images/triggers/googlesheets-managedata-4.png';
 
 const SectionWrapper = styled.div`
   position: relative;
@@ -21,22 +36,32 @@ const SectionWrapper = styled.div`
 const ThirdPartyTriggerPage = ({ location }) => (
   <Layout location={location}>
     <SEO title="Joseph Wang" hideTitle={true} />
+    <CaseStudyTopNav nextPath={`..${PATHS.WORKFLOW_PLAN}`} />
     <SectionWrapper>
       <CaseStudyHeroHero
         title="Third party triggers for HubSpot workflows"
         company="HubSpot"
         role="Senior Product Designer"
-        timeframe="Q2 2025"
+        timeframe="Q2 2026"
+        image={sheetManage1}
         bannerSlot={
           <TldrBanner>
-            <P>...</P>
-            <P>...</P>
+            <P>
+              I led design for how the Automation Product Group at HubSpot could
+              support third-party triggers, considering different auth flows and
+              how users would be able to use their data within the workflow.
+            </P>
+            <P>
+              This led to over 120 third-party apps supporting workflow triggers
+              and 10% of workflows in our new builder for Agent Hub using
+              third-party triggers..
+            </P>
           </TldrBanner>
         }
       />
 
       <CaseStudySection>
-        <H2>Overview</H2>
+        <H2>Background</H2>
         <P>
           In 2026 the Automation Product Group at HubSpot was reimagining what
           automation could look like inside of HubSpot. We were building a brand
@@ -82,7 +107,7 @@ const ThirdPartyTriggerPage = ({ location }) => (
           displayed to the customer that they can install in their portal. While
           that gives a central spot to view everything offered, it includes all
           available integrations, regardless of if they support specific
-          workflow functionality. 
+          workflow functionality.
         </P>
         <P>
           For this experience I wanted to have a contextual library of available
@@ -95,9 +120,11 @@ const ThirdPartyTriggerPage = ({ location }) => (
           breaking down integrations into two sections: Connected apps where we
           could elevate integrations they have already installed for quick
           access and a full list of all available apps that included workflow
-          triggers. 
+          triggers.
         </P>
-        <CaseStudyImage imageSrc="" />
+
+        <CaseStudyImage src={triggerAppCatalog} />
+
         <P>
           This made it very convenient for users to find the integration they
           wanted since this contextual app library made it possible for us to
@@ -106,7 +133,6 @@ const ThirdPartyTriggerPage = ({ location }) => (
           and force them to go to a different part of the product to do that
           browsing.
         </P>
-        <CaseStudyImage imageSrc="" />
       </CaseStudySection>
 
       <CaseStudySection>
@@ -116,7 +142,7 @@ const ThirdPartyTriggerPage = ({ location }) => (
           be connecting their account. Connected apps in HubSpot are managed in
           their own part of the product, but for this to work how we’d ideally
           want in Workflows we’d need to be able to keep our user focused on
-          their task and not bounce them around to different pages. 
+          their task and not bounce them around to different pages.
         </P>
         <P>
           Before this project, it was also typical for customers to need to
@@ -131,9 +157,12 @@ const ThirdPartyTriggerPage = ({ location }) => (
           another field in the trigger setup, something that the user would be
           able to have fully visibility into which account is in use while also
           giving them flexibility to swap which account to use across their
-          different workflows. 
+          different workflows.
         </P>
-        <CaseStudyImage imageSrc="" />
+
+        <CaseStudyImage src={triggerPreAuth} />
+
+        <CaseStudyImage src={triggerOauth} />
       </CaseStudySection>
 
       <CaseStudySection>
@@ -141,21 +170,77 @@ const ThirdPartyTriggerPage = ({ location }) => (
         <P>
           “Sheet-like apps”, such as Google Sheets or Airtable, posed an
           interesting problem where there is no predefined data schema, such as
-          in most of our other workflow triggers and actions. Instead, the
-          selection the user makes during trigger setup will impact what data
-          outputs would be available later on in the workflow, which could even
-          change if the sheet is edited later on.{' '}
+          in most of our other workflow triggers and actions.
         </P>
         <P>
-          Due to this dynamic nature of the sheet and the derived outputs, I
-          designed an experience for those types of apps to allow the user to
-          better manage which range of cells to include in their trigger data,
-          and be able to decide when they want to refresh and pull in new column
-          data, as actually using that data downstream in the workflow would
-          already require the user to come back and make edits to the workflow.{' '}
+          Instead, the selection the user makes during trigger setup will impact
+          what data outputs would be available later on in the workflow, which
+          could even change if the sheet is edited later on.{' '}
         </P>
-        <CaseStudyImage imageSrc="" />
+
+        <CaseStudyImage src={sheetSelect} />
+
+        <P>
+          My approach to this was to use the dedicated asset picker from the
+          integration to choose the main asset being selected, in this case the
+          spreadsheet. This allowed us to mirror the organization the user had
+          in their account to aid in findability.
+        </P>
+
+        <CaseStudyImage src={sheetModal} />
+
+        <P>
+          Once that was selected, we used progressive disclosure to have the
+          user make the remaining follow-up selections as needed. In the case of
+          Google Sheets this means choosing the specific Sheet to use as well as
+          a way to select which row was dedicated for column headers.
+        </P>
+
+        <CaseStudyImage src={triggerConfigured} />
       </CaseStudySection>
+
+      <CaseStudySection>
+        <H2>Managing spreadsheet data schemas</H2>
+
+        <P>
+          Once we had these designs in place and built out, we began testing
+          with customers as part of an alpha experience, before a broader public
+          beta update (which included updated designs to the editor shell).
+        </P>
+
+        <P>
+          One thing I didn’t catch initially that started to emerge was how to
+          best handle change management of the spreadsheet as columns are added
+          to the spreadsheet. At that point, column additions to the sheet would
+          immediately update the schema, and cause trigger events to fire. While
+          this kept things up to date, it meant that the user was silently opted
+          in to listen to data changes from columns that the user wasn’t aware
+          of when first setting up the trigger.
+        </P>
+
+        <CaseStudyImage src={sheetManage1} />
+
+        <P>
+          Due to the dynamic nature of the sheet’s data and how that affects
+          derived outputs for the trigger, I designed an experience for those
+          types of apps to allow the user to better manage which range of cells
+          to include in their trigger data.
+        </P>
+
+        <CaseStudyImage src={sheetManage2} />
+
+        <P>
+          In this experience they’d be able to decide when they want to refresh
+          and pull in new column data, as actually using that data downstream in
+          the workflow would already require the user to come back and make
+          edits to the workflow.
+        </P>
+
+        <CaseStudyImage src={sheetManage3} />
+
+        <CaseStudyImage src={sheetManage4} />
+      </CaseStudySection>
+
       <CaseStudySection>
         <H2>Impact</H2>
         <P>

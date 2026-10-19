@@ -10,6 +10,19 @@ import P from '../elements/P';
 import CaseStudySection from '../components/case-study/CaseStudySection';
 import CaseStudyImage from '../components/case-study/CaseStudyImage';
 import TldrBanner from '../components/case-study/TldrBanner';
+import CaseStudyTopNav from '../components/case-study/CaseStudyTopNav';
+import { PATHS } from '../tokens';
+
+import * as pocImg1 from '../images/run-agent/runagent_poc_1.png';
+import * as pocImg2 from '../images/run-agent/runagent_poc_2.png';
+import * as pocImg3 from '../images/run-agent/runagent_poc_3.png';
+import * as runAgentSelect from '../images/run-agent/RunAgent_AgentSelect.png';
+import * as runAgentConfig from '../images/run-agent/RunAgent_BlankConfig.png';
+import * as runAgentTwoOutputs from '../images/run-agent/RunAgent_Initial_TwoOutputs.png';
+import * as runAgentFinal1 from '../images/run-agent/RunAgent_OutputTypes.png';
+import * as runAgentFinal2 from '../images/run-agent/RunAgent_BlankConfig.png';
+import * as runAgentFinal3 from '../images/run-agent/RunAgent_GeneratingOutputs.png';
+import * as runAgentFinal4 from '../images/run-agent/RunAgent_OutputsGenerated.png';
 
 const SectionWrapper = styled.div`
   position: relative;
@@ -21,40 +34,50 @@ const SectionWrapper = styled.div`
 const RunAgentPage = ({ location }) => (
   <Layout location={location}>
     <SEO title="Joseph Wang" hideTitle={true} />
+    <CaseStudyTopNav nextPath={`..${PATHS.THIRD_PARTY_TRIGGER}`} />
     <SectionWrapper>
       <CaseStudyHeroHero
         title="Run agent workflow action"
         company="HubSpot"
         role="Product Designer"
         timeframe="Q4 2025"
+        image={runAgentConfig}
         bannerSlot={
           <TldrBanner>
-            <P>...</P>
-            <P>...</P>
+            <P>
+              I led design for agent orchestration within HubSpot workflows,
+              utilizing rapid customer feedback to quickly iterate on an initial
+              MVP alongside my engineering team and shape how data would pass
+              between agents and the workflow.
+            </P>
+            <P>
+              My changes resonated with customers, leading to steady growth in
+              agent usage in the months following the update and paving the way
+              for 10% of new workflows using agents during the launch of our new
+              agentic automation builder.
+            </P>
           </TldrBanner>
         }
       />
 
       <CaseStudySection>
-        <H2>Overview</H2>
+        <H2>Background</H2>
         <P>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          In September 2025, HubSpot launched Agent Studio into public beta
+          during their annual INBOUND conference. This release would allow
+          customers to create their own custom agents within HubSpot, utilizing
+          context from the CRM to do work for them.
         </P>
       </CaseStudySection>
 
       <CaseStudySection>
         <H2>Problem</H2>
         <P>
-          Custom agents launched into public beta after September 2025, but
-          usage of these agents was still low. Customers were able to run their
-          agents manually and based on some simple triggers, but lacked
-          flexibility with how these agents are run automatically and how agents
-          can be orchestrated together.
+          Adoption and usage of custom agents was fairly low after the public
+          beta release. Customers were able to run their agents manually and
+          based on some simple triggers, but lacked flexibility with how these
+          agents are run automatically and how agents can be orchestrated
+          together.
         </P>
         <P>
           My team’s plan to address this was to build into HubSpot’s Workflows
@@ -62,28 +85,43 @@ const RunAgentPage = ({ location }) => (
           workflows relied on expected outputs for their actions to properly
           pass data between each other we needed a way to convert an agent’s
           non-deterministic response into something that’d be usable by standard
-          non-deterministic workflow actions. 
+          non-deterministic workflow actions.
         </P>
       </CaseStudySection>
 
       <CaseStudySection>
-        <H2>Initial approach and user research</H2>
+        <H2>Initial proof of concept</H2>
         <P>
-          Since agents were a new technology to the HubSpot product at the time,
-          I decided to conduct user interviews with our customers who’ve built
-          custom agents. The team and I quickly prototyped an initial proof of
-          concept (POC) version of the action to get rapid feedback from
-          customers in the custom agents beta. 
-        </P>
-        <P>
-          For this first version I had to balance technical level of effort with
-          UX best practices, knowing the feedback we uncover during said
-          research will help get buy-in from the rest of the team for aspects
-          that might require a more involved change to how the code was
-          currently architected.  
+          Before joining this project, the engineering team had spun up an
+          initial proof of concept (POC) version of the action to start working
+          through some of the technical pieces to integrate our custom agents
+          and workflows platforms.
         </P>
 
-        <CaseStudyImage imageSrc="" />
+        <CaseStudyImage src={pocImg1} />
+
+        <P>
+          Since agents were a new technology to the HubSpot product at the time,
+          I decided to conduct user interviews with our customers to learn more
+          about their mental models and expectations for agentic features within
+          HubSpot.
+        </P>
+
+        <P>
+          Knowing the feedback we uncover during said research will help get
+          buy-in from the rest of the team for aspects that might require a more
+          involved change to how the code was currently architected, I decided
+          to start a user testing plan with this engineering POC, and quickly
+          iterate as we gain insights.
+        </P>
+
+        <CaseStudyImage src={pocImg2} />
+
+        <CaseStudyImage src={pocImg3} />
+      </CaseStudySection>
+
+      <CaseStudySection>
+        <H2>Research approach</H2>
 
         <P>
           Going into the user research sessions, I had three main objectives I
@@ -123,7 +161,10 @@ const RunAgentPage = ({ location }) => (
 
       <CaseStudySection>
         <H2>Research takeaways</H2>
-        <P>After interviewing the 7 customers two main takeaways emerged:</P>
+        <P>
+          After the first round of interviewing customers two main takeaways
+          emerged:
+        </P>
 
         <P>
           <ol>
@@ -152,57 +193,88 @@ const RunAgentPage = ({ location }) => (
         <P>
           Looking at outputs, our first POC version of the action oversimplified
           the link between what instructions are passed to the agent and how
-          that affects what data it returns to the workflow. Rather than keep
-          this behavior hidden to the customer, I decided we should bake in
-          steps to the action’s setup that would help gradually inform the user
-          how data is flowing between the agent and the workflow.
+          that affects what data it returns to the workflow.
         </P>
+
+        <P>
+          Rather than keep this behavior hidden to the customer, I decided we
+          should bake in steps to the action’s setup that would help gradually
+          inform the user how data is flowing between the agent and the
+          workflow.
+        </P>
+      </CaseStudySection>
+
+      <CaseStudySection>
+        <H2>First iteration and validation</H2>
+
+        <P>
+          Based on the research I went ahead and made a round of revisions to
+          the Run agent action. I cleaned up the UI of the action heavily,
+          standardizing agent presentation and simplifying content. I also broke
+          up the outputs into two separate sections, to better clarify the
+          difference between default and custom outputs.
+        </P>
+
+        <CaseStudyImage src={runAgentSelect} />
+
+        <P>
+          While this tested much better than the initial version, the Outputs
+          section still proved overwhelming for our customers. Giving customers
+          both the default full agent response and a way to define a custom
+          output schema proved confusing, ultimately complicating the agent
+          setup process too much.
+        </P>
+
+        <CaseStudyImage src={runAgentTwoOutputs} />
       </CaseStudySection>
 
       <CaseStudySection>
         <H2>Final solution</H2>
         <P>
-          Using the results of the research, I made updates to the design of the
-          Run agent action with a heavy focus on the output configuration step.
           Something we uncovered during the research was two main buckets of
-          agent jobs: content generation and data manipulation. 
+          agent jobs: content generation and data manipulation. These agent
+          archetypes were a common link between what our customers were trying
+          to set up in their own portal, and gave me a way to simplify the
+          action.
         </P>
         <P>
-          To solve for this, I designed a method for the user to choose what
-          format they’d want their outputs in: either a full rich text response,
-          aimed at the content generation use case, or a structured format aimed
-          at the data manipulation use case where the customer would want to use
-          those different data outputs in the proceeding workflow actions.
+          What I went with was an option to choose what you expected from the
+          agent’s response: either a full rich text response, aimed at the
+          content generation use case, or a structured format aimed at the data
+          manipulation use case where the customer would want to use those
+          different data outputs in the proceeding workflow actions.
         </P>
 
-        <CaseStudyImage imageSrc="" />
+        <CaseStudyImage src={runAgentFinal1} />
 
         <P>
           Full rich text response would require no additional setup for the
           user, being able to use whatever text response the agent gives back by
-          default. The structured data outputs required one more step to work
-          — additional instructions passed to the agent at runtime to have it
-          map the data it generates in its run into the correct final format. 
+          default. The structured data outputs required one more step to work —
+          additional instructions passed to the agent at runtime to have it map
+          the data it generates in its run into the correct final format. 
         </P>
+
+        <CaseStudyImage src={runAgentFinal2} />
 
         <P>
           This piece was important because it gave the customer flexibility in
           how their agent was used in a workflow without degrading the
           experience for manual runs, in which the rich text response was a
-          better experience since the user was present to review. 
+          better experience since the user was present to review what the agent
+          did.
         </P>
+
+        <CaseStudyImage src={runAgentFinal3} />
 
         <P>
           Rather than put the burden on the user to write these instructions, I
           wanted to use the context we already had at this point based on the
           agent that is being run and the rest of the steps in the workflow to
-          generate a first pass at outputs for the user. This approach had two
-          main benefits: it reduced manual work that the user would have to do
-          and also served as a way to avoid a cold start problem by giving
-          customers a starting point, with a path to refine as needed.
+          generate a first pass at outputs for the user.
         </P>
 
-        <CaseStudyImage imageSrc="" />
+        <CaseStudyImage src={runAgentFinal4} />
       </CaseStudySection>
 
       <CaseStudySection>

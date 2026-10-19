@@ -1,18 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { COLORS, FONTS, FONT_SIZE, SIZES } from '../../tokens';
+import { COLORS, SIZES } from '../../tokens';
 import P from '../../elements/P';
 
 const Header = styled(P)`
   color: ${COLORS.TEXT};
-  font-weight: 600;
+  font-weight: 500;
 `;
 
 const Body = styled.div`
   /* TODO: add breakpoint smaller size */
   & ${P} {
     font-size: 16px;
+  }
+
+  ${P} + ${P} {
+    margin-top: 8px;
   }
 `;
 

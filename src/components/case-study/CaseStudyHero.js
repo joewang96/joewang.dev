@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import H1 from '../../elements/H1';
 import P from '../../elements/P';
-import ItalicSubtitle from '../../elements/ItalicSubtitle';
 
 import { SIZES, FONT_SIZE, FONTS, COLORS } from '../../tokens';
 import CaseStudyImage from './CaseStudyImage';
@@ -26,7 +25,7 @@ const DetailText = styled(P)`
   marign: 0px;
   color: ${COLORS.TEXT};
 
-  font-weight: 600;
+  font-weight: 500;
 `;
 
 const Wrapper = styled.div`
@@ -48,10 +47,6 @@ const Wrapper = styled.div`
 `;
 
 class DetailGroup extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { label, text, ...rest } = this.props;
 
@@ -74,7 +69,7 @@ const CaseStudyHero = ({
 }) => (
   <Wrapper>
     <H1>{title}</H1>
-    <CaseStudyImage imageSrc={image} />
+    <CaseStudyImage src={image} />
     <DetailContainer>
       <DetailGroup label="Company" text={company} />
       <DetailGroup label="Role" text={role} />

@@ -27,7 +27,7 @@ const JobTitle = styled(P)`
   margin: 0;
   margin-bottom: 2px;
 
-  font-weight: 600;
+  font-weight: 500;
   color: ${COLORS.TEXT};
 `;
 
@@ -75,7 +75,13 @@ class JobItem extends React.Component {
           <Company>{company}</Company>
         </PositionContainer>
         <Year>
-          {start} - {end}
+          {start === end ? (
+            start
+          ) : (
+            <>
+              {start} - {end}
+            </>
+          )}
         </Year>
       </JobWrapper>
     );
@@ -91,7 +97,7 @@ const WorkSection = () => (
         title="Senior Product Designer"
         company="HubSpot"
         start="2026"
-        end="Present"
+        end="2026"
       />
       <JobItem
         title="Product Designer"

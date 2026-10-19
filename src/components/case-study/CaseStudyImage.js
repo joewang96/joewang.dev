@@ -1,19 +1,12 @@
 import styled from 'styled-components';
 
-import { COLORS, FONTS, FONT_SIZE, SIZES } from '../../tokens';
+import { COLORS } from '../../tokens';
 
-const CaseStudyImage = styled.div`
+const CaseStudyImage = styled.img`
   width: 100%;
-  height: 280px;
+  border-radius: 8px;
 
-  background-color: #848484;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("${props => props.imageSrc}");
-
-  border-radius: ${SIZES.BORDER_RADIUS};
+  background-color: ${COLORS.IMG_BG};
 `;
 
 export default CaseStudyImage;

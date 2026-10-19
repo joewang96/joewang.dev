@@ -8,11 +8,14 @@ const P = styled.p`
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 140%;
+  font-weight: 300;
   color: ${COLORS.TEXT_SUBTLE};
 
+  /*
   & + & {
     margin-top: 16px;
   }
+  */
 
   @media (max-width: ${SIZES.BREAK_SM}) {
     font-size: 16px;

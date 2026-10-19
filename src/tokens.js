@@ -15,6 +15,8 @@ export const COLORS = {
   BORDER_HOVER: '#D2D2D2',
 
   CONTAINER_BORDER_SUBTLE: '#3E3E3E',
+
+  IMG_BG: '#F9F6EE',
 };
 
 export const SIZES = {
@@ -33,7 +35,7 @@ export const SIZES = {
 };
 
 export const FONTS = {
-  SANS: "'DM Sans', Helvetica Neue, Helvetica, sans-serif",
+  SANS: "'Radio Canada', Helvetica Neue, Helvetica, sans-serif",
   SERIF: "'Instrument Serif', 'Georgia', 'Palatino', serif",
   MONO: "'DM Mono', monospace",
 };
@@ -45,4 +47,10 @@ export const FONT_SIZE = {
   BODY: '18px',
   SM: '16px',
   XS: '14px',
+};
+
+export const PATHS = {
+  WORKFLOW_PLAN: '/workflow-plan-mode',
+  RUN_AGENT: '/run-agent-action',
+  THIRD_PARTY_TRIGGER: '/third-party-triggers',
 };

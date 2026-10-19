@@ -1,63 +1,38 @@
 import React from 'react';
-import { CraneTowerIcon } from '@phosphor-icons/react';
 import styled from 'styled-components';
 import H2 from '../elements/H2';
 import P from '../elements/P';
-import { COLORS, FONTS, FONT_SIZE, SIZES } from '../tokens';
-
+import { COLORS, SIZES, PATHS } from '../tokens';
 import { Link } from 'gatsby';
+
+import * as workflowPlanImg from '../images/plan-mode/PlanModeHero.png';
+import * as runAgentImg from '../images/run-agent/RunAgent_BlankConfig.png';
+import * as triggerImg from '../images/triggers/googlesheets-managedata-1.png';
 
 const Wrapper = styled.div``;
 
-const CraneIcon = styled(CraneTowerIcon)`
-  display: inline-block;
-  color: ${COLORS.TEXT_SUBTLE};
-`;
-
-const PlaceholderBlock = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 28px 16px;
-
-  border: 1px solid ${COLORS.CONTAINER_BORDER_SUBTLE};
-  border-radius: 8px;
-
-  ${P} {
-    font-family: ${FONTS.MONO};
-    font-size: ${FONT_SIZE.XS};
-    color: ${COLORS.TEXT_SUBTLE};
-    text-align: center;
-    line-height: 140%;
-    margin-bottom: 0px;
-  }
-
-  & ${P} {
-    margin-bottom: 4px;
-    margin-top: 0;
-  }
-`;
-
 const ProjectImage = styled.div`
-  width: 140px;
-  height: 100px;
+  width: 160px;
+  height: 120px;
+  border-radius: 4px;
 
-  background-size: cover;
+  background-size: ${({ imageSize }) => (!!imageSize ? imageSize : 'cover')};
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url('${({ imageSrc }) => imageSrc}');
+  background-color: ${COLORS.IMG_BG};
 
-  background-color: #848484;
-
-  border-radius: 4px;
+  @media (max-width: ${SIZES.BREAK_XS}) {
+    width: 100%;
+    height: 200px;
+  }
 `;
 
 const ProjectTitle = styled(P)`
   margin: 0;
   margin-bottom: 8px;
 
-  font-weight: 600;
+  font-weight: 500;
   color: ${COLORS.TEXT};
 `;
 
@@ -82,7 +57,7 @@ const ProjectTile = styled(Link)`
   align-items: center;
   gap: 20px;
 
-  padding: 14px 20px;
+  padding: 12px 16px;
   border: 1px solid ${COLORS.CONTAINER_BORDER_SUBTLE};
   border-radius: 8px;
   transition: all 200ms ease-in-out;
@@ -113,16 +88,23 @@ const ProjectList = styled.div`
 `;
 
 class ProjectItem extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    const { title, subtitle, imageSrc, imageAlt, ...rest } = this.props;
+    const {
+      title,
+      subtitle,
+      imageSrc,
+      imageSize,
+      imageAlt,
+      ...rest
+    } = this.props;
 
     return (
       <ProjectTile {...rest}>
-        <ProjectImage imageSrc={imageSrc} imageAlt={imageAlt} />
+        <ProjectImage
+          imageSrc={imageSrc}
+          imageSize={imageSize}
+          imageAlt={imageAlt}
+        />
         <ProjectInfo>
           <ProjectTitle>{title}</ProjectTitle>
           <ProjectDescription>{subtitle}</ProjectDescription>
@@ -134,28 +116,28 @@ class ProjectItem extends React.Component {
 
 const ProjectsSection = () => (
   <Wrapper>
-    <H2>Case studies</H2>
+    <H2>Selected work</H2>
     <ProjectList>
       <ProjectItem
-        title="Conversational building of agentic automation"
+        title="Building automations conversationally"
         subtitle="Describe a process you'd like to automate in plain language, and let AI work with you to build it."
-        imageSrc="https://placehold.co/600x400"
+        imageSrc={workflowPlanImg}
         imageAlt=""
-        to="/workflow-plan-mode"
+        to={PATHS.WORKFLOW_PLAN}
       />
       <ProjectItem
         title="Run agent workflow action"
         subtitle="Invoke an agent from within a deterministic automation and pass data between the two systems."
-        imageSrc="https://placehold.co/600x400"
+        imageSrc={runAgentImg}
         imageAlt=""
-        to="/run-agent-action"
+        to={PATHS.RUN_AGENT}
       />
       <ProjectItem
         title="Third party triggers for HubSpot workflows"
         subtitle="Extending HubSpot Workflows to be able to automate a task off of data from anywhere."
-        imageSrc="https://placehold.co/600x400"
+        imageSrc={triggerImg}
         imageAlt=""
-        to="/third-party-triggers"
+        to={PATHS.THIRD_PARTY_TRIGGER}
       />
     </ProjectList>
   </Wrapper>

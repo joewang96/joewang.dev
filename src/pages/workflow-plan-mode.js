@@ -10,6 +10,19 @@ import P from '../elements/P';
 import CaseStudySection from '../components/case-study/CaseStudySection';
 import CaseStudyImage from '../components/case-study/CaseStudyImage';
 import TldrBanner from '../components/case-study/TldrBanner';
+import CaseStudyTopNav from '../components/case-study/CaseStudyTopNav';
+import { PATHS } from '../tokens';
+
+import * as heroImg from '../images/plan-mode/PlanModeHero.png';
+import * as planCardImg from '../images/plan-mode/planmode-3.png';
+import * as agentHubOverview from '../images/plan-mode/planmode-1.png';
+import * as planFocusMode from '../images/plan-mode/planmode-2.png';
+import * as planCardFramework from '../images/plan-mode/plan-card-framework-stacked.png';
+import * as planFollowUp from '../images/plan-mode/planmode-followup.png';
+import * as interactiveDrag from '../images/plan-mode/interactivemode-drag.png';
+import * as interactiveContext from '../images/plan-mode/interactivemode-selection-context.png';
+import * as interactiveLoaderNode from '../images/plan-mode/interactivemode-loader-node.png';
+import * as interactiveCreated from '../images/plan-mode/interactivemode-create.png';
 
 const SectionWrapper = styled.div`
   position: relative;
@@ -21,12 +34,14 @@ const SectionWrapper = styled.div`
 const WorkflowPlanModePage = ({ location }) => (
   <Layout location={location}>
     <SEO title="Joseph Wang" hideTitle={true} />
+    <CaseStudyTopNav nextPath={`..${PATHS.RUN_AGENT}`} />
     <SectionWrapper>
       <CaseStudyHeroHero
         title="Conversational building of agentic automation"
         company="HubSpot"
         role="Senior Product Designer"
         timeframe="Q3 2026"
+        image={heroImg}
         bannerSlot={
           <TldrBanner>
             <P>
@@ -45,85 +60,108 @@ const WorkflowPlanModePage = ({ location }) => (
       />
 
       <CaseStudySection>
-        <H2>Overview</H2>
+        <H2>Background</H2>
         <P>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          In 2026 the Automation Product Group at HubSpot was reimagining what
+          automation could look like inside of HubSpot. With the rise of AI and
+          agents we had an opportunity to expand what automation meant within
+          the product, encompassing both deterministic workflows and
+          non-deterministic agents.
+        </P>
+        <P>
+          To support this, the team worked on Agent Hub, a brand new product
+          surface for customers to manage their fleet of automation within the
+          product as well as a new agentic automation builder to better
+          integrate some of the new capabilities.
         </P>
       </CaseStudySection>
 
       <CaseStudySection>
         <H2>Problem</H2>
         <P>
-          HubSpot workflows are a very powerful tool and drive a lot of usage of
-          the product, however it was known that new users take a while to fully
-          learn the tool and that workflow building can take some time to go
-          from idea to a published state, even for customers familiar with the
-          tool. 
+          One thing the team learned from our history with building the
+          Workflows tool was that automation takes some time for customers to
+          wrap their head around. While it led to great retention with our
+          customers, that initial activation was a crucial step that we’ve
+          worked to make easier. 
         </P>
         <P>
           In designing our new agentic workflow builder for the Agent Hub
-          release, my team wanted to help customers get started more easily and
-          increase time to activation for the business. 
+          release, I had two main problems I wanted to solve for:  
         </P>
         <P>
-          Additionally, from customer research with those in our beta we learned
-          that they have a hard time knowing when it’s best to use a traditional
-          workflow, an agent, or some combination of them. In positioning Agent
-          Hub as your central spot to manage all your HubSpot automations, both
-          deterministic and agentic, we knew we had to help customers end up
-          with the right automation, regardless of their prior knowledge.
+          <ol>
+            <li>
+              How could we reduce the time it takes for customers to build out
+              and publish their automation, thus increasing activation?
+            </li>
+            <li>
+              With the positioning of agents within the automation umbrella, how
+              can we make sure customers don’t have to second guess what they
+              should be building to best solve for their specific business
+              needs?
+            </li>
+          </ol>
         </P>
       </CaseStudySection>
 
       <CaseStudySection>
-        <H2>Solution (Plan mode entry)</H2>
+        <H2>Planning the automation</H2>
         <P>
-          The goal of this work was to allow customers to get started building
-          their automation from natural language, starting with a simple prompt
-          in plain language and ending up with a fully functional automation
-          that best suits their needs. Whether the process they want to automate
-          is best suited for an agent or a standard workflow, we’d make sure
-          HubSpot does the heavy lifting to identify what makes the most sense
-          to build.
-        </P>
-        <P>
-          Getting started, I knew I didn’t want Breeze to just go off and build
-          whatever the user said at face value. I knew customers don’t know what
-          they don’t know about automation, and are looking for a thought
-          partner to work with them in crafting their automation rather than a
-          one-shot automation generator.  
-        </P>
-        <P>
-          The solution I went with was to have contextual entry points where
-          users could interact with Breeze from the Agent Hub workspace, without
-          even needing to make the choice to build a workflow or an agent. The
-          user would be able to describe what they wanted to automate, and we’d
-          launch a focused conversation view to either follow-up with additional
-          questions to 
+          To solve those problems, I started with a vision of customers being
+          able to get started from natural language, stating in plain language
+          what they wanted to build and end up with a fully functional
+          automation tailor made for their business.
         </P>
 
-        <CaseStudyImage imageSrc="" />
+        <P>
+          Whether the process they want to automate is best suited for an agent
+          or a standard workflow, we’d make sure HubSpot does the heavy lifting
+          to identify what makes the most sense to build.
+        </P>
+
+        <CaseStudyImage src={agentHubOverview} />
+
+        <P>
+          The solution I went with was to have contextual entry points where
+          users could interact with HubSpot’s AI Assistant, Breeze, from the
+          Agent Hub workspace.
+        </P>
+
+        <P>
+          The user would be able to describe what they wanted to automate,
+          without any prior knowledge of what makes a workflow different from an
+          agent, and we’d launch a focused conversation to gather any additional
+          information necessary before going forward with the building step.
+        </P>
+
+        <CaseStudyImage src={planFocusMode} />
 
         <P>
           This initial conversation to gather info could easily get out of hand,
           and I wanted to make sure we’d be able to balance completeness in
           understanding the process the user wants to automate and speed to
-          deliver something of value to the user. I ended up writing the skill
-          to codify these instructions to Breeze, ensuring it would ask tailored
-          follow-up questions based on the information the user has provided,
-          and handing off to the various automation generation tools once we had
-          reached a certain threshold of confidence of what should be built for
-          the user.
+          deliver something of value to the user.
+        </P>
+
+        <P>
+          I ended up writing the skill to codify these instructions to Breeze,
+          ensuring it would ask tailored follow-up questions based on the
+          information the user has provided, and handing off to the various
+          automation generation tools once we had reached a certain threshold of
+          confidence of what should be built for the user.
         </P>
       </CaseStudySection>
 
       <CaseStudySection>
-        <H2>Solution (Plan mode card)</H2>
+        <H2>Designing for trust</H2>
+        <P>
+          Getting started, I knew I didn’t want Breeze to just go off and build
+          whatever the user said at face value. I knew customers don’t know what
+          they don’t know about automation, and are looking for a thought
+          partner to work with them in crafting their automation rather than a
+          one-shot automation generator.
+        </P>
         <P>
           Once the user provided the necessary information and Breeze knew what
           should be built, I wanted to give the user a moment to review what
@@ -133,6 +171,9 @@ const WorkflowPlanModePage = ({ location }) => (
           right, and to build trust with the user of what the AI would and
           wouldn’t do.
         </P>
+
+        <CaseStudyImage src={planCardImg} />
+
         <P>
           I created a framework for how the final plan of what Breeze would
           build should be shown to the end user, making note to clearly
@@ -142,11 +183,11 @@ const WorkflowPlanModePage = ({ location }) => (
           generate this plan card UI.
         </P>
 
-        <CaseStudyImage imageSrc="" />
+        <CaseStudyImage src={planCardFramework} />
 
         <P>
           This trust building step was something I felt was very important to
-          the success of this solution. While a large amount of customers in our
+          the success of this solution. While a large number of customers in our
           beta were very experienced with agents and similar AI generation
           tools, this is still a new technology that our greater customer base
           is still adopting. Being able to trust this process would make it more
@@ -156,25 +197,25 @@ const WorkflowPlanModePage = ({ location }) => (
       </CaseStudySection>
 
       <CaseStudySection>
-        <H2>Solution (Interactive Mode)</H2>
+        <H2>Bringing the customer along the building process</H2>
         <P>
-          The final piece to this work was ensuring we don’t abandon the user
-          once we build that first version of the automation for them. I knew
-          testing is an important piece both to users trusting what Breeze built
-          as well as ensuring they accounted for all possible scenarios they’d
-          expect, so I wanted to design an experience that allows for that
-          continual refinement.
+          I felt it was important we didn’t abandon the user once we build that
+          first version of the automation for them. I knew testing is an
+          important piece both to users trusting what Breeze built as well as
+          ensuring they accounted for all possible scenarios they’d expect, so I
+          wanted to design an experience that allows for that continual
+          refinement.
         </P>
         <P>
-          To solve for this, we brought the user directly into the editor canvas
-          with the conversation thread still active while their automation was
-          being built in front of them. This was to help the user orient
-          themselves in the new builder, being able to identify where their
-          conversation left off and to expect to be able to continue working
-          with Breeze in this new space.
+          To account for this, I brought the user directly into the editor
+          canvas with the conversation thread still active while their
+          automation was being built in front of them. This was to help the user
+          orient themselves in the new builder, being able to identify where
+          their conversation left off and to expect to be able to continue
+          working with Breeze in this new space.
         </P>
 
-        <CaseStudyImage imageSrc="" />
+        <CaseStudyImage src={interactiveDrag} />
 
         <P>
           Once Breeze was done and the automation was built out for them, we
@@ -182,8 +223,10 @@ const WorkflowPlanModePage = ({ location }) => (
           for the user to test their automation, giving them a chance to check
           our work and build trust with Breeze, as well as an option to publish
           their automation if everything looked (for the more simple
-          automations). 
+          automations).
         </P>
+
+        <CaseStudyImage src={planFollowUp} />
 
         <P>
           The user would be able to still do all of these things while in the
@@ -191,10 +234,58 @@ const WorkflowPlanModePage = ({ location }) => (
           Breeze conversation UI we helped guide the user to their desired end
           result of an active automation as well as helped them discover they
           could continue to use Breeze to refine their automation, rather than
-          it just being an up front planning experience. 
+          it just being an up front planning experience.  
+        </P>
+      </CaseStudySection>
+
+      <CaseStudySection>
+        <H2>Canvas interactions</H2>
+        <P>
+          As a final step to polish this experience, I designed some new
+          interactions within the workflow canvas to aid in the utilization of
+          Breeze and conversational building.
+        </P>
+        <P>
+          Specificity is something that can be challenging in a purely
+          conversational experience — you often would need to reiterate a lot of
+          information to be sure the AI knows what you are referencing. To
+          simplify this, I wanted our drag selection on the canvas to be passed
+          to Breeze as context.
         </P>
 
-        <CaseStudyImage imageSrc="" />
+        <CaseStudyImage src={interactiveDrag} />
+
+        <P>
+          When a user would make a selection, we’d signify in the Breeze sidebar
+          that their selection was being passed alongside their message. This
+          would free up how much text the user would have to write in order to
+          accurately describe what they wanted to do with the selection.
+        </P>
+
+        <CaseStudyImage src={interactiveContext} />
+
+        <P>
+          When the user sent their message over to have Breeze work on it, I had
+          the canvas nodes update to an animated loading state, to help signal
+          to the user that their task was being worked on.
+        </P>
+
+        <CaseStudyImage src={interactiveLoaderNode} />
+
+        <P>
+          Finally, once updates were made on the canvas, we’d have Breeze
+          reiterate what it did, to help provide some clarity in case a large
+          amount of the workflow was edited, or if the user missed the loading
+          state.
+        </P>
+
+        <P>
+          To reinforce this conversational building pattern, I designed for
+          Breeze to close its message with letting the user know it could assist
+          with any other updates or revisions they’d want to make.
+        </P>
+
+        <CaseStudyImage src={interactiveCreated} />
       </CaseStudySection>
 
       <CaseStudySection>
