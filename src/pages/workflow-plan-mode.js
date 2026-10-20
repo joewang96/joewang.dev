@@ -45,15 +45,16 @@ const WorkflowPlanModePage = ({ location }) => (
         bannerSlot={
           <TldrBanner>
             <P>
-              I designed a conversational building experience to help users
-              create and manage their automations with AI, aimed at making it
-              easier for users to build automations in general, while
+              I led design for a conversational building experience to help
+              users create and manage their automations with AI, aimed at making
+              it easier for users to build automations in general, while
               maintaining trust in this new technology.
             </P>
             <P>
-              This led to 70% of all new automations being created with AI
-              (increased from ~45% previously), while maintaining an average
-              CSAT of 73%.
+              This led to an increase of AI adoption, going from 45% of active
+              portals using AI to build their workflow to 75% after this change,
+              leading to 70% of all new automations being created with AI. This
+              was all done while maintaining an average CSAT of 73%.
             </P>
           </TldrBanner>
         }
@@ -96,10 +97,10 @@ const WorkflowPlanModePage = ({ location }) => (
               and publish their automation, thus increasing activation?
             </li>
             <li>
-              With the positioning of agents within the automation umbrella, how
-              can we make sure customers don’t have to second guess what they
-              should be building to best solve for their specific business
-              needs?
+              With Agent Hub bridging traditional workflows and AI agents, users
+              faced a new dilemma: should this process be an automated rule, or
+              an autonomous agent? We needed a way to ensure we don’t add more
+              complexity and get the user to the right thing.
             </li>
           </ol>
         </P>
@@ -165,22 +166,44 @@ const WorkflowPlanModePage = ({ location }) => (
         <P>
           Once the user provided the necessary information and Breeze knew what
           should be built, I wanted to give the user a moment to review what
-          would be built. This would accomplish two things: allowing the user to
-          make refinements before anything is built to minimize the risk that
-          they need to start over if they end up with something that isn’t quite
-          right, and to build trust with the user of what the AI would and
-          wouldn’t do.
+          would be built.
+        </P>
+        <P>
+          Looking at emerging patterns in this space, I designed a preview card
+          to highlight the core pieces to the automation.
+        </P>
+        <P>The goal of the preview card was to accomplish the following:</P>
+
+        <P>
+          <ol>
+            <li>
+              Ensure Breeze didn’t hallucinate anything, as that is a risk with
+              LLMs.
+            </li>
+            <li>
+              Allow the user to make refinements before anything is built. There
+              is much lower risk of the user abandoning the flow if they have a
+              chance to make updates here rather than have to start completely
+              over once something is built.
+            </li>
+            <li>
+              Build trust with the user by clearly stating what Breeze would and
+              wouldn’t do.
+            </li>
+          </ol>
         </P>
 
         <CaseStudyImage src={planCardImg} />
 
         <P>
-          I created a framework for how the final plan of what Breeze would
-          build should be shown to the end user, making note to clearly
-          highlight what the AI was doing for the user and what they’d still
-          have control over. I gave this framework and example scenarios to my
-          engineering team to use to build the skill Breeze would use to
-          generate this plan card UI.
+          To ensure we conveyed the right information in the plan card, I
+          created a framework for what information to present and how it should
+          be organized, making note to clearly highlight what the AI was doing
+          for the user and what they’d still have control over.
+        </P>
+        <P>
+          I gave this framework and example scenarios to my engineering team to
+          use to build the skill Breeze would use to generate this plan card UI.
         </P>
 
         <CaseStudyImage src={planCardFramework} />
@@ -199,7 +222,7 @@ const WorkflowPlanModePage = ({ location }) => (
       <CaseStudySection>
         <H2>Bringing the customer along the building process</H2>
         <P>
-          I felt it was important we didn’t abandon the user once we build that
+          I felt it was important we didn’t abandon the user once we built that
           first version of the automation for them. I knew testing is an
           important piece both to users trusting what Breeze built as well as
           ensuring they accounted for all possible scenarios they’d expect, so I
@@ -246,20 +269,30 @@ const WorkflowPlanModePage = ({ location }) => (
           Breeze and conversational building.
         </P>
         <P>
-          Specificity is something that can be challenging in a purely
-          conversational experience — you often would need to reiterate a lot of
-          information to be sure the AI knows what you are referencing. To
-          simplify this, I wanted our drag selection on the canvas to be passed
-          to Breeze as context.
+          Specificity is something that can be challenging in conversational UIs
+          — users usually struggle with spatial reference ("Move that action
+          after the other one"), especially when a workflow features multiple
+          instances of the same action. Users often need to type a lot more to
+          ensure the AI has enough information to know what you are referring
+          to.
+        </P>
+        <P>
+          To simplify this I wanted the drag selection on the canvas to be
+          passed to Breeze as additional context with the message, providing
+          more accuracy with what the user wants to modify with less work on
+          their part.
         </P>
 
         <CaseStudyImage src={interactiveDrag} />
 
         <P>
           When a user would make a selection, we’d signify in the Breeze sidebar
-          that their selection was being passed alongside their message. This
-          would free up how much text the user would have to write in order to
-          accurately describe what they wanted to do with the selection.
+          that their selection was being passed alongside their message, denoted
+          through the top reference block added to the text box.
+        </P>
+        <P>
+          This would free up how much text the user would have to write in order
+          to accurately describe what they wanted to do with the selection.
         </P>
 
         <CaseStudyImage src={interactiveContext} />
@@ -281,7 +314,7 @@ const WorkflowPlanModePage = ({ location }) => (
 
         <P>
           To reinforce this conversational building pattern, I designed for
-          Breeze to close its message with letting the user know it could assist
+          Breeze to close its message by letting the user know it could assist
           with any other updates or revisions they’d want to make.
         </P>
 

@@ -55,14 +55,16 @@ const Hero = () => (
     </TitleContainer>
     <Body>
       <P>
-        Welcome! I’m a product designer with a technical background as a
-        front-end software engineer. Some product areas I've worked on include
-        design systems, workflow triggers, developer tooling, and agentic
-        automation.
+        I’m a product and UX designer with a strong technical background. I have
+        experience working on enterprise workflow automation, AI orchestration,
+        and developer ecosystems — always ensuring powerful but potentially
+        complex functionality remains easy to use.
       </P>
       <P>
-        Outside of work I like to play video games, read (currently reading the
-        Mistborn trilogy), and hang out with my dog, Kody.
+        Utilizing my background as a software engineer, I can collaborate
+        closely with engineering teams to navigate platform constraints, rapidly
+        prototype interactions, and bridge the gap between technical reality and
+        design vision.
       </P>
     </Body>
     <ActionContainer>

@@ -4,11 +4,13 @@ import { Link } from 'gatsby';
 
 import { COLORS, FONTS, FONT_SIZE } from '../../tokens';
 
+const SUBTLE_TEXT = '#d8d7d7';
+
 const NavLink = styled(Link)`
   font-size: ${FONT_SIZE.XS};
   font-weight: 400;
   font-family: ${FONTS.MONO};
-  color: ${COLORS.TEXT_SUBTLE};
+  color: ${SUBTLE_TEXT};
   transition: all 200ms ease-in-out;
 
   &:hover {
@@ -20,7 +22,7 @@ const Dot = styled.div`
   width: 4px;
   height: 4px;
   border-radius: 100px;
-  background: ${COLORS.TEXT_SUBTLE};
+  background: ${SUBTLE_TEXT};
 `;
 
 const NavWrapper = styled.div`
@@ -33,7 +35,9 @@ const NavWrapper = styled.div`
 
   gap: 20px;
   padding: 12px 0;
-  background: ${COLORS.BACKGROUND};
+  /* Trailing digits refer to alpha values for transparency */
+  background: ${COLORS.PURPLE_SUBTLE}99;
+  backdrop-filter: blur(8px);
 
   position: fixed;
   top: 0;

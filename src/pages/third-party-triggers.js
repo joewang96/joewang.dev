@@ -13,6 +13,8 @@ import TldrBanner from '../components/case-study/TldrBanner';
 import CaseStudyTopNav from '../components/case-study/CaseStudyTopNav';
 import { PATHS } from '../tokens';
 
+import * as heroImg from '../images/triggers/TriggerHero.png';
+
 import * as triggerAppCatalog from '../images/triggers/trigger-app-catalog.png';
 import * as triggerPreAuth from '../images/triggers/trigger-oauth-config.png';
 import * as triggerOauth from '../images/triggers/trigger-oauth-modal.png';
@@ -43,7 +45,7 @@ const ThirdPartyTriggerPage = ({ location }) => (
         company="HubSpot"
         role="Senior Product Designer"
         timeframe="Q2 2026"
-        image={sheetManage1}
+        image={heroImg}
         bannerSlot={
           <TldrBanner>
             <P>
@@ -85,18 +87,25 @@ const ThirdPartyTriggerPage = ({ location }) => (
           the data that lives inside of HubSpot. It did a good job at letting
           customers build out automations for triggers like added to a segment,
           form submissions, or CRM property updates — all things that revolved
-          around a central HubSpot object type. However, the team and I know
-          many of our customers have data that lives in various third-party apps
-          and tools.
+          around a central HubSpot object type.
+        </P>
+        <P>
+          However, the team and I know many of our customers have data that
+          lives in various third-party apps and tools, and this reliance on CRM
+          object data often forces customers to use other automation tools to
+          fill the gaps in what we could automate.
         </P>
         <P>
           The problem I aimed to solve was building out a system for third-party
           or external triggers that could hook into our automation system,
-          without needing to be tied to HubSpot’s data model. As part of this
-          broader reimagining of the Workflows product I also set out to
-          modernize the authentication experience for these third-party apps, by
-          both streamlining the experience to remove friction for the user and
-          to support easier switching of which account to use for said trigger.
+          without needing to be tied to HubSpot’s data model.
+        </P>
+        <P>
+          As part of this broader reimagining of the Workflows product I also
+          set out to modernize the authentication experience for these
+          third-party apps, by both streamlining the experience to remove
+          friction for the user and to support easier switching of which account
+          to use for said trigger.
         </P>
       </CaseStudySection>
 
@@ -113,10 +122,12 @@ const ThirdPartyTriggerPage = ({ location }) => (
           For this experience I wanted to have a contextual library of available
           integration triggers that the user can easily choose from when
           deciding how to trigger their automation, regardless of whether they
-          have already installed it or not.
+          have already installed it or not. That way they could naturally
+          discover new functionality without having to search it out in a
+          different part of the product.
         </P>
         <P>
-          The solution I went with gave Apps it’s own tab in the trigger panel,
+          The solution I went with gave Apps its own tab in the trigger panel,
           breaking down integrations into two sections: Connected apps where we
           could elevate integrations they have already installed for quick
           access and a full list of all available apps that included workflow
@@ -162,11 +173,18 @@ const ThirdPartyTriggerPage = ({ location }) => (
 
         <CaseStudyImage src={triggerPreAuth} />
 
+        <P>
+          The customer would be able to complete the authentication step (OAuth
+          in most of our integrations) while remaining in context of the
+          workflow, keeping them on track rather than introducing friction by
+          having them go somewhere else to manage the account connection.
+        </P>
+
         <CaseStudyImage src={triggerOauth} />
       </CaseStudySection>
 
       <CaseStudySection>
-        <H2>Designing the Google Sheets trigger</H2>
+        <H2>Designing for dynamic data structures</H2>
         <P>
           “Sheet-like apps”, such as Google Sheets or Airtable, posed an
           interesting problem where there is no predefined data schema, such as
@@ -200,7 +218,7 @@ const ThirdPartyTriggerPage = ({ location }) => (
       </CaseStudySection>
 
       <CaseStudySection>
-        <H2>Managing spreadsheet data schemas</H2>
+        <H2>Managing spreadsheet data over time</H2>
 
         <P>
           Once we had these designs in place and built out, we began testing
@@ -212,10 +230,13 @@ const ThirdPartyTriggerPage = ({ location }) => (
           One thing I didn’t catch initially that started to emerge was how to
           best handle change management of the spreadsheet as columns are added
           to the spreadsheet. At that point, column additions to the sheet would
-          immediately update the schema, and cause trigger events to fire. While
-          this kept things up to date, it meant that the user was silently opted
-          in to listen to data changes from columns that the user wasn’t aware
-          of when first setting up the trigger.
+          immediately update the schema, and cause trigger events to fire.
+        </P>
+
+        <P>
+          While this kept things up to date, it meant that the user silently
+          opted in to listen to data changes from columns that the user wasn’t
+          aware of when first setting up the trigger.
         </P>
 
         <CaseStudyImage src={sheetManage1} />
@@ -238,16 +259,17 @@ const ThirdPartyTriggerPage = ({ location }) => (
 
         <CaseStudyImage src={sheetManage3} />
 
+        <P>
+          As the user made updates to their data selection, the preview would
+          live update and ensure they had an accurate representation of the data
+          they’d be able to use in the workflow.
+        </P>
+
         <CaseStudyImage src={sheetManage4} />
       </CaseStudySection>
 
       <CaseStudySection>
         <H2>Impact</H2>
-        <P>
-          The result of my work on the Run custom agent action resulted in
-          steady growth in customers using custom agents and laid the groundwork
-          for future adoption of agentic automation features. 
-        </P>
         <P>
           Once we hit public beta in July 2026 we saw{' '}
           <strong>
@@ -259,6 +281,13 @@ const ThirdPartyTriggerPage = ({ location }) => (
           <strong>120+ apps with third party triggers</strong>, ensuring
           customers can remain within our ecosystem rather than turn to external
           tools to solve for missing functionality
+        </P>
+        <P>
+          While my time at HubSpot concluded before I could pull more
+          quantitative metrics, I would have compared the median time to
+          complete the task between these new third party triggers and the rest
+          of our triggers to identify any steps that proved difficult for our
+          users and focus on improvements to that part of the flow.
         </P>
       </CaseStudySection>
     </SectionWrapper>

@@ -6,8 +6,8 @@ import { COLORS, SIZES, PATHS } from '../tokens';
 import { Link } from 'gatsby';
 
 import * as workflowPlanImg from '../images/plan-mode/PlanModeHero.png';
-import * as runAgentImg from '../images/run-agent/RunAgent_BlankConfig.png';
-import * as triggerImg from '../images/triggers/googlesheets-managedata-1.png';
+import * as runAgentImg from '../images/run-agent/RunAgentHero.png';
+import * as triggerImg from '../images/triggers/TriggerHero.png';
 
 const Wrapper = styled.div``;
 
@@ -119,22 +119,22 @@ const ProjectsSection = () => (
     <H2>Selected work</H2>
     <ProjectList>
       <ProjectItem
-        title="Building automations conversationally"
-        subtitle="Describe a process you'd like to automate in plain language, and let AI work with you to build it."
+        title="Conversational building of agentic automation"
+        subtitle="Designed an AI thought partner that plans, builds, and tests complex automations side-by-side with the user."
         imageSrc={workflowPlanImg}
         imageAlt=""
         to={PATHS.WORKFLOW_PLAN}
       />
       <ProjectItem
         title="Run agent workflow action"
-        subtitle="Invoke an agent from within a deterministic automation and pass data between the two systems."
+        subtitle="Enabling customers to orchestrate agents to execute work and pass structured data downstream within workflows."
         imageSrc={runAgentImg}
         imageAlt=""
         to={PATHS.RUN_AGENT}
       />
       <ProjectItem
         title="Third party triggers for HubSpot workflows"
-        subtitle="Extending HubSpot Workflows to be able to automate a task off of data from anywhere."
+        subtitle="Allowing customers to trigger business automations using data living outside the HubSpot ecosystem."
         imageSrc={triggerImg}
         imageAlt=""
         to={PATHS.THIRD_PARTY_TRIGGER}

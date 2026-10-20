@@ -13,6 +13,7 @@ import TldrBanner from '../components/case-study/TldrBanner';
 import CaseStudyTopNav from '../components/case-study/CaseStudyTopNav';
 import { PATHS } from '../tokens';
 
+import * as heroImg from '../images/run-agent/RunAgentHero.png';
 import * as pocImg1 from '../images/run-agent/runagent_poc_1.png';
 import * as pocImg2 from '../images/run-agent/runagent_poc_2.png';
 import * as pocImg3 from '../images/run-agent/runagent_poc_3.png';
@@ -23,6 +24,8 @@ import * as runAgentFinal1 from '../images/run-agent/RunAgent_OutputTypes.png';
 import * as runAgentFinal2 from '../images/run-agent/RunAgent_BlankConfig.png';
 import * as runAgentFinal3 from '../images/run-agent/RunAgent_GeneratingOutputs.png';
 import * as runAgentFinal4 from '../images/run-agent/RunAgent_OutputsGenerated.png';
+import * as runAgentFullResponse from '../images/run-agent/RunAgent_FullResponse_Tooltip.png';
+import * as runAgentOutputsConfig from '../images/run-agent/RunAgent_EditOutputs_Popover.png';
 
 const SectionWrapper = styled.div`
   position: relative;
@@ -41,7 +44,7 @@ const RunAgentPage = ({ location }) => (
         company="HubSpot"
         role="Product Designer"
         timeframe="Q4 2025"
-        image={runAgentConfig}
+        image={heroImg}
         bannerSlot={
           <TldrBanner>
             <P>
@@ -81,9 +84,15 @@ const RunAgentPage = ({ location }) => (
         </P>
         <P>
           My team’s plan to address this was to build into HubSpot’s Workflows
-          product as the way to automate and orchestrate agents. However, since
-          workflows relied on expected outputs for their actions to properly
-          pass data between each other we needed a way to convert an agent’s
+          product as the way to automate and orchestrate agents. However, there
+          was tension with how workflows and agents function: workflows relied
+          on strict, predictable data schemas where each step is set by the user
+          while agents are non-deterministic and can provide different data
+          across each run.
+        </P>
+        <P>
+          Since workflows relied on known outputs for their actions to properly
+          pass data between each step, we needed a way to convert an agent’s
           non-deterministic response into something that’d be usable by standard
           non-deterministic workflow actions.
         </P>
@@ -148,9 +157,16 @@ const RunAgentPage = ({ location }) => (
         </P>
 
         <P>
-          I was able to recruit 7 customers for my research, with a good mix of
-          prior experience to agents and AI tooling in other apps. The
-          interviews consisted of two parts: a semi-structured interview and
+          I was able to recruit 7 customers for my research, consisting of 5
+          customers and 2 HubSpot partners. All participants had created at
+          least 1 custom agent, but had different usage ranges of workflows. I
+          also recruited for different levels of familiarity with AI agents,
+          ranging from HubSpot being their introduction to agents to having
+          built out agents in separate products like Claude and ChatGPT.
+        </P>
+
+        <P>
+          The interviews consisted of two parts: a semi-structured interview and
           unboxing experience to get initial reactions and feedback using the
           action. Because the purpose of this research was to help bring in
           customer perspective early to shape the direction we go with this
@@ -191,16 +207,10 @@ const RunAgentPage = ({ location }) => (
         </P>
 
         <P>
-          Looking at outputs, our first POC version of the action oversimplified
-          the link between what instructions are passed to the agent and how
-          that affects what data it returns to the workflow.
-        </P>
-
-        <P>
-          Rather than keep this behavior hidden to the customer, I decided we
-          should bake in steps to the action’s setup that would help gradually
-          inform the user how data is flowing between the agent and the
-          workflow.
+          We also uncovered two main buckets of agent jobs: content generation
+          and data manipulation. These agent archetypes were a common link
+          between what our customers were trying to set up in their own portal,
+          and gave me a way to simplify the action.
         </P>
       </CaseStudySection>
 
@@ -210,49 +220,64 @@ const RunAgentPage = ({ location }) => (
         <P>
           Based on the research I went ahead and made a round of revisions to
           the Run agent action. I cleaned up the UI of the action heavily,
-          standardizing agent presentation and simplifying content. I also broke
-          up the outputs into two separate sections, to better clarify the
-          difference between default and custom outputs.
+          standardizing agent presentation and simplifying content.
         </P>
 
         <CaseStudyImage src={runAgentSelect} />
 
         <P>
-          While this tested much better than the initial version, the Outputs
-          section still proved overwhelming for our customers. Giving customers
-          both the default full agent response and a way to define a custom
-          output schema proved confusing, ultimately complicating the agent
-          setup process too much.
+          Looking at outputs, our first POC version of the action oversimplified
+          the link between what instructions are passed to the agent and how
+          that affects what data it returns to the workflow.
+        </P>
+
+        <P>
+          Rather than keep this behavior hidden to the customer, I decided we
+          should bake in steps to the action’s setup that would help gradually
+          inform the user how data is flowing between the agent and the
+          workflow. I broke up the outputs into two separate sections, to better
+          clarify the difference between default and custom outputs.
         </P>
 
         <CaseStudyImage src={runAgentTwoOutputs} />
+
+        <P>
+          While this tested better than the initial version, the Outputs section
+          still proved overwhelming for our customers. Giving customers both the
+          default full agent response and a way to define a custom output schema
+          proved confusing, ultimately complicating the agent setup process too
+          much.
+        </P>
       </CaseStudySection>
 
       <CaseStudySection>
         <H2>Final solution</H2>
         <P>
-          Something we uncovered during the research was two main buckets of
-          agent jobs: content generation and data manipulation. These agent
-          archetypes were a common link between what our customers were trying
-          to set up in their own portal, and gave me a way to simplify the
-          action.
-        </P>
-        <P>
-          What I went with was an option to choose what you expected from the
-          agent’s response: either a full rich text response, aimed at the
-          content generation use case, or a structured format aimed at the data
-          manipulation use case where the customer would want to use those
-          different data outputs in the proceeding workflow actions.
+          To address that final issue I redesigned the outputs section, having
+          the user choose what they’d expect in the agent’s response: either a
+          full rich text response, aimed at the content generation use case, or
+          a structured format aimed at the data manipulation use case where the
+          customer would want to use those different data outputs in the
+          proceeding workflow actions.
         </P>
 
         <CaseStudyImage src={runAgentFinal1} />
+
+        <P>
+          Breaking out those two output formats allowed the user to focus on
+          only what was needed for their use case. While this didn’t give as
+          full flexibility, it better matched the jobs customers used custom
+          agents for and made output setup a lot more focused and clear.
+        </P>
+
+        <CaseStudyImage src={runAgentFullResponse} />
 
         <P>
           Full rich text response would require no additional setup for the
           user, being able to use whatever text response the agent gives back by
           default. The structured data outputs required one more step to work —
           additional instructions passed to the agent at runtime to have it map
-          the data it generates in its run into the correct final format. 
+          the data it generates in its run into the correct final format.
         </P>
 
         <CaseStudyImage src={runAgentFinal2} />
@@ -275,6 +300,21 @@ const RunAgentPage = ({ location }) => (
         </P>
 
         <CaseStudyImage src={runAgentFinal4} />
+
+        <P>
+          Finally, when editing the outputs we gave the user a way to provide
+          additional instructions for what kind of data the output represents.
+          This helped users have a better grasp of how the agent would know how
+          to fill in the outputs correctly, and gave an opportunity for users to
+          ensure higher accuracy with agent outputs.
+        </P>
+
+        <P>
+          As part of generating the agent outputs, this was done for the user
+          rather than having them write it out from scratch.
+        </P>
+
+        <CaseStudyImage src={runAgentOutputsConfig} />
       </CaseStudySection>
 
       <CaseStudySection>
