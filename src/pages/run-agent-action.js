@@ -18,7 +18,6 @@ import * as pocImg1 from '../images/run-agent/runagent_poc_1.png';
 import * as pocImg2 from '../images/run-agent/runagent_poc_2.png';
 import * as pocImg3 from '../images/run-agent/runagent_poc_3.png';
 import * as runAgentSelect from '../images/run-agent/RunAgent_AgentSelect.png';
-import * as runAgentConfig from '../images/run-agent/RunAgent_BlankConfig.png';
 import * as runAgentTwoOutputs from '../images/run-agent/RunAgent_Initial_TwoOutputs.png';
 import * as runAgentFinal1 from '../images/run-agent/RunAgent_OutputTypes.png';
 import * as runAgentFinal2 from '../images/run-agent/RunAgent_BlankConfig.png';
@@ -26,6 +25,9 @@ import * as runAgentFinal3 from '../images/run-agent/RunAgent_GeneratingOutputs.
 import * as runAgentFinal4 from '../images/run-agent/RunAgent_OutputsGenerated.png';
 import * as runAgentFullResponse from '../images/run-agent/RunAgent_FullResponse_Tooltip.png';
 import * as runAgentOutputsConfig from '../images/run-agent/RunAgent_EditOutputs_Popover.png';
+import * as agentBuilderOutput1 from '../images/run-agent/AgentBuilder_Outputs_1.png';
+import * as agentBuilderOutput2 from '../images/run-agent/AgentBuilder_Outputs_2.png';
+import * as agentBuilderOutput3 from '../images/run-agent/AgentBuilder_Outputs_3.png';
 
 const SectionWrapper = styled.div`
   position: relative;
@@ -251,9 +253,55 @@ const RunAgentPage = ({ location }) => (
       </CaseStudySection>
 
       <CaseStudySection>
+        <H2>Exploring outputs on the agent definition</H2>
+
+        <P>
+          As an alternative option to the current design direction, I explored
+          what it could look like to have structured outputs be a native concept
+          on the agent definition itself.
+        </P>
+
+        <CaseStudyImage src={agentBuilderOutput1} />
+
+        <P>
+          This option added a new section for “What data this agent returns”,
+          which allowed for either manual entry of outputs if the customer knew
+          how they wanted to configure the agent ahead of time, or by suggesting
+          outputs based on the agent’s instructions in an above section.
+        </P>
+
+        <CaseStudyImage src={agentBuilderOutput2} />
+
+        <P>
+          The customer would be able to accept either specific outputs, if they
+          only wanted certain ones, or be able to easily add all suggested
+          outputs with a single click.
+        </P>
+
+        <CaseStudyImage src={agentBuilderOutput3} />
+
+        <P>
+          I presented these options alongside the original directions and
+          iterations shown previously to the team in charge of the Agent
+          Builder, and the group ultimately decided to keep structured outputs
+          tied to an agent’s use in Workflows. HubSpot’s custom agents were
+          originally built and positioned around a more conversational
+          experience and the non-deterministic nature was a real boon for that
+          sort of experience, compared to a stricter output schema we’d need for
+          use in a workflow.
+        </P>
+
+        <P>
+          After reaching that decision with the Agent Builder team, I went back
+          to iterate and improve upon the original direction for the Run agent
+          action.
+        </P>
+      </CaseStudySection>
+
+      <CaseStudySection>
         <H2>Final solution</H2>
         <P>
-          To address that final issue I redesigned the outputs section, having
+          To address complexity with the output step, I simplified it by having
           the user choose what they’d expect in the agent’s response: either a
           full rich text response, aimed at the content generation use case, or
           a structured format aimed at the data manipulation use case where the

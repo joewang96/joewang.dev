@@ -18,6 +18,7 @@ import * as planCardImg from '../images/plan-mode/planmode-3.png';
 import * as agentHubOverview from '../images/plan-mode/planmode-1.png';
 import * as planFocusMode from '../images/plan-mode/planmode-2.png';
 import * as planCardFramework from '../images/plan-mode/plan-card-framework-stacked.png';
+import * as exampelScenarios from '../images/plan-mode/PlanCard_ExampleScenarios.png';
 import * as planFollowUp from '../images/plan-mode/planmode-followup.png';
 import * as interactiveDrag from '../images/plan-mode/interactivemode-drag.png';
 import * as interactiveContext from '../images/plan-mode/interactivemode-selection-context.png';
@@ -157,18 +158,22 @@ const WorkflowPlanModePage = ({ location }) => (
       <CaseStudySection>
         <H2>Designing for trust</H2>
         <P>
-          Getting started, I knew I didn’t want Breeze to just go off and build
-          whatever the user said at face value. I knew customers don’t know what
-          they don’t know about automation, and are looking for a thought
-          partner to work with them in crafting their automation rather than a
-          one-shot automation generator.
+          One thing I had strong conviction for is that we didn’t want Breeze to
+          just go off and build whatever the user said at face value. Past
+          customer feedback has shown that a wide segment of users don’t feel
+          completely confident in their understanding of automation and are
+          looking for a thought partner to work with to help iron out their
+          ideas, rather than a one-shot automation generator.
         </P>
         <P>
-          Once the user provided the necessary information and Breeze knew what
-          should be built, I wanted to give the user a moment to review what
-          would be built.
+          My idea was to implement a planning phase for Breeze, where the user
+          can state the end goal for what they want to achieve and Breeze would
+          be able to dynamically follow-up to collect any missing information or
+          dig deeper into things that the user didn’t provide enough clarity on.
         </P>
         <P>
+          Once Breeze was confident it had enough information, I wanted to give
+          the user a moment to review the plan before anything was created.
           Looking at emerging patterns in this space, I designed a preview card
           to highlight the core pieces to the automation.
         </P>
@@ -201,12 +206,23 @@ const WorkflowPlanModePage = ({ location }) => (
           be organized, making note to clearly highlight what the AI was doing
           for the user and what they’d still have control over.
         </P>
-        <P>
-          I gave this framework and example scenarios to my engineering team to
-          use to build the skill Breeze would use to generate this plan card UI.
-        </P>
 
         <CaseStudyImage src={planCardFramework} />
+
+        <P>
+          I gave this framework as well as example scenarios, consisting of a
+          chat conversation that led to a specific plan card, to my engineering
+          team to use to build the skill Breeze would use to generate this plan
+          card UI.
+        </P>
+
+        <P>
+          The example scenarios were very useful in helping establish the limits
+          of what we want to show on the plan card, for both ends of the
+          extremes for how complex an automation could be.
+        </P>
+
+        <CaseStudyImage src={exampelScenarios} />
 
         <P>
           This trust building step was something I felt was very important to

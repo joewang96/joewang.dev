@@ -18,15 +18,15 @@ import * as heroImg from '../images/triggers/TriggerHero.png';
 import * as triggerAppCatalog from '../images/triggers/trigger-app-catalog.png';
 import * as triggerPreAuth from '../images/triggers/trigger-oauth-config.png';
 import * as triggerOauth from '../images/triggers/trigger-oauth-modal.png';
-
 import * as sheetSelect from '../images/triggers/googlesheet-spreadsheet-select.png';
 import * as sheetModal from '../images/triggers/googlesheet-spreadsheet-modal.png';
 import * as triggerConfigured from '../images/triggers/googlesheets-configured.png';
-
 import * as sheetManage1 from '../images/triggers/googlesheets-managedata-1.png';
 import * as sheetManage2 from '../images/triggers/googlesheets-managedata-2.png';
 import * as sheetManage3 from '../images/triggers/googlesheets-managedata-3.png';
 import * as sheetManage4 from '../images/triggers/googlesheets-managedata-4.png';
+import * as triggerSpecSheet from '../images/triggers/AccountConnect_SpecSheet.png';
+import * as triggerApiKey from '../images/triggers/AppTrigger_API_Key_2.png';
 
 const SectionWrapper = styled.div`
   position: relative;
@@ -181,6 +181,36 @@ const ThirdPartyTriggerPage = ({ location }) => (
         </P>
 
         <CaseStudyImage src={triggerOauth} />
+
+        <P>
+          One thing to note is that not every user in a HubSpot portal might
+          have permissions to connect new accounts, and is something admins can
+          grant to certain users or roles.
+        </P>
+
+        <P>
+          To ensure we’d be able to handle this, I mapped out the different
+          states we’d need to consider. This included cases such as having
+          existing accounts the user could select while lacking permissions to
+          install new, as well as having no accounts available and having to
+          request an admin to connect the integration for you.
+        </P>
+
+        <CaseStudyImage src={triggerSpecSheet} />
+
+        <P>
+          To ensure our platform would be extensible regardless of
+          authentication mechanism the integration supported, I designed
+          additional components to handle API or other access keys that’d we’d
+          get from the user and encrypt and store on our servers.
+        </P>
+
+        <P>
+          These would use the same connected account field, but swap out the
+          embedded OAuth panel for a modal component we render.
+        </P>
+
+        <CaseStudyImage src={triggerApiKey} />
       </CaseStudySection>
 
       <CaseStudySection>
