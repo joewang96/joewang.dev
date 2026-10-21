@@ -12,6 +12,10 @@ import { SIZES } from '../tokens';
 const Body = styled.div`
   text-align: left;
   margin: auto;
+
+  ${P} + ${P} {
+    margin-top: 16px;
+  }
 `;
 
 const TitleContainer = styled.div``;
@@ -45,16 +49,22 @@ const Hero = () => (
   <Wrapper>
     <TitleContainer>
       <H1>Joe Wang</H1>
-      <ItalicSubtitle>Senior Product Designer @ HubSpot</ItalicSubtitle>
+      <ItalicSubtitle>
+        Senior Product Designer, formerly @ HubSpot
+      </ItalicSubtitle>
     </TitleContainer>
     <Body>
       <P>
-        Hello there! I’m a designer with a background as a software engineer,
-        working on agentic automation and workflow integrations at HubSpot.
+        I’m a product and UX designer with a strong technical background. I have
+        experience working on enterprise workflow automation, AI orchestration,
+        and developer ecosystems — always ensuring powerful but potentially
+        complex functionality remains easy to use.
       </P>
       <P>
-        Outside of work I like to play video games and hang out with my dog,
-        Kody.
+        Utilizing my background as a software engineer, I can collaborate
+        closely with engineering teams to navigate platform constraints, rapidly
+        prototype interactions, and bridge the gap between technical reality and
+        design vision.
       </P>
     </Body>
     <ActionContainer>

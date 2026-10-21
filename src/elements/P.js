@@ -8,14 +8,35 @@ const P = styled.p`
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 140%;
+  font-weight: 300;
   color: ${COLORS.TEXT_SUBTLE};
 
+  /*
   & + & {
     margin-top: 16px;
   }
+  */
 
   @media (max-width: ${SIZES.BREAK_SM}) {
     font-size: 16px;
+  }
+
+  && strong {
+    color: ${COLORS.TEXT};
+  }
+
+  && ol,
+  && ul {
+    padding-left: 16px;
+  }
+
+  && li {
+    list-style-position: outside;
+    padding-left: 12px;
+  }
+
+  && li + li {
+    margin-top: 12px;
   }
 `;
 
