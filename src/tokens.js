@@ -53,4 +53,5 @@ export const PATHS = {
   WORKFLOW_PLAN: '/workflow-plan-mode',
   RUN_AGENT: '/run-agent-action',
   THIRD_PARTY_TRIGGER: '/third-party-triggers',
+  ACTION_BUILDER: '/action-builder',
 };

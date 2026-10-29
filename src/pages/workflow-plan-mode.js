@@ -34,7 +34,7 @@ const SectionWrapper = styled.div`
 
 const WorkflowPlanModePage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Joseph Wang" hideTitle={true} />
+    <SEO title="Conversational building of agentic automation" />
     <CaseStudyTopNav nextPath={`..${PATHS.RUN_AGENT}`} />
     <SectionWrapper>
       <CaseStudyHeroHero

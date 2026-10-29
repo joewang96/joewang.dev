@@ -38,7 +38,7 @@ const SectionWrapper = styled.div`
 
 const RunAgentPage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Joseph Wang" hideTitle={true} />
+    <SEO title="Run agent workflow action" />
     <CaseStudyTopNav nextPath={`..${PATHS.THIRD_PARTY_TRIGGER}`} />
     <SectionWrapper>
       <CaseStudyHeroHero
