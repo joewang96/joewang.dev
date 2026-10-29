@@ -56,7 +56,7 @@ const ActionBuilderPage = ({ location }) => (
               My work enabled the extension of our platform, leading to
               consistent YoY growth of action usage and allowing us to deliver
               agent skills for INBOUND 2025, ensuring the launch of Agent Studio
-              included over 55 high quality skills with usage topping out at 3M
+              included 55 high quality skills with usage topping out at 3M
               executions within the first month of release.
             </P>
           </TldrBanner>
@@ -216,7 +216,7 @@ const ActionBuilderPage = ({ location }) => (
         <P>
           After having a high level framework for what we’d need the platform to
           handle, I shifted focus to the details of what we’d need our current
-          custom action definition to include in order to support agent tools.
+          custom action definition to include in order to support agent skills.
         </P>
 
         <P>
@@ -339,7 +339,7 @@ const ActionBuilderPage = ({ location }) => (
           increased usage of workflow features. From 2024 to the start of 2026
           we saw{' '}
           <strong>
-            64% YoY growth in action executions across 154k+ active portals
+            64% growth in action executions across 154k+ active portals
             utilizing those actions
           </strong>
           .

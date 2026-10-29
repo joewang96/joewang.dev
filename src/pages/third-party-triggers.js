@@ -201,8 +201,8 @@ const ThirdPartyTriggerPage = ({ location }) => (
         <P>
           To ensure our platform would be extensible regardless of
           authentication mechanism the integration supported, I designed
-          additional components to handle API or other access keys that’d we’d
-          get from the user and encrypt and store on our servers.
+          additional components to handle API or other access keys that we’d get
+          from the user and encrypt and store on our servers.
         </P>
 
         <P>
