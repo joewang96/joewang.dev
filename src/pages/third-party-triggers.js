@@ -37,8 +37,8 @@ const SectionWrapper = styled.div`
 
 const ThirdPartyTriggerPage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Joseph Wang" hideTitle={true} />
-    <CaseStudyTopNav nextPath={`..${PATHS.WORKFLOW_PLAN}`} />
+    <SEO title="Third party triggers for HubSpot workflows" />
+    <CaseStudyTopNav nextPath={`..${PATHS.ACTION_BUILDER}`} />
     <SectionWrapper>
       <CaseStudyHeroHero
         title="Third party triggers for HubSpot workflows"
@@ -56,7 +56,7 @@ const ThirdPartyTriggerPage = ({ location }) => (
             <P>
               This led to over 120 third-party apps supporting workflow triggers
               and 10% of workflows in our new builder for Agent Hub using
-              third-party triggers..
+              third-party triggers.
             </P>
           </TldrBanner>
         }
@@ -201,8 +201,8 @@ const ThirdPartyTriggerPage = ({ location }) => (
         <P>
           To ensure our platform would be extensible regardless of
           authentication mechanism the integration supported, I designed
-          additional components to handle API or other access keys that’d we’d
-          get from the user and encrypt and store on our servers.
+          additional components to handle API or other access keys that we’d get
+          from the user and encrypt and store on our servers.
         </P>
 
         <P>

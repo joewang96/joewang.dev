@@ -38,7 +38,7 @@ const SectionWrapper = styled.div`
 
 const RunAgentPage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Joseph Wang" hideTitle={true} />
+    <SEO title="Run agent workflow action" />
     <CaseStudyTopNav nextPath={`..${PATHS.THIRD_PARTY_TRIGGER}`} />
     <SectionWrapper>
       <CaseStudyHeroHero
@@ -96,7 +96,7 @@ const RunAgentPage = ({ location }) => (
           Since workflows relied on known outputs for their actions to properly
           pass data between each step, we needed a way to convert an agent’s
           non-deterministic response into something that’d be usable by standard
-          non-deterministic workflow actions.
+          deterministic workflow actions.
         </P>
       </CaseStudySection>
 
@@ -119,7 +119,7 @@ const RunAgentPage = ({ location }) => (
         </P>
 
         <P>
-          Knowing the feedback we uncover during said research will help get
+          Knowing the feedback we uncover during said research would help get
           buy-in from the rest of the team for aspects that might require a more
           involved change to how the code was currently architected, I decided
           to start a user testing plan with this engineering POC, and quickly
@@ -159,7 +159,7 @@ const RunAgentPage = ({ location }) => (
         </P>
 
         <P>
-          I was able to recruit 7 customers for my research, consisting of 5
+          I was able to recruit 7 participants for my research, consisting of 5
           customers and 2 HubSpot partners. All participants had created at
           least 1 custom agent, but had different usage ranges of workflows. I
           also recruited for different levels of familiarity with AI agents,
@@ -368,15 +368,15 @@ const RunAgentPage = ({ location }) => (
       <CaseStudySection>
         <H2>Impact</H2>
         <P>
-          The result of my work on the Run custom agent action resulted in
-          steady growth in customers using custom agents and laid the groundwork
-          for future adoption of agentic automation features. 
+          The result of my work on the Run agent action resulted in steady
+          growth in customers using custom agents and laid the groundwork for
+          future adoption of agentic automation features. 
         </P>
         <P>
           We saw <strong>~31,000 action executions</strong> within the first
           full month of the action entering public beta. By August 2026 we saw{' '}
-          <strong>10% of active workflows</strong> were using the Run custom
-          agent action.
+          <strong>10% of active workflows</strong> were using the Run agent
+          action.
         </P>
       </CaseStudySection>
     </SectionWrapper>

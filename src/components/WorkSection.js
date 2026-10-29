@@ -66,12 +66,15 @@ class JobItem extends React.Component {
   }
 
   render() {
-    const { title, company, start, end } = this.props;
+    const { title, team, company, start, end } = this.props;
 
     return (
       <JobWrapper>
         <PositionContainer>
-          <JobTitle>{title}</JobTitle>
+          <JobTitle>
+            {title}
+            {!!team && ` · ${team}`}
+          </JobTitle>
           <Company>{company}</Company>
         </PositionContainer>
         <Year>
@@ -95,30 +98,35 @@ const WorkSection = () => (
     <JobList>
       <JobItem
         title="Senior Product Designer"
+        team="Automation"
         company="HubSpot"
         start="2026"
         end="2026"
       />
       <JobItem
         title="Product Designer"
+        team="Automation"
         company="HubSpot"
         start="2024"
         end="2026"
       />
       <JobItem
         title="Associate Product Designer"
+        team="Automation"
         company="HubSpot"
         start="2023"
         end="2024"
       />
       <JobItem
         title="Senior Software Engineer"
+        team="Design Systems"
         company="HubSpot"
         start="2022"
         end="2023"
       />
       <JobItem
         title="Software Engineer"
+        team="Design Systems"
         company="HubSpot"
         start="2020"
         end="2022"

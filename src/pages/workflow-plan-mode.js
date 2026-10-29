@@ -34,7 +34,7 @@ const SectionWrapper = styled.div`
 
 const WorkflowPlanModePage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Joseph Wang" hideTitle={true} />
+    <SEO title="Conversational building of agentic automation" />
     <CaseStudyTopNav nextPath={`..${PATHS.RUN_AGENT}`} />
     <SectionWrapper>
       <CaseStudyHeroHero
@@ -261,7 +261,7 @@ const WorkflowPlanModePage = ({ location }) => (
           suggested additional actions the user could take. We offered a nudge
           for the user to test their automation, giving them a chance to check
           our work and build trust with Breeze, as well as an option to publish
-          their automation if everything looked (for the more simple
+          their automation if everything looked good (for the more simple
           automations).
         </P>
 
@@ -351,11 +351,11 @@ const WorkflowPlanModePage = ({ location }) => (
           <strong>70% of all new automations being built with Breeze</strong>.
         </P>
         <P>
-          Qualitatively, I heard customers say how easier this made it to build
-          workflows and how much time it saved them. Our CSAT data backed up
-          these responses we saw, with our workflow generation tools in Breeze
-          maintaining a <strong>73% CSAT on average</strong>, being some of the
-          highest rated Breeze tools across the product.
+          Qualitatively, I heard customers say how much easier this made it to
+          build workflows and how much time it saved them. Our CSAT data backed
+          up these responses we saw, with our workflow generation tools in
+          Breeze maintaining a <strong>73% CSAT on average</strong>, being some
+          of the highest rated Breeze tools across the product.
         </P>
       </CaseStudySection>
     </SectionWrapper>

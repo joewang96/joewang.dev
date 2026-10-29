@@ -8,6 +8,7 @@ import { Link } from 'gatsby';
 import * as workflowPlanImg from '../images/plan-mode/PlanModeHero.png';
 import * as runAgentImg from '../images/run-agent/RunAgentHero.png';
 import * as triggerImg from '../images/triggers/TriggerHero.png';
+import * as actionBuilderImg from '../images/action-builder/CABHero.png';
 
 const Wrapper = styled.div``;
 
@@ -138,6 +139,13 @@ const ProjectsSection = () => (
         imageSrc={triggerImg}
         imageAlt=""
         to={PATHS.THIRD_PARTY_TRIGGER}
+      />
+      <ProjectItem
+        title="Developer tooling for an automation platform"
+        subtitle="Enabling simpler creation and management of custom workflow actions."
+        imageSrc={actionBuilderImg}
+        imageAlt=""
+        to={PATHS.ACTION_BUILDER}
       />
     </ProjectList>
   </Wrapper>

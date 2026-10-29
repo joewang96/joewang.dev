@@ -9,7 +9,8 @@ import CaseStudyImage from './CaseStudyImage';
 
 const DetailContainer = styled.div`
   display: flex;
-  gap: 60px;
+  gap: 20px 60px;
+  flex-wrap: wrap;
 `;
 
 const DetailGroupContainer = styled.div``;
