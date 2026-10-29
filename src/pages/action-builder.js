@@ -86,11 +86,11 @@ const ActionBuilderPage = ({ location }) => (
         </P>
         <P>
           This allows for much faster development of new actions, as it doesn’t
-          require engineers writing FE code for our codebase that they aren’t
-          familiar with and allows us to build reusable functionality into the
-          action platform. I also designed it so you could preview your action
-          for a given portal from within the tool, shortening the dev and test
-          cycle for creating the action UI.
+          require engineers writing frontend code for our codebase that they
+          aren’t familiar with and allows us to build reusable functionality
+          into the action platform. I also designed it so you could preview your
+          action for a given portal from within the tool, shortening the dev and
+          test cycle for creating the action UI.
         </P>
         <CaseStudyImage src={CAB_AddInputs} />
       </CaseStudySection>
